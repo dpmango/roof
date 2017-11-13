@@ -1,0 +1,85 @@
+.footer
+  background-color: $footerBg
+  &__companies
+    padding: 50px 0
+    border-bottom: 1px solid $footerBorder
+  &__company
+    margin-right: 55px
+    &:last-child
+      margin-right: 0
+  &__mainbar
+    padding: 50px 0
+    border-bottom: 1px solid $footerBorder
+    .flex-wrap
+      align-items: flex-start
+      margin: 0 -15px
+    ul
+      padding: 0
+      margin: 0
+    li
+      display: block
+      margin-bottom: 20px
+      &:last-child
+        margin-bottom: 0
+  &__item
+    width: 25%
+    padding: 0 15px
+    &--contacts
+      text-align: right
+  &__item-title
+    text-transform: uppercase
+    margin-top: 0
+    font-size: 17px
+    color: $blackColor
+    font-weight: 400
+    margin-bottom: 25px
+  &__item-link
+    display: inline
+    text-decoration: none
+    color: $footerText
+    border-bottom: 1px solid transparentize($footerText, .4)
+    transition: all $transitionSpeed $ease
+    &:hover
+      border-color: transparent
+  &__tel
+    display: block
+    font-size: 27px
+    text-align: right
+    margin-bottom: 20px
+  &__mail
+    font-size: 16px
+    display: inline-block
+    margin-bottom: 40px
+    text-decoration: none
+    border-bottom: 1px solid transparentize($footerText, .4)
+    color: $footerText
+    transition: all $transitionSpeed $ease
+    &:hover
+      border-color: transparent
+  &__btn
+    display: block
+    margin-left: auto
+    text-align: center
+    padding: 9px 20px
+    font-size: 16px
+    background-color: transparent
+    border: 1px solid $blackColor
+    color: $footerText
+    transition: all $transitionSpeed $ease
+    &:hover
+      cursor: pointer
+      color: $whiteColor
+      background-color: $blackColor
+  &__copy
+    padding: 35px 0
+    color: $footerText
+    font-size: 16px
+    .flex-wrap
+      align-items: center
+      justify-content: space-between
+  &__dev
+    display: inline-block
+    vertical-align: middle
+    i
+      vertical-align: middle
+      margin-left: 4px

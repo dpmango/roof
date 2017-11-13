@@ -1,0 +1,149 @@
+.manufac-section
+  background-repeat: no-repeat
+  background-size: cover
+  background-image: url(../../img/main-bg1.jpg)
+  &__wrap
+    flex-direction: column
+    justify-content: center
+    align-items: flex-start
+    min-height: 100vh
+  &__company
+    margin-right: 30px
+    &:last-child
+      margin-right: 0
+    
+.product-section
+  background-repeat: no-repeat
+  background-size: cover
+  background-image: url(../../img/main-bg2.jpg)
+  &__wrap
+    flex-direction: column
+    justify-content: center
+    align-items: flex-start
+    min-height: 100vh
+  &__products
+    justify-content: space-between
+    align-items: flex-start
+    width: 100%
+    margin-top: 30px
+  &__item
+    width: 25%
+    &-img
+      width: 115px
+      height: 115px
+      background-repeat: no-repeat
+      background-size: 100%
+      background-image: url(../../img/prod-bg.png)
+      display: flex
+      justify-content: center
+      align-items: center
+      margin-bottom: 45px
+    &-title
+      display: inline-block
+      text-transform: uppercase
+      margin: 0
+      font-size: 22px
+      line-height: 36px
+      font-family: $fontExtra
+      color: $whiteColor
+      max-width: 270px
+      a
+        text-decoration: none
+        color: $whiteColor
+        border-bottom: 1px solid transparentize($whiteColor, .7)
+        transition: all $transitionSpeed $ease
+        &:hover
+          border-color: transparent
+
+.advantages
+  background-repeat: no-repeat
+  background-size: cover
+  background-image: url(../../img/main-bg3.jpg)
+  &__wrap
+    min-height: 100vh
+  &__titles
+    width: 50%
+    padding-right: 40px
+  &__more
+    width: 50%
+    flex-wrap: wrap
+    align-items: flex-start
+  &__btn
+    font-size: 17px
+    text-align: center
+    padding: 18px 36px
+    border: 1px solid $blackColor
+    background-color: transparent
+    text-transform: uppercase
+    transition: all $transitionSpeed $ease
+    &:hover
+      cursor: pointer
+      color: $whiteColor
+      background-color: $blackColor
+  &__item
+    width: 50%
+    margin-bottom: 55px
+    &:nth-child(3),
+    &:nth-child(4)
+      margin-bottom: 0
+    &-title
+      font-size: 40px
+      margin-top: 0
+      margin-bottom: 10px
+      position: relative
+      padding-top: 100px
+      font-weight: 400
+      max-width: 225px
+    &-descr
+      font-size: 16px
+      line-height: 36px
+      margin: 0
+      max-width: 235px
+      
+.events-section
+  padding-top: 50px
+  padding-bottom: 80px
+  &__title
+    text-transform: uppercase
+    margin-top: 0
+    margin-bottom: 50px
+    font-size: 40px
+    font-family: $fontExtra
+  &__wrap
+    align-items: stretch
+    justify-content: space-between
+  &__col
+    width: 31%
+    display: flex
+    flex-direction: column
+    align-items: stretch
+.event-item
+  padding: 50px 45px
+  background-color: $eventsBg
+  color: $whiteColor
+  margin-bottom: 45px
+  &--full
+    height: 100%
+  &:last-child
+    margin-bottom: 0
+  &__title
+    font-size: 18px
+    font-weight: 400
+    margin-top: 0
+    text-transform: uppercase
+    padding-bottom: 30px
+    position: relative
+    &:after
+      content: ''
+      position: absolute
+      bottom: 2px
+      left: 0
+      width: 55px
+      height: 5px
+      background-color: $mainColor
+  &__descr
+    font-size: 18px
+    margin-top: 0
+    margin-bottom: 30px
+    &:last-child
+      margin-bottom: 0

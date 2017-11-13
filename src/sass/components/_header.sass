@@ -1,0 +1,45 @@
+.header
+  padding: 45px 0
+  position: fixed
+  width: 100%
+  top: 0
+  left: 0
+  &__logo
+    display: block
+    text-decoration: none
+    margin-right: 25px
+  &__contacts
+    margin-left: auto
+    text-align: right
+  &__tel
+    display: block
+    font-size: 23px
+    color: $whiteColor
+    margin-bottom: 5px
+  &__bid
+    font-size: 15px
+    color: transparentize($whiteColor, .2)
+    text-decoration: underline
+    padding: 0
+    border: 0
+    background-color: transparent
+    transition: all $transitionSpeed $ease
+    &:hover
+      color: $whiteColor
+      text-decoration: none
+      cursor: pointer
+    
+.main-nav
+  &__link
+    display: inline-block
+    vertical-align: middle
+    text-decoration: none
+    color: $whiteColor
+    margin: 0 29px
+    font-size: 17px
+    transition: all $transitionSpeed $ease
+    &--catalog
+      position: relative
+      padding-left: 25px
+    &:hover
+      text-decoration: underline

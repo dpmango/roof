@@ -1,0 +1,189 @@
+$sprite: (
+	dax: (
+		offset-x: 0px,
+		offset-y: -55px,
+		width: 137px,
+		height: 40px,
+		total-width: 318px,
+		total-height: 230px,
+		image: '../img/sprite.png'
+	),
+	fj: (
+		offset-x: -136px,
+		offset-y: -105px,
+		width: 122px,
+		height: 31px,
+		total-width: 318px,
+		total-height: 230px,
+		image: '../img/sprite.png'
+	),
+	folder: (
+		offset-x: -159px,
+		offset-y: 0px,
+		width: 104px,
+		height: 48px,
+		total-width: 318px,
+		total-height: 230px,
+		image: '../img/sprite.png'
+	),
+	freshm: (
+		offset-x: -159px,
+		offset-y: -58px,
+		width: 72px,
+		height: 18px,
+		total-width: 318px,
+		total-height: 230px,
+		image: '../img/sprite.png'
+	),
+	logo: (
+		offset-x: 0px,
+		offset-y: 0px,
+		width: 149px,
+		height: 45px,
+		total-width: 318px,
+		total-height: 230px,
+		image: '../img/sprite.png'
+	),
+	oklent: (
+		offset-x: 0px,
+		offset-y: -148px,
+		width: 121px,
+		height: 29px,
+		total-width: 318px,
+		total-height: 230px,
+		image: '../img/sprite.png'
+	),
+	optima: (
+		offset-x: 0px,
+		offset-y: -105px,
+		width: 126px,
+		height: 33px,
+		total-width: 318px,
+		total-height: 230px,
+		image: '../img/sprite.png'
+	),
+	prod-icon1: (
+		offset-x: 0px,
+		offset-y: -187px,
+		width: 61px,
+		height: 43px,
+		total-width: 318px,
+		total-height: 230px,
+		image: '../img/sprite.png'
+	),
+	prod-icon2: (
+		offset-x: -273px,
+		offset-y: -58px,
+		width: 37px,
+		height: 52px,
+		total-width: 318px,
+		total-height: 230px,
+		image: '../img/sprite.png'
+	),
+	prod-icon3: (
+		offset-x: -71px,
+		offset-y: -187px,
+		width: 54px,
+		height: 43px,
+		total-width: 318px,
+		total-height: 230px,
+		image: '../img/sprite.png'
+	),
+	prod-icon4: (
+		offset-x: -273px,
+		offset-y: 0px,
+		width: 45px,
+		height: 48px,
+		total-width: 318px,
+		total-height: 230px,
+		image: '../img/sprite.png'
+	),
+);
+
+
+@mixin sprite-size($image) {
+	background-size: map-get(map-get($sprite, $image), 'total-width') map-get(map-get($sprite, $image), 'total-height');
+}
+
+@mixin sprite-width($image) {
+	width: map-get(map-get($sprite, $image), 'width');
+}
+
+@mixin sprite-height($image) {
+	height: map-get(map-get($sprite, $image), 'height');
+}
+
+@mixin sprite-position($image) {
+	background-position: map-get(map-get($sprite, $image), 'offset-x') map-get(map-get($sprite, $image), 'offset-y');
+}
+
+@mixin sprite-image($image) {
+	background-image: url(map-get(map-get($sprite, $image), 'image'));
+}
+
+@mixin sprite-image-retina($image) {
+	$image-path: map-get(map-get($sprite, $image), 'image');
+	$image-path-retina: str-slice($image-path, 1, str-index($image-path, '.png') - 1) + '@2x.png';
+
+	background-image: url($image-path-retina);
+}
+
+@mixin sprite($image, $size: true) {
+	@include sprite-image($image);
+	@include sprite-position($image);
+	background-repeat: no-repeat;
+
+	@if $size {
+		@include sprite-width($image);
+		@include sprite-height($image);
+	}
+
+	@media
+		only screen and (-webkit-min-device-pixel-ratio: 2),
+		only screen and (   min--moz-device-pixel-ratio: 2),
+		only screen and (     -o-min-device-pixel-ratio: 2/1),
+		only screen and (        min-device-pixel-ratio: 2),
+		only screen and (                min-resolution: 192dpi),
+		only screen and (                min-resolution: 2dppx) {
+
+		@include sprite-size($image);
+		@include sprite-image-retina($image);
+
+	}
+}
+
+
+
+	.icon-dax {
+		@include sprite(dax)
+	}
+	.icon-fj {
+		@include sprite(fj)
+	}
+	.icon-folder {
+		@include sprite(folder)
+	}
+	.icon-freshm {
+		@include sprite(freshm)
+	}
+	.icon-logo {
+		@include sprite(logo)
+	}
+	.icon-oklent {
+		@include sprite(oklent)
+	}
+	.icon-optima {
+		@include sprite(optima)
+	}
+	.icon-prod-icon1 {
+		@include sprite(prod-icon1)
+	}
+	.icon-prod-icon2 {
+		@include sprite(prod-icon2)
+	}
+	.icon-prod-icon3 {
+		@include sprite(prod-icon3)
+	}
+	.icon-prod-icon4 {
+		@include sprite(prod-icon4)
+	}
