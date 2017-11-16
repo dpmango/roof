@@ -10,16 +10,16 @@ block content
           h2.common-title Производство комплектующих для строительства
           p.common-descr Комплексные поставки на Российский рынок профессиональных материалов для монтажа кровли и окон
           .manufac-section__companies.flex-wrap
-            .manufac-section__company
-              i.icon.icon-dax
-            .manufac-section__company
-              i.icon.icon-folder
-            .manufac-section__company
-              i.icon.icon-optima
-            .manufac-section__company
-              i.icon.icon-oklent
-            .manufac-section__company
-              i.icon.icon-fj
+            a.manufac-section__company(href="#")
+              +icon('ico-daxmer')
+            a.manufac-section__company(href="#")
+              +icon('ico-folder')
+            a.manufac-section__company(href="#")
+              +icon('ico-optima')
+            a.manufac-section__company(href="#")
+              +icon('ico-okl')
+            a.manufac-section__company(href="#")
+              +icon('ico-fgl')
     section.product-section
       .container
         .product-section__wrap.flex-wrap
@@ -28,22 +28,22 @@ block content
           .product-section__products.flex-wrap
             .product-section__item
               .product-section__item-img
-                i.icon.icon-prod-icon1
+                +icon('ico-roof')
               h3.product-section__item-title 
                 a(href="#") Комплектующие<br> для кровли
             .product-section__item
               .product-section__item-img
-                i.icon.icon-prod-icon2
+                +icon('ico-fixture')
               h3.product-section__item-title 
                 a(href="#") Строительный<br> крепеж
             .product-section__item
               .product-section__item-img
-                i.icon.icon-prod-icon3
+                +icon('ico-skin')
               h3.product-section__item-title 
                 a(href="#") Защитные<br> пленки
             .product-section__item
               .product-section__item-img
-                i.icon.icon-prod-icon4
+                +icon('ico-window')
               h3.product-section__item-title 
                 a(href="#") Комплектующие<br> для монтажа окон
     section.advantages
@@ -55,15 +55,19 @@ block content
           .advantages__more.flex-wrap
             .advantages__item
               h3.advantages__item-title Лидеры отрасли
+                +icon('ico-cup')
               p.advantages__item-descr Мы лидеры на рынке комплек-тующих для строительства
             .advantages__item
               h3.advantages__item-title Короткие сроки
+                +icon('ico-timer')
               p.advantages__item-descr Оперативное выполнение оптовых заказов
             .advantages__item
               h3.advantages__item-title Высокое качество
+                +icon('ico-medal')
               p.advantages__item-descr Гарантируем отличное качество выпускаемой продукции
             .advantages__item
               h3.advantages__item-title Широкий ассортимент
+                +icon('ico-handshake')
               p.advantages__item-descr Более 300 наименований продукции
     section.events-section
       .container

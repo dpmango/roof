@@ -8,7 +8,14 @@
     align-items: flex-start
     min-height: 100vh
   &__company
+    display: inline-block
     margin-right: 30px
+    color: #a7a7a7
+    font-size: 45px
+    transition: all $transitionSpeed $ease
+    &:hover
+      color: $whiteColor
+      cursor: pointer
     &:last-child
       margin-right: 0
     
@@ -38,6 +45,9 @@
       justify-content: center
       align-items: center
       margin-bottom: 45px
+      .ico
+        font-size: 55px
+        color: $whiteColor
     &-title
       display: inline-block
       text-transform: uppercase
@@ -94,6 +104,12 @@
       padding-top: 100px
       font-weight: 400
       max-width: 225px
+      .ico
+        color: $advIcon
+        position: absolute
+        left: 0
+        top: 0
+        font-size: 70px
     &-descr
       font-size: 16px
       line-height: 36px

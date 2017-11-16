@@ -22,6 +22,8 @@ gulp.task('watch',
   'pug:watch',
   'javascript:watch',
   'images:watch',
+  'svg-min:watch',
+  'sprite:svg:watch',
   'sprite:png:watch',
   'list-pages:watch'
 ]);

@@ -18,11 +18,12 @@ gulp.task('build:development', function(callback) {
 function build(callback) {
   runSequence(
     'clean:dist',
-    'sprite:png',
+    ['sprite:svg', 'sprite:png'],
     'sass',
     'pug',
     'javascript',
     'images',
+    'svg-min',
     'copy',
     'list-pages',
     callback

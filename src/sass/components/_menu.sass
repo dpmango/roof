@@ -1,0 +1,65 @@
+.menu
+  position: fixed
+  top: 135px
+  left: 0
+  width: 100%
+  min-height: 100vh
+  background-color: $whiteColor
+  transition: all $transitionSpeed $ease
+  z-index: 10
+  visibility: hidden
+  opacity: 0
+  &.is-active
+    opacity: 1
+    visibility: visible
+  &__wrap
+    align-items: flex-start
+  &__col
+    width: 74%
+    &--brands
+      width: 26%
+  &__row
+    align-items: flex-start
+  &__item
+    width: 50%
+    margin-bottom: 70px
+    padding-left: 60px
+    position: relative
+    .ico
+      position: absolute
+      top: -3px
+      left: 0
+      color: $mainColor
+      font-size: 45px
+    ul
+      padding: 0
+      margin: 0
+    li
+      display: block
+      margin-bottom: 17px
+      max-width: 325px
+  &__subtitle
+    font-family: $fontExtra
+    text-transform: uppercase
+    margin-top: 0
+    max-width: 325px
+    font-size: 22px
+    margin-bottom: 30px
+  &__link
+    font-size: 17px
+    text-decoration: none
+    color: $blackColor
+    transition: all $transitionSpeed $ease
+    border-bottom: 1px solid transparent
+    &:hover
+      border-color: $blackColor
+  &__brand
+    display: table
+    text-decoration: none
+    font-size: 40px
+    margin-bottom: 30px
+    color: #919191
+    transition: all $transitionSpeed $ease
+    &:hover
+      cursor: pointer
+      color: $main2Color

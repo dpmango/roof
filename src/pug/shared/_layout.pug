@@ -1,16 +1,17 @@
+include _mixins
 doctype html
 html(lang="ru")
   head
     include _head
 
   body(class=bodyClass)
-    .page(class=outClass)
-      .page__content
-        block header
-          include ../components/_header
-        block content
+    include ../../../dist/img/sprite.svg
+    include ../components/_menu
+    block header
+      include ../components/_header
+    block content
 
-      block footer
-        include ../components/_footer
-      block scripts
-        include _scripts
+    block footer
+      include ../components/_footer
+    block scripts
+      include _scripts

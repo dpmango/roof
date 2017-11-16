@@ -4,6 +4,23 @@
   width: 100%
   top: 0
   left: 0
+  z-index: 2
+  overflow-y: scroll
+  &--menu-open
+    background-color: $whiteColor
+    .header
+      &__tel
+        color: $blackColor
+      &__bid
+        color: transparentize($blackColor, .4)
+        border-bottom: 1px solid transparentize($blackColor, .4)
+        &:hover
+          color: $blackColor
+    .main-nav
+      &__link
+        color: $blackColor
+        &:after
+          background-color: $mainColor
   &__logo
     display: block
     text-decoration: none
@@ -19,14 +36,15 @@
   &__bid
     font-size: 15px
     color: transparentize($whiteColor, .2)
-    text-decoration: underline
-    padding: 0
     border: 0
+    border-radius: 0
+    border-bottom: 1px solid transparentize($whiteColor, .2)
+    padding: 0
     background-color: transparent
     transition: all $transitionSpeed $ease
     &:hover
       color: $whiteColor
-      text-decoration: none
+      border-color: transparent
       cursor: pointer
     
 .main-nav
@@ -34,12 +52,33 @@
     display: inline-block
     vertical-align: middle
     text-decoration: none
+    position: relative
+    overflow: hidden
     color: $whiteColor
     margin: 0 29px
+    padding: 5px 0
     font-size: 17px
     transition: all $transitionSpeed $ease
     &--catalog
       position: relative
       padding-left: 25px
-    &:hover
-      text-decoration: underline
+      .ico
+        font-size: 15px
+        position: absolute
+        top: 50%
+        left: 0
+        transform: translateY(-50%)
+    &:after
+      content: ''
+      position: absolute
+      bottom: 0px
+      left: 0
+      height: 2px
+      width: 100%
+      background-color: $whiteColor
+      transition: all $transitionSpeed $ease
+      transform: translateX(200px)
+    &:hover,
+    &.is-active
+      &:after
+        transform: translateX(0px)
