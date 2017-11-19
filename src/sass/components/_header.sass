@@ -43,6 +43,16 @@
     margin-right: 25px
     #logo-blue
       display: none
+  &__mobile-toggle
+    display: none
+    padding: 0
+    &:hover
+      opacity: 1
+    .hamburger-inner
+      background-color: $main2Color
+      &:after,
+      &:before
+        background-color: $main2Color
   &__contacts
     margin-left: auto
     text-align: right
@@ -120,3 +130,26 @@
     &.is-active
       &:after
         transform: translateX(0px)
+      
++r($wide)
+  .header
+    &__contacts
+      display: none
+  .main-nav
+    margin-left: auto
+    &__link
+      margin: 0 20px
+      &:last-child
+        margin-right: 0
+      
++r($desktop)
+  .header
+    padding: 25px 0
+    background-color: $whiteColor
+    &__logo
+      #logo-white
+        display: none
+      #logo-blue
+        display: inline-block
+    &__mobile-toggle
+      display: inline-block

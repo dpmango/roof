@@ -40,6 +40,8 @@
     color: $blackColor
     font-weight: 400
     margin-bottom: 25px
+    svg
+      display: none
   &__item-link
     display: inline
     text-decoration: none
@@ -90,3 +92,46 @@
     i
       vertical-align: middle
       margin-left: 4px
+      
++r($desktop)
+  .footer
+    &__company
+      margin: 0 10px
+      text-align: center
+    &__mainbar
+      padding: 0
+      .flex-wrap
+        flex-direction: column
+        margin-left: 0
+        margin-right: 0
+    &__item
+      width: 100%
+      padding: 0
+      &--contacts
+        text-align: left
+        padding: 35px 0px
+      &-title
+        padding: 20px 30px
+        border-bottom: 1px solid $footerBorder
+        margin-bottom: 0
+        width: calc(100% + 60px)
+        margin-left: -30px
+        position: relative
+        svg
+          display: inline-block
+          position: absolute
+          top: 50%
+          transform: translateY(-50%)
+          right: 30px
+          font-size: 15px
+          color: darken($footerBorder, 10%)
+      ul
+        display: none
+    &__tel
+      text-align: left
+      margin-bottom: 15px
+      font-family: $fontExtra
+    &__main
+      margin-bottom: 27px
+    &__btn
+      margin-left: 0
