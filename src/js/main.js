@@ -119,7 +119,8 @@ $('[js-submit-form]').on('click', function(e){
     $('.slick-dots').css('margin-left', posLeft - 5);
   }
   
-  // Fullpage
+  if ($('body').hasClass('homepage-body')) {
+    // Fullpage
   $.scrollify({
     section : '.section',
     scrollbars: false,
@@ -163,6 +164,11 @@ $('[js-submit-form]').on('click', function(e){
       $('.header').addClass('header--white')
     },
   });
+  } else {
+    $('.footer').removeClass('section');
+    $('.footer').removeAttr('data-section-name');
+    
+  }
 
   if ($(window).width() < 992) {
     $.scrollify.destroy();
