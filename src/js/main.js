@@ -22,10 +22,25 @@ $('[js-open-mobile]').on('click', function(e){
   e.preventDefault();
   if ($(this).hasClass('is-active')) {
     $(this).removeClass('is-active');
+    $('.mobile-menu').slideUp(200);
+    $('body').removeClass('no-scroll');
   } else {
     $(this).addClass('is-active');
+    $('.mobile-menu').slideDown(200);
+    $('body').addClass('no-scroll');
   }
 });
+  
+  $('.mobile-menu__link--prod').on('click', function(e){
+    e.preventDefault();
+    if ($(this).hasClass('is-active')) {
+      $(this).next('.mobile-menu__products').slideUp(200);
+      $(this).removeClass('is-active');
+    } else {
+      $(this).next('.mobile-menu__products').slideDown(200);
+      $(this).addClass('is-active');
+    }
+  })
 
 // Плавный плейсхолдеры
 $('[js-input] input').focus(function () {
@@ -78,7 +93,15 @@ $('[js-submit-form]').on('click', function(e){
     autoplay: true,
     accessibility: false,
     pauseOnHover: false,
-    pauseOnFocus: false
+    pauseOnFocus: false,
+    responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        dots: false
+      }
+    }
+  ]
   });
   
   var posLeft = $('.manufac-section__wrap').offset().left;
@@ -128,6 +151,60 @@ $('[js-submit-form]').on('click', function(e){
     },
   });
   
+  if ($(window).width() < 992) {
+    $.scrollify.destroy();
+    
+    $('.events-section__wrap').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      dots: true,
+      autoplay: true,
+      accessibility: false,
+      pauseOnHover: false,
+      pauseOnFocus: false,
+      adaptiveHeight: true
+    });
+    $('.footer__companies .flex-wrap').slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      arrows: true,
+      dots: false,
+      autoplay: true,
+      accessibility: false,
+      pauseOnHover: false,
+      pauseOnFocus: false,
+      responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3
+        }
+      },
+        {
+        breakpoint: 568,
+        settings: {
+          slidesToShow: 2
+        }
+      }
+      ]
+    });
+  }
+  
+  // Footer mobile
+  $('.footer__item-title').on('click', function(){
+    if ($(this).hasClass('is-active')) {
+      $(this).next('ul').slideUp(200);
+      $(this).removeClass('is-active');
+    } else {
+      $(this).next('ul').slideDown(200);
+      $(this).addClass('is-active');
+    }
+    
+  });
+});
+
+$(window).resize(function(){
   if ($(window).width() < 992) {
     $.scrollify.destroy();
     

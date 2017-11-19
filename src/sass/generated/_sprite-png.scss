@@ -98,6 +98,15 @@ $sprite: (
 		total-height: 230px,
 		image: '../img/sprite.png'
 	),
+	tel-mobile: (
+		offset-x: -273px,
+		offset-y: -120px,
+		width: 43px,
+		height: 43px,
+		total-width: 318px,
+		total-height: 230px,
+		image: '../img/sprite.png'
+	),
 );
 
 
@@ -186,4 +195,7 @@ $sprite: (
 	}
 	.icon-prod-icon4 {
 		@include sprite(prod-icon4)
+	}
+	.icon-tel-mobile {
+		@include sprite(tel-mobile)
 	}

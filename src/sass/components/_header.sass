@@ -5,7 +5,6 @@
   top: 0
   left: 0
   z-index: 2
-  overflow-y: scroll
   transition: all $transitionSpeed $ease
   &--menu-open,
   &--blue
@@ -153,3 +152,30 @@
         display: inline-block
     &__mobile-toggle
       display: inline-block
+      margin-left: auto
+    
+  .main-nav
+    display: none
+    
++r($mobile)
+  .header
+    padding: 18px 0
+    &__logo
+      svg
+        display: block
+        max-height: 40px
+    &__mobile-toggle
+      .hamburger-box
+        width: 30px
+        height: 20px
+      .hamburger-inner
+        width: 30px
+        height: 3px
+        &:before,
+        &:after
+          width: 30px
+          height: 3px
+        &:before
+          top: -8px
+        &:after
+          bottom: -8px

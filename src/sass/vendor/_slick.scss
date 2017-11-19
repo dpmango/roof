@@ -113,25 +113,20 @@
     background: transparent;
     color: transparent;
     top: 50%;
-    -webkit-transform: translate(0, -50%);
-    -ms-transform: translate(0, -50%);
-    transform: translate(0, -50%);
     padding: 0;
     border: none;
     outline: none;
-    &:hover, &:focus {
-        outline: none;
-        background: transparent;
-        color: transparent;
-    }
+    background-image: url(../../img/svg/sprite-src/arrow-down-gray.svg);
 }
 
 .slick-prev {
-    left: -25px;
+  left: -15px;
+  transform: translateY(-50%) rotate(90deg);
 }
 
 .slick-next {
-    right: -25px;
+  right: -15px;
+  transform: translateY(-50%) rotate(-90deg);
 }
 
 /* Dots */
