@@ -1,0 +1,53 @@
+.callback-form
+  button.callback-form__close(type="button" js-close-form)
+    +icon('ico-close')
+  form.callback-form__form(action="#")
+    h2.callback-form__title Форма обратной связи
+    .callback-form__row.flex-wrap
+      .callback-form__half
+        input.callback-form__check(type="checkbox" id="check1")
+        label.callback-form__check-label(for="check1") Запросить прайс-лист
+      .callback-form__half
+        input.callback-form__check(type="checkbox" id="check2")
+        label.callback-form__check-label(for="check2") Хочу быть диллером
+    .callback-form__input(js-input)
+      input(type="text" id="callback-name")
+      label.callback-form__placeholder(for="callback-name")
+            span Название компании
+    .callback-form__input(js-input)
+      input(type="text" id="callback-city")
+      label.callback-form__placeholder(for="callback-city")
+            span Город
+    .callback-form__row.flex-wrap
+      .callback-form__half
+        .callback-form__input(js-input)
+          input(type="text" id="callback-tel")
+          label.callback-form__placeholder(for="callback-tel")
+                span Телефон
+      .callback-form__half
+        .callback-form__input(js-input)
+          input(type="text" id="callback-mail")
+          label.callback-form__placeholder(for="callback-mail")
+                span E-mail
+    .callback-form__input(js-input)
+      input(type="text" id="callback-product")
+      label.callback-form__placeholder(for="callback-product")
+            span Какая продукция вас заинтересовала
+    .callback-form__buttons.flex-wrap
+      .callback-form__agree
+        input.callback-form__check(type="checkbox" id="check-agree" checked)
+        label.callback-form__agree-label(for="check-agree") Я принимаю
+          a(href="#") условия передачи информации
+      button.callback-form__btn(type="submit" js-submit-form) Отправить
+  .callback-form__ok
+    h2.callback-form__title Форма обратной связи
+    p.callback-form__descr Ваша заявка отправлена<br> и зарегистрована под номером 748
+    .callback-form__contacts
+      p Если у вас возникли вопросы, пожалуйста позвоните или напишите нам:
+      p Часы работы: с 8.00 до 18.00
+      p E-mail: info@roofcom.ru
+      p Телефон: +7(484) 399-61-84
+    .callback-form__buttons.flex-wrap
+      .callback-form__timer Форма будет закрыта через
+        span 5 секунд
+      button.callback-form__btn(type="button" js-form-close) Закрыть

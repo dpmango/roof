@@ -1,0 +1,190 @@
+.callback-form
+  position: fixed
+  width: 100%
+  min-height: 100vh
+  height: 100%
+  top: 0
+  left: 0
+  z-index: 999
+  background-color: $whiteColor
+  display: flex
+  justify-content: center
+  transition: all $transitionSpeed $ease
+  align-items: center
+  visibility: hidden
+  opacity: 0
+  &.is-active
+    visibility: visible
+    opacity: 1
+  &__form
+    margin-left: auto
+    margin-right: auto
+    width: 100%
+    max-width: 640px
+  &__close
+    position: absolute
+    top: 30px
+    right: 30px
+    background-color: transparent
+    border: 0
+    padding: 0
+    color: $blackColor
+    font-size: 20px
+    transition: all $transitionSpeed $ease
+    &:hover
+      cursor: pointer
+      opacity: 0.7
+  &__title
+    font-size: 35px
+    margin-top: 0
+    margin-bottom: 35px
+    font-family: $fontExtra
+    text-transform: uppercase
+  &__row
+    justify-content: space-between
+  &__half
+    width: 49%
+  &__check
+    display: none
+    &:checked + label:before
+      background-color: #d4ed00
+      border-color: #d4ed00
+      background-image: url(../../icons/check.svg)
+  &__check-label
+    display: block
+    width: 100%
+    font-size: 17px
+    color: $inputText
+    border: 1px solid $inputBorder
+    background-color: $whiteColor
+    padding: 17px 20px
+    padding-left: 60px
+    position: relative
+    margin-bottom: 20px
+    &:before
+      content: ''
+      position: absolute
+      top: 50%
+      left: 20px
+      width: 20px
+      height: 20px
+      border: 1px solid darken($inputBorder, 5%)
+      transform: translateY(-50%)
+      background-color: $inputBg
+      background-repeat: no-repeat
+      background-position: 50%
+      background-size: 16px 16px
+    &:hover
+      cursor: pointer
+  &__input
+    display: block
+    width: 100%
+    position: relative
+    margin-bottom: 20px
+    input
+      width: 100%
+      display: block
+      background-color: $inputBg
+      border: 1px solid $inputBorder
+      font-size: 17px
+      line-height: 17px
+      color: $inputText
+      padding: 17px 20px
+      font-weight: 400
+  &__placeholder
+    position: absolute
+    width: 100%
+    min-height: 100%
+    top: 0
+    left: 0
+    font-size: 17px
+    line-height: 17px
+    color: $inputText
+    padding: 17px 20px
+    display: flex
+    align-items: center
+    font-weight: 400
+    span 
+    	display: block
+    	transition: all $transitionSpeed $ease
+    	transform-origin: left top
+    	width: 100%
+    &.is-active 
+    	span 
+        font-size: 13px
+        color: $blackColor
+        transform: translateY(-13px)
+  &__buttons
+    justify-content: space-between
+  &__btn
+    flex: 0 0 auto
+    font-size: 18px
+    color: #494949
+    text-align: center
+    border: 0
+    background-color: $mainColor
+    border-radius: 0
+    width: 200px
+    padding: 17px
+    transition: all $transitionSpeed $ease
+    &:hover
+      cursor: pointer
+      background-color: $main2Color
+      color: $whiteColor
+  &__agree-label
+    font-size: 15px
+    color: $inputText
+    padding-left: 40px
+    position: relative
+    a
+      color: darken($main2Color, 10%)
+      margin-left: 4px
+      &:hover
+        text-decoration: none
+    &:before
+      content: ''
+      position: absolute
+      top: 50%
+      left: 0px
+      width: 20px
+      height: 20px
+      border: 1px solid darken($inputBorder, 5%)
+      transform: translateY(-50%)
+      background-color: $inputBg
+      background-repeat: no-repeat
+      background-position: 50%
+      background-size: 16px 16px
+    &:hover
+      cursor: pointer
+    
+  &__ok
+    display: none
+    width: 100%
+    margin-left: auto
+    margin-right: auto
+    max-width: 640px
+  &__descr
+    font-size: 22px
+    line-height: 34px
+    margin-top: 0
+    margin-bottom: 30px
+    color: $inputText
+  &__contacts
+    padding: 30px 40px
+    background-color: $inputBg
+    border-left: 4px solid $mainColor
+    margin-bottom: 70px
+    p
+      max-width: 420px
+      color: $inputText
+      font-size: 17px
+      margin-top: 0
+      margin-bottom: 5px
+      &:first-child
+        margin-bottom: 13px
+  &__timer
+    font-size: 15px
+    color: $inputText
+    span
+      margin-left: 4px
+      color: $main2Color

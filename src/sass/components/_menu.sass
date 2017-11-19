@@ -1,13 +1,15 @@
 .menu
   position: fixed
-  top: 135px
+  top: 139px
   left: 0
   width: 100%
   min-height: 100vh
+  height: 100%
   background-color: $whiteColor
   transition: all $transitionSpeed $ease
-  z-index: 10
+  z-index: 999
   visibility: hidden
+  overflow-y: scroll
   opacity: 0
   &.is-active
     opacity: 1

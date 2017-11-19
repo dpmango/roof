@@ -20,9 +20,11 @@
       margin-right: 0
     
 .product-section
-  background-repeat: no-repeat
-  background-size: cover
-  background-image: url(../../img/main-bg2.jpg)
+  &__slide
+    background-repeat: no-repeat
+    background-size: cover
+    &--first
+      background-image: url(../../img/main-bg2.jpg)
   &__wrap
     flex-direction: column
     justify-content: center
@@ -133,11 +135,16 @@
     display: flex
     flex-direction: column
     align-items: stretch
+    &:first-child
+      .event-item
+        background-image: url(../../img/event-bg.jpg)
 .event-item
   padding: 50px 45px
   background-color: $eventsBg
   color: $whiteColor
   margin-bottom: 45px
+  background-repeat: no-repeat
+  background-size: cover
   &--full
     height: 100%
   &:last-child

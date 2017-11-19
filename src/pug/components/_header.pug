@@ -3,13 +3,16 @@ header.header
     .header__row.flex-wrap
       a.header__logo(href="/")
         include ../../icons/logo1.svg
+        include ../../icons/logo2.svg
       nav.main-nav
         a.main-nav__link(href="#") О компании
         a.main-nav__link.main-nav__link--catalog(href="#" js-open-catalog) Каталог продукции
-          +icon('ico-close')
+          button(class="hamburger hamburger--spin" type="button")
+            span(class="hamburger-box")
+              span(class="hamburger-inner")
         a.main-nav__link(href="#") Сертификаты
         a.main-nav__link(href="#") Дилеры
         a.main-nav__link(href="#") Контакты
       .header__contacts
         span.header__tel +7 484 399 61 84
-        button.header__bid(type="button") Оставить заявку
+        button.header__bid(type="button" js-open-form) Оставить заявку

@@ -6,9 +6,16 @@
   left: 0
   z-index: 2
   overflow-y: scroll
-  &--menu-open
+  transition: all $transitionSpeed $ease
+  &--menu-open,
+  &--blue
     background-color: $whiteColor
     .header
+      &__logo
+        #logo-white
+          display: none
+        #logo-blue
+          display: inline-block
       &__tel
         color: $blackColor
       &__bid
@@ -21,10 +28,19 @@
         color: $blackColor
         &:after
           background-color: $mainColor
+        .hamburger-inner
+          background-color: $mainColor
+          &:before,
+          &:after
+            background-color: $mainColor
+  &--blue
+    background-color: transparent
   &__logo
     display: block
     text-decoration: none
     margin-right: 25px
+    #logo-blue
+      display: none
   &__contacts
     margin-left: auto
     text-align: right
@@ -62,12 +78,32 @@
     &--catalog
       position: relative
       padding-left: 25px
-      .ico
-        font-size: 15px
+      .hamburger
         position: absolute
         top: 50%
         left: 0
         transform: translateY(-50%)
+        padding: 0
+        max-height: 15px
+        &:hover
+          opacity: 1
+        &-box
+          width: 20px
+          height: 15px
+        &-inner
+          background-color: $whiteColor
+          width: 20px
+          height: 2px
+          &:before,
+          &:after
+            background-color: $whiteColor
+            width: 20px
+            height: 2px
+          &:before
+            top: -6px
+          &:after
+            bottom: -6px
+          
     &:after
       content: ''
       position: absolute

@@ -3,8 +3,8 @@ title: Homepage
 ---
 extends shared/_layout
 block content
-  main.page-main
-    section.manufac-section
+  main.page-main#fullpage
+    section.manufac-section.section
       .container
         .manufac-section__wrap.flex-wrap
           h2.common-title Производство комплектующих для строительства
@@ -20,38 +20,65 @@ block content
               +icon('ico-okl')
             a.manufac-section__company(href="#")
               +icon('ico-fgl')
-    section.product-section
-      .container
-        .product-section__wrap.flex-wrap
-          h2.common-title Продукция
-          p.common-descr Комплексные поставки на Российский рынок профессиональных материалов для монтажа кровли и окон
-          .product-section__products.flex-wrap
-            .product-section__item
-              .product-section__item-img
-                +icon('ico-roof')
-              h3.product-section__item-title 
-                a(href="#") Комплектующие<br> для кровли
-            .product-section__item
-              .product-section__item-img
-                +icon('ico-fixture')
-              h3.product-section__item-title 
-                a(href="#") Строительный<br> крепеж
-            .product-section__item
-              .product-section__item-img
-                +icon('ico-skin')
-              h3.product-section__item-title 
-                a(href="#") Защитные<br> пленки
-            .product-section__item
-              .product-section__item-img
-                +icon('ico-window')
-              h3.product-section__item-title 
-                a(href="#") Комплектующие<br> для монтажа окон
-    section.advantages
+    section.product-section.section
+      .product-section__slide.product-section__slide--first
+        .container
+          .product-section__wrap.flex-wrap
+            h2.common-title Продукция
+            p.common-descr Комплексные поставки на Российский рынок профессиональных материалов для монтажа кровли и окон
+            .product-section__products.flex-wrap
+              .product-section__item
+                .product-section__item-img
+                  +icon('ico-roof')
+                h3.product-section__item-title 
+                  a(href="#") Комплектующие<br> для кровли
+              .product-section__item
+                .product-section__item-img
+                  +icon('ico-fixture')
+                h3.product-section__item-title 
+                  a(href="#") Строительный<br> крепеж
+              .product-section__item
+                .product-section__item-img
+                  +icon('ico-skin')
+                h3.product-section__item-title 
+                  a(href="#") Защитные<br> пленки
+              .product-section__item
+                .product-section__item-img
+                  +icon('ico-window')
+                h3.product-section__item-title 
+                  a(href="#") Комплектующие<br> для монтажа окон
+      .product-section__slide.product-section__slide--first
+        .container
+          .product-section__wrap.flex-wrap
+            h2.common-title Другой слайд
+            p.common-descr Комплексные поставки на Российский рынок профессиональных материалов для монтажа кровли и окон
+            .product-section__products.flex-wrap
+              .product-section__item
+                .product-section__item-img
+                  +icon('ico-roof')
+                h3.product-section__item-title 
+                  a(href="#") Комплектующие<br> для кровли
+              .product-section__item
+                .product-section__item-img
+                  +icon('ico-fixture')
+                h3.product-section__item-title 
+                  a(href="#") Строительный<br> крепеж
+              .product-section__item
+                .product-section__item-img
+                  +icon('ico-skin')
+                h3.product-section__item-title 
+                  a(href="#") Защитные<br> пленки
+              .product-section__item
+                .product-section__item-img
+                  +icon('ico-window')
+                h3.product-section__item-title 
+                  a(href="#") Комплектующие<br> для монтажа окон
+    section.advantages.section
       .container
         .advantages__wrap.flex-wrap
           .advantages__titles
             h2.common-title.common-title--black преимущества Руфкомлект
-            button.advantages__btn(type="button") Начать сотрудничество
+            button.advantages__btn(type="button" js-open-form) Начать сотрудничество
           .advantages__more.flex-wrap
             .advantages__item
               h3.advantages__item-title Лидеры отрасли
@@ -69,7 +96,7 @@ block content
               h3.advantages__item-title Широкий ассортимент
                 +icon('ico-handshake')
               p.advantages__item-descr Более 300 наименований продукции
-    section.events-section
+    section.events-section.section
       .container
         h2.events-section__title события компании
         .events-section__wrap.flex-wrap
@@ -89,4 +116,5 @@ block content
             .event-item
               h3.event-item__title 10.05.17
               p.event-item__descr Новинки! Расширение размерного ряда вытяжных заклепок!
+        
         

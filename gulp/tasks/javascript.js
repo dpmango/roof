@@ -12,6 +12,8 @@ var config      = require('../config');
 gulp.task('javascript:vendor', function() {
   return gulp.src([
       path.resolve('bower_components', 'jquery/dist/jquery.min.js'),
+      path.resolve('bower_components', 'fullpage.js/dist/jquery.fullpage.min.js'),
+      path.resolve('bower_components', 'slick-carousel/slick/slick.min.js'),
       config.src.js + '/vendor/**/*.js'
      ])
     .pipe(plumber({ errorHandler: config.errorHandler }))
