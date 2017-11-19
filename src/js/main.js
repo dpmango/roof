@@ -58,29 +58,8 @@ $('[js-submit-form]').on('click', function(e){
 });
 
 
-// Fullpage
-$(document).ready(function() {
-	$('#fullpage').fullpage({
-    navigation: true,
-    navigationTooltips: ['01', '02', '03', '04'],
-    verticalCentered: false
-//    onLeave: function() {
-//      if ($('.product-section, .events-section').hasClass('active')) {
-//        $('.header').addClass('header--blue');
-//      } else {
-//        $('.header').removeClass('header--blue');
-//      }
-//      if ($('.advantages').hasClass('active')) {
-//        $('.header').hide();
-//      } else {
-//        $('.header').show();
-//      }
-//    }
-  });
-});
-
-// Slider
 $(document).ready(function(){
+  // Slider
   $('.product-section').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -95,4 +74,47 @@ $(document).ready(function(){
   var posLeft = $('.manufac-section__wrap').offset().left;
   $('.slick-dots').css('margin-left', posLeft - 5);
   
+  // Fullpage
+  $.scrollify({
+    section : '.section',
+    scrollbars: false,
+    easing: "easeOutExpo",
+    interstitialSection : '.footer, .events-section',
+    scrollSpeed: 1600,
+    before:function(i,panels) {
+      var ref = panels[i].attr("data-section-name");
+      $(".pagination .active").removeClass("active");
+      $(".pagination").find("a[href=\"#" + ref + "\"]").addClass("active");
+      
+      if ($('.pagination a[href*="03"]').hasClass('active')) {
+        $('.header').addClass('header--blue');
+      } else {
+        $('.header').removeClass('header--blue');
+      }
+      if ($('.pagination a[href*="04"], .pagination a[href*="05"]').hasClass('active')) {
+        $('.header').fadeOut(200)
+      } else {
+        $('.header').fadeIn(200)
+      }
+      if ($('.pagination a[href*="03"], .pagination a[href*="04"]').hasClass('active')) {
+        $('.pagination').addClass('pagination--black');
+      } else {
+        $('.pagination').removeClass('pagination--black');
+      }
+    },
+    afterRender:function() {
+      var pagination = "<ul class=\"pagination\">";
+      var activeClass = "";
+      $(".section").each(function(i) {
+        activeClass = "";
+        if(i===0) {
+          activeClass = "active";
+        }
+        pagination += "<li><a class=\"" + activeClass + "\" href=\"#" + $(this).attr("data-section-name") + "\"><span class=\"hover-text\">" + $(this).attr("data-section-name").charAt(0).toUpperCase() + $(this).attr("data-section-name").slice(1) + "</span></a></li>";
+      });
+      pagination += "</ul>";
+      $("#fullpage").append(pagination);
+      $(".pagination a").on("click",$.scrollify.move);
+    },
+  });
 });

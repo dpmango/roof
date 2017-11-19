@@ -4,7 +4,7 @@ title: Homepage
 extends shared/_layout
 block content
   main.page-main#fullpage
-    section.manufac-section.section
+    section.manufac-section.section(data-section-name="01")
       .container
         .manufac-section__wrap.flex-wrap
           h2.common-title Производство комплектующих для строительства
@@ -20,7 +20,7 @@ block content
               +icon('ico-okl')
             a.manufac-section__company(href="#")
               +icon('ico-fgl')
-    section.product-section.section
+    section.product-section.section(data-section-name="02")
       .product-section__slide.product-section__slide--first
         .container
           .product-section__wrap.flex-wrap
@@ -73,7 +73,7 @@ block content
                   +icon('ico-window')
                 h3.product-section__item-title 
                   a(href="#") Комплектующие<br> для монтажа окон
-    section.advantages.section
+    section.advantages.section(data-section-name="03")
       .container
         .advantages__wrap.flex-wrap
           .advantages__titles
@@ -96,7 +96,7 @@ block content
               h3.advantages__item-title Широкий ассортимент
                 +icon('ico-handshake')
               p.advantages__item-descr Более 300 наименований продукции
-    section.events-section.section
+    section.events-section.section(data-section-name="04")
       .container
         h2.events-section__title события компании
         .events-section__wrap.flex-wrap
