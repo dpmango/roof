@@ -1,0 +1,151 @@
+---
+title: Our team
+---
+extends shared/_layout
+block content
+  section.our-team
+    .container
+      h2.our-team__title Руководство
+      .our-team__row.flex-wrap
+        .our-team__item
+          .our-team__img
+            img(src="img/member1.jpg")
+            a.our-team__write(href="#") Написать сообщение
+          .our-team__name Иванов Алексей Вдадимирович
+          .our-team__pos Генеральный директор
+        .our-team__item
+          .our-team__img
+            img(src="img/member2.jpg")
+            a.our-team__write(href="#") Написать сообщение
+          .our-team__name Иванов Алексей Вдадимирович
+          .our-team__pos Заместитель генерального директора
+        .our-team__item
+          .our-team__img
+            img(src="img/member3.jpg")
+            a.our-team__write(href="#") Написать сообщение
+          .our-team__name Иванов Алексей Вдадимирович
+          .our-team__pos Заместитель генерального директора подразделения  крепежных изделий
+        .our-team__item
+          .our-team__img
+            img(src="img/member4.jpg")
+            a.our-team__write(href="#") Написать сообщение
+          .our-team__name Иванов Алексей Вдадимирович
+          .our-team__pos Генеральный директор
+      .our-team__row.flex-wrap
+        .our-team__item
+          .our-team__img
+            img(src="img/member1.jpg")
+            a.our-team__write(href="#") Написать сообщение
+          .our-team__name Иванов Алексей Вдадимирович
+          .our-team__pos Генеральный директор
+        .our-team__item
+          .our-team__img
+            img(src="img/member2.jpg")
+            a.our-team__write(href="#") Написать сообщение
+          .our-team__name Иванов Алексей Вдадимирович
+          .our-team__pos Заместитель генерального директора
+        .our-team__item
+          .our-team__img
+            img(src="img/member3.jpg")
+            a.our-team__write(href="#") Написать сообщение
+          .our-team__name Иванов Алексей Вдадимирович
+          .our-team__pos Заместитель генерального директора подразделения  крепежных изделий
+        .our-team__item
+          .our-team__img
+            img(src="img/member4.jpg")
+            a.our-team__write(href="#") Написать сообщение
+          .our-team__name Иванов Алексей Вдадимирович
+          .our-team__pos Генеральный директор
+      h2.our-team__title Отдел продаж
+      .our-team__row.flex-wrap
+        .our-team__item
+          .our-team__img
+            img(src="img/member1.jpg")
+            a.our-team__write(href="#") Написать сообщение
+          .our-team__name Иванов Алексей Вдадимирович
+          .our-team__pos Генеральный директор
+        .our-team__item
+          .our-team__img
+            img(src="img/member2.jpg")
+            a.our-team__write(href="#") Написать сообщение
+          .our-team__name Иванов Алексей Вдадимирович
+          .our-team__pos Заместитель генерального директора
+        .our-team__item
+          .our-team__img
+            img(src="img/member3.jpg")
+            a.our-team__write(href="#") Написать сообщение
+          .our-team__name Иванов Алексей Вдадимирович
+          .our-team__pos Заместитель генерального директора подразделения  крепежных изделий
+        .our-team__item
+          .our-team__img
+            img(src="img/member4.jpg")
+            a.our-team__write(href="#") Написать сообщение
+          .our-team__name Иванов Алексей Вдадимирович
+          .our-team__pos Генеральный директор
+      h2.our-team__title Отдел логистики
+      .our-team__row.flex-wrap
+        .our-team__item
+          .our-team__img
+            img(src="img/member1.jpg")
+            a.our-team__write(href="#") Написать сообщение
+          .our-team__name Иванов Алексей Вдадимирович
+          .our-team__pos Генеральный директор
+        .our-team__item
+          .our-team__img
+            img(src="img/member2.jpg")
+            a.our-team__write(href="#") Написать сообщение
+          .our-team__name Иванов Алексей Вдадимирович
+          .our-team__pos Заместитель генерального директора
+        .our-team__item
+          .our-team__img
+            img(src="img/member3.jpg")
+            a.our-team__write(href="#") Написать сообщение
+          .our-team__name Иванов Алексей Вдадимирович
+          .our-team__pos Заместитель генерального директора подразделения  крепежных изделий
+        .our-team__item
+          .our-team__img
+            img(src="img/member4.jpg")
+            a.our-team__write(href="#") Написать сообщение
+          .our-team__name Иванов Алексей Вдадимирович
+          .our-team__pos Генеральный директор
+          
+  section.carier
+    .container
+      h2.carier__title Хотите работать в «Руфкомплект»?
+      p.carier__descr Заполните форму ниже и отправьте нам. Мы обязательно рассмотрим ваше резюме
+      form.carier__form(action="#")
+        .carier__row.flex-wrap
+          .carier__half
+            .carier__input(js-input)
+              input(type="text" id="carier-name")
+              label.carier__placeholder(for="carier-name")
+                span Ваше имя
+          .carier__half
+            .carier__input(js-input)
+              input(type="text" id="carier-spec")
+              label.carier__placeholder(for="carier-spec")
+                span Специализация
+        .carier__row.flex-wrap
+          .carier__half
+            .carier__input(js-input)
+              input(type="text" id="carier-mail")
+              label.carier__placeholder(for="carier-mail")
+                span E-mail
+          .carier__half
+            .carier__input(js-input)
+              input(type="text" id="carier-tel")
+              label.carier__placeholder(for="carier-tel")
+                span Телефон
+        .carier__input(js-input)
+          input(type="text" id="carier-about")
+          label.carier__placeholder(for="carier-about")
+            span О себе
+        a.carier__attach(href="#") 
+          +icon('ico-clip')
+          span Приложите ваше резюме
+        .carier__row.flex-wrap
+          .carier__agree
+            input.carier__check-agree(type="checkbox" id="carier-agree")
+            label.carier__agree-label(for="carier-agree") Я принимаю
+              a(href="#") условия передачи информации
+          button.carier__btn(type="submit") Отправить

@@ -5,3 +5,5 @@ PageList:
   ready: 85
 - file: documents.html
   ready: 85
+- file: our-team.html
+  ready: 85

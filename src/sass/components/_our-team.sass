@@ -1,0 +1,174 @@
+.our-team
+  padding: 20px 0
+  &__title
+    font-size: 40px
+    margin-top: 0
+    font-family: $fontExtra
+    margin-bottom: 45px
+  &__row
+    align-items: flex-start
+    margin-left: -20px
+    margin-right: -20px
+    margin-bottom: 35px
+  &__item
+    width: 25%
+    padding-left: 20px
+    padding-right: 20px
+  &__img
+    position: relative
+    overflow: hidden
+    &:hover
+      .our-team__write
+        transform: translateY(0px)
+    img
+      display: block
+      width: 100%
+      height: auto
+  &__write
+    display: block
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    text-align: center
+    padding: 13px 0
+    font-size: 16px
+    color: $blackColor
+    text-decoration: none
+    background-color: $mainColor
+    transition: all $transitionSpeed $ease
+    transform: translateY(45px)
+  &__name
+    margin-top: 25px
+    margin-bottom: 7px
+    font-size: 18px
+    font-weight: bold
+    font-family: $fontBold
+  &__pos
+    font-size: 16px
+    margin: 0
+    color: #727272
+    
+.carier
+  padding-top: 50px
+  padding-bottom: 80px
+  background-image: linear-gradient(to top right, #00395c, #1c5578)
+  &__title
+    font-size: 35px
+    margin-top: 0
+    margin-bottom: 25px
+    padding-bottom: 35px
+    position: relative
+    font-weight: 400
+    color: $whiteColor
+    &:after
+      content: ''
+      position: absolute
+      bottom: 2px
+      left: 0
+      width: 80px
+      height: 2px
+      background-color: $mainColor
+  &__descr
+    font-size: 17px
+    color: $whiteColor
+    margin-top: 0
+    margin-bottom: 70px
+  &__form
+    width: 100%
+    max-width: 670px
+  &__row
+    justify-content: space-between
+  &__half
+    width: 49%
+  &__input
+    display: block
+    width: 100%
+    position: relative
+    margin-bottom: 35px
+    input
+      width: 100%
+      display: block
+      background-color: transparent
+      border: 0
+      border-bottom: 1px solid #2d5d7a
+      font-size: 17px
+      line-height: 17px
+      color: #d0d0d0
+      padding: 17px 0px
+      font-weight: 400
+      transition: all $transitionSpeed $ease
+      &:focus
+        border-color: $whiteColor
+  &__placeholder
+    position: absolute
+    width: 100%
+    min-height: 100%
+    top: 0
+    left: 0
+    font-size: 17px
+    line-height: 17px
+    color: #d0d0d0
+    padding: 17px 0px
+    display: flex
+    align-items: center
+    font-weight: 400
+    span 
+    	display: block
+    	transition: all $transitionSpeed $ease
+    	transform-origin: left top
+    	width: 100%
+    &.is-active 
+    	span 
+        font-size: 13px
+        color: $whiteColor
+        transform: translateY(-13px)
+  &__attach
+    display: inline-block
+    margin-bottom: 20px
+    text-decoration: none
+    color: #d4ed00
+    position: relative
+    padding-left: 35px
+    .ico
+      position: absolute
+      top: 50%
+      left: 0
+      transform: translateY(-50%)
+      font-size: 22px
+    span
+      border-bottom: 1px dotted #d4ed00
+  &__check-agree
+    display: none
+  &__agree-label
+    color: $whiteColor
+    position: relative
+    font-size: 15px
+    padding-left: 40px
+    &:before
+      content: ''
+      position: absolute
+      top: 50%
+      left: 0
+      border: 1px solid $whiteColor
+      width: 20px
+      height: 20px
+      transform: translateY(-50%)
+    &:hover
+      cursor: pointer
+    a
+      color: $whiteColor
+      margin-left: 4px
+      text-decoration: none
+      border-bottom: 1px dotted #2d5d7a
+  &__btn
+    padding: 15px 50px
+    text-align: center
+    border-radius: 0
+    border: 0
+    background-color: #d1d1d1
+    color: #494949
+    transition: all $transitionSpeed $ease
+    &:hover
+      background-color: $mainColor
+      cursor: pointer

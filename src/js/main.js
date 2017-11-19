@@ -54,7 +54,7 @@ $('[js-open-mobile]').on('click', function(e){
 
 // Плавный плейсхолдеры
 $('[js-input] input').focus(function () {
-		$(this).next('.callback-form__placeholder').addClass('is-active');
+		$(this).next('[class*=placeholder]').addClass('is-active');
 		$(this).css({
 			"paddingTop": "22px",
 			"paddingBottom": "12px"
@@ -62,7 +62,7 @@ $('[js-input] input').focus(function () {
 });
 $('[js-input] input').focusout(function () {
 		if ($(this).val() === "") {
-			$(this).next('.callback-form__placeholder').removeClass('is-active');
+			$(this).next('[class*=placeholder]').removeClass('is-active');
 			$(this).css({
 				"paddingTop": "17px",
 				"paddingBottom": "17px"
