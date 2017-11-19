@@ -1,0 +1,125 @@
+.doc-section
+  padding: 20px 0
+  &__title
+    font-size: 40px
+    line-height: 42px
+    margin-top: 0
+    margin-bottom: 45px
+    font-family: $fontExtra
+    text-transform: uppercase
+    font-weight: 900
+  &__tabs
+    margin-bottom: 65px
+    max-width: 80%
+  &__tab
+    text-decoration: none
+    display: inline-block
+    vertical-align: middle
+    margin-right: 12px
+    margin-bottom: 12px
+    font-size: 17px
+    padding: 12px 20px
+    background-color: $inputBg
+    color: #767676
+    transition: all $transitionSpeed $ease
+    &:hover,
+    &.is-active
+      color: $whiteColor
+      background-color: $main2Color
+    &:last-child
+      margin-right: 0
+  &__item
+    align-items: flex-start
+    max-width: 80%
+    margin-bottom: 60px
+  &__aside
+    width: 35%
+    .selectric-wrapper
+      max-width: 75%
+  &__archive
+    color: #767676
+    font-size: 15px
+    display: block
+    padding-left: 20px
+    position: relative
+    margin-top: 40px
+    transition: all $transitionSpeed $ease
+    .ico
+      color: $mainColor
+      position: absolute
+      top: 50%
+      left: 0
+      transform: translateY(-50%)
+    &:hover
+      color: $mainColor
+  &__main
+    padding-left: 15px
+    width: 65%
+  &__subtitle
+    font-size: 29px
+    font-weight: 400
+    margin-top: 0
+    margin-bottom: 35px
+  &__document
+    display: block
+    position: relative
+    text-decoration: none
+    padding: 20px 0
+    padding-left: 55px
+    color: $main2Color
+    border-bottom: 1px solid $inputBorder
+    &:hover
+      text-decoration: underline
+    svg
+      width: 30px
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translateY(-50%)
+      
++r($custom-wide)
+  .doc-section
+    &__tabs
+      max-width: 100%
+    &__item
+      max-width: 100%
++r($desktop)
+  .doc-section
+    &__item
+      flex-direction: column
+    &__aside
+      width: 100%
+      margin-bottom: 20px
+      .selectric-wrapper
+        max-width: 80%
+    &__main
+      width: 100%
+      padding-left: 0
+    &__subtitle
+      margin-bottom: 20px
++r($tablet)
+  .doc-section
+    &__title
+      font-size: 29px
+      margin-bottom: 23px
+    &__tabs
+      margin-bottom: 35px
+    &__tab
+      display: none
+      &--all
+        display: inline-block
+        font-size: 15px
+        background-color: transparent !important
+        color: $main2Color !important
+        padding: 0
+        border-bottom: 1px dashed $main2Color
+    &__subtitle
+      font-size: 19px
+    &__item
+      margin-bottom: 40px
+    &__document
+      padding: 10px 0
+      padding-left: 45px
+      font-size: 14px
+    &__archive
+      margin-top: 20px

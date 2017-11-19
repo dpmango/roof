@@ -2,4 +2,6 @@ ProjectTitle: Roof
 
 PageList:
 - file: homepage.html
-  ready: 0
+  ready: 85
+- file: documents.html
+  ready: 85

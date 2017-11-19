@@ -14,6 +14,7 @@ gulp.task('javascript:vendor', function() {
       path.resolve('bower_components', 'jquery/dist/jquery.min.js'),
       path.resolve('bower_components', 'scrollify/jquery.scrollify.min.js'),
       path.resolve('bower_components', 'slick-carousel/slick/slick.min.js'),
+      path.resolve('bower_components', 'jquery-selectric/public/jquery.selectric.min.js'),
       config.src.js + '/vendor/**/*.js'
      ])
     .pipe(plumber({ errorHandler: config.errorHandler }))
