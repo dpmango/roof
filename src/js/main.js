@@ -1,3 +1,8 @@
+$(window).on('load', function() {
+  $('#status').fadeOut();
+  $('#preloader').delay(350).fadeOut('slow');
+})
+
 $(document).ready(function(){
   
 /////////
@@ -126,6 +131,12 @@ $('[js-submit-form]').on('click', function(e){
         var ref = panels[i].attr("data-section-name");
         $(".pagination .active").removeClass("active");
         $(".pagination").find("a[href=\"#" + ref + "\"]").addClass("active");
+        
+        if ($('.pagination a[href*="05"]').hasClass('active')) {
+          $('.pagination').addClass('pagination--hidden');
+        } else {
+          $('.pagination').removeClass('pagination--hidden');
+        }
         
         if ($('.pagination a[href*="03"]').hasClass('active')) {
           $('.header').removeClass('header--white');
