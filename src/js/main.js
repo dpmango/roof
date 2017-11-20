@@ -276,6 +276,28 @@ $('[js-submit-form]').on('click', function(e){
   /////////
   $('[js-select]').selectric();
   
+  $('.doc-section__tab').on('click', function(e){
+    e.preventDefault();
+    $('.doc-section__tab').removeClass('is-active');
+		$(this).addClass('is-active');
+		var dataId = $(this).attr('data-id');
+    if (dataId == 'all') {
+      $('.doc-section__item').addClass('is-active');
+    } else {
+		  $('.doc-section__item').removeClass('is-active');
+		  $('.doc-section__item#' + dataId).addClass('is-active');
+    }
+  });
+  
+  $('.doc-section__tabs select').on('change', function(){
+    var dataOpt = $(this).find('option:selected').attr('data-option')
+    if (dataOpt == 'all') {
+      $('.doc-section__item').addClass('is-active');
+    } else {
+		  $('.doc-section__item').removeClass('is-active');
+		  $('.doc-section__item#' + dataOpt).addClass('is-active');
+    }
+  })
 });
 
 

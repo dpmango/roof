@@ -11,6 +11,10 @@
   &__tabs
     margin-bottom: 65px
     max-width: 80%
+    .doc-section__select
+      display: none
+    .selectric-doc-section__select
+      display: none
   &__tab
     text-decoration: none
     display: inline-block
@@ -32,6 +36,9 @@
     align-items: flex-start
     max-width: 80%
     margin-bottom: 60px
+    display: none
+    &.is-active
+      display: flex
   &__aside
     width: 35%
     .selectric-wrapper
@@ -101,18 +108,27 @@
   .doc-section
     &__title
       font-size: 29px
-      margin-bottom: 23px
+      margin-bottom: 5px
     &__tabs
       margin-bottom: 35px
+      .selectric-doc-section__select
+        display: block
+        max-width: 80%
+      .selectric
+        border: 0
+      .label
+        display: inline-block
+        padding: 0
+        font-size: 15px
+        color: $main2Color
+        border-bottom: 1px dashed $main2Color
+        height: auto
+        &:before
+          display: none
     &__tab
       display: none
-      &--all
-        display: inline-block
-        font-size: 15px
-        background-color: transparent !important
-        color: $main2Color !important
-        padding: 0
-        border-bottom: 1px dashed $main2Color
+    &__select
+      display: block
     &__subtitle
       font-size: 19px
     &__item

@@ -7,13 +7,19 @@ block content
     .container
       h1.doc-section__title Сертификаты
       .doc-section__tabs
-        a.doc-section__tab.doc-section__tab--all.is-active(href="#") Все сертификаты
-        a.doc-section__tab(href="#") Кровельный крепеж и уплотнители
-        a.doc-section__tab(href="#") Изоляционные материалы Folder и Optima
-        a.doc-section__tab(href="#") Общестроительный крепеж
-        a.doc-section__tab(href="#") Защитная пленка
-        a.doc-section__tab(href="#") Комплектующие для монтажа окон
-      .doc-section__item.flex-wrap
+        a.doc-section__tab.is-active(href="#" data-id="all") Все сертификаты
+        a.doc-section__tab(href="#" data-id="tab1") Кровельный крепеж и уплотнители
+        a.doc-section__tab(href="#" data-id="tab2") Изоляционные материалы Folder и Optima
+        a.doc-section__tab(href="#" data-id="tab3") Общестроительный крепеж
+        a.doc-section__tab(href="#" data-id="tab4") Защитная пленка
+        a.doc-section__tab(href="#" data-id="tab5") Комплектующие для монтажа окон
+        select.doc-section__select(js-select)
+          option(data-option="all") Все сертификаты
+          option(data-option="tab1") Кровельный крепеж и уплотнители
+          option(data-option="tab2") Изоляционные материалы Folder и Optima
+          option(data-option="tab4") Защитная пленка
+          option(data-option="tab5") Комплектующие для монтажа окон
+      .doc-section__item.flex-wrap.is-active#tab1
         .doc-section__aside
           h2.doc-section__subtitle Кровельный крепеж и уплотнители
           select.doc-section__select(js-select)
@@ -41,7 +47,7 @@ block content
             include ../icons/pdf.svg
           a.doc-section__document(href="#") Отказное письмо, кровельные манжеты и проходки MasterFlash
             include ../icons/pdf.svg
-      .doc-section__item.flex-wrap
+      .doc-section__item.flex-wrap.is-active#tab2
         .doc-section__aside
           h2.doc-section__subtitle Изоляционные материалы Folder и Optima
           select.doc-section__select(js-select)
@@ -71,7 +77,7 @@ block content
             include ../icons/pdf.svg
           a.doc-section__document(href="#") Отказное письмо, кровельные манжеты и проходки MasterFlash
             include ../icons/pdf.svg
-      .doc-section__item.flex-wrap
+      .doc-section__item.flex-wrap.is-active#tab4
         .doc-section__aside
           h2.doc-section__subtitle Защитная пленка
           a.doc-section__archive(href="#") Скачать архивом
@@ -95,7 +101,7 @@ block content
             include ../icons/pdf.svg
           a.doc-section__document(href="#") Отказное письмо, кровельные манжеты и проходки MasterFlash
             include ../icons/pdf.svg
-      .doc-section__item.flex-wrap
+      .doc-section__item.flex-wrap.is-active#tab5
         .doc-section__aside
           h2.doc-section__subtitle Комплектующие для монтажа окон
           a.doc-section__archive(href="#") Скачать архивом
