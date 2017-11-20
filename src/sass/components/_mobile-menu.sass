@@ -3,16 +3,17 @@
   position: fixed
   overflow-y: scroll
   min-height: 100vh
+  height: 100%
   left: 0
-  top: 99px
+  top: 59px
   width: 100%
   background-color: $whiteColor
   z-index: 10
-  padding-bottom: 30px
+  padding-bottom: 80px
   &__link
     display: block
-    font-size: 37px
-    padding: 30px
+    font-size: 18px
+    padding: 18px 30px
     font-family: $fontBold
     text-decoration: none
     color: $blackColor
@@ -23,31 +24,30 @@
         top: 50%
         transform: translateY(-50%)
         right: 30px
-        font-size: 17px
+        font-size: 15px
         color: $textColor
       &.is-active
         background-color: #dff300
   &__products
-    display: none
-    padding: 30px 30px 30px 50px
+    padding: 18px 30px 18px 45px
     background-color: $inputBg
     a
-      font-size: 30px
+      font-size: 15px
       color: $inputText
       text-decoration: none
       display: block
-      margin-bottom: 30px
+      margin-bottom: 15px
       &:last-child
         margin-bottom: 0
   &__tel
     display: block
     text-decoration: none
     font-weight: 300
-    font-size: 37px
+    font-size: 18px
     position: relative
     color: #6c6c6c
-    margin: 30px 0
-    padding-left: 80px
+    margin: 15px 0
+    padding-left: 55px
     padding-right: 30px
     .icon
       position: absolute
@@ -56,44 +56,20 @@
       transform: translateY(-50%)
   &__bid
     text-align: center
-    padding: 12px 40px
+    padding: 6px 20px
     border: 1px solid #6c6c6c
     color: #6c6c6c
-    font-size: 33px
+    font-size: 16px
     background-color: transparent
     margin-left: 30px
     margin-right: 30px
     border-radius: 0
-    margin-bottom: 50px
+    margin-bottom: 25px
     font-weight: 300
   &__copy,
   &__conf
-    font-size: 25px
+    font-size: 13px
     color: #6c6c6c
     display: block
-    margin: 10px 0
+    margin: 5px 0
     padding: 0 30px
-    
-+r($mobile)
-  .mobile-menu
-    top: 79px
-    &__link
-      font-size: 28px
-      padding: 15px
-    &__products
-      padding: 15px 15px 15px 35px
-      a
-        font-size: 22px
-    &__tel
-      font-size: 28px
-      padding-left: 65px
-      .icon
-        left: 15px
-    &__bid
-      margin-right: 15px
-      margin-left: 15px
-      font-size: 22px
-      margin-bottom: 35px
-    &__copy,
-    &__conf
-      font-size: 18px
