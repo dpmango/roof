@@ -3,6 +3,9 @@
   &__companies
     padding: 50px 0
     border-bottom: 1px solid $footerBorder
+    .flex-wrap
+      padding-left: 15px
+      padding-right: 15px
   &__company
     margin-right: 55px
     display: inline-block
@@ -162,6 +165,11 @@
       
 +r($tablet)
   .footer
+    &__companies
+      .slick-prev
+        left: -10px
+      .slick-next
+        right: -10px
     &__copy
       .flex-wrap
         flex-direction: column
@@ -169,4 +177,4 @@
     &__item
       &-title
         width: calc(100% + 40px)
-        margin-left: -20px
+        margin-left: -25px

@@ -1,6 +1,8 @@
+// Preloader
 $(window).on('load', function() {
   $('#status').fadeOut();
   $('#preloader').delay(350).fadeOut('slow');
+  $('body').removeClass('no-scroll');
 })
 
 $(document).ready(function(){
@@ -74,6 +76,8 @@ $('[js-input] input').focusout(function () {
 $('[js-open-form]').on('click', function(e){
   e.preventDefault();
   $('body').addClass('no-scroll');
+  $('[js-open-mobile]').removeClass('is-active');
+  $('.mobile-menu').slideUp(300);
   $(this).addClass('is-active');
   $('.callback-form').addClass('is-active');
 });
@@ -94,7 +98,7 @@ $('[js-submit-form]').on('click', function(e){
 });
   
   
-  // Slider
+  // Слайдер продукция
   $('.product-section').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -114,69 +118,74 @@ $('[js-submit-form]').on('click', function(e){
   ]
   });
   
+  // Выравнивание точек для слайдера
   if ($('.manufac-section__wrap').length > 0) {
     var posLeft = $('.manufac-section__wrap').offset().left;
-    $('.slick-dots').css('margin-left', posLeft - 5);
+    $('.slick-dots').css('padding-left', posLeft - 5);
   }
   
-  if ($('body').hasClass('homepage-body') && $(window).width() > 991) {
-    // Fullpage
-    $.scrollify({
-      section : '.section',
-      scrollbars: false,
-      easing: "easeOutExpo",
-      interstitialSection : '.footer, .events-section',
-      scrollSpeed: 1600,
-      before:function(i,panels) {
-        var ref = panels[i].attr("data-section-name");
-        $(".pagination .active").removeClass("active");
-        $(".pagination").find("a[href=\"#" + ref + "\"]").addClass("active");
-        
-        if ($('.pagination a[href*="05"]').hasClass('active')) {
-          $('.pagination').addClass('pagination--hidden');
-        } else {
-          $('.pagination').removeClass('pagination--hidden');
-        }
-        
-        if ($('.pagination a[href*="03"]').hasClass('active')) {
-          $('.header').removeClass('header--white');
-        } else {
-          $('.header').addClass('header--white');
-        }
-        if ($('.pagination a[href*="04"], .pagination a[href*="05"]').hasClass('active')) {
-          $('.header').fadeOut(200)
-        } else {
-          $('.header').fadeIn(200)
-        }
-        if ($('.pagination a[href*="03"], .pagination a[href*="04"]').hasClass('active')) {
-          $('.pagination').addClass('pagination--black');
-        } else {
-          $('.pagination').removeClass('pagination--black');
-        }
-      },
-      afterRender:function() {
-        var pagination = "<ul class=\"pagination\">";
-        var activeClass = "";
-        $(".section").each(function(i) {
-          activeClass = "";
-          if(i===0) {
-            activeClass = "active";
-          }
-          pagination += "<li><a class=\"" + activeClass + "\" href=\"#" + $(this).attr("data-section-name") + "\"><span class=\"hover-text\">" + $(this).attr("data-section-name").charAt(0).toUpperCase() + $(this).attr("data-section-name").slice(1) + "</span></a></li>";
+  // Fullpage scroll
+  if ($('body').hasClass('homepage-body')) {
+      if ($(window).width() > 991) {
+        $.scrollify({
+          section : '.section',
+          scrollbars: false,
+          easing: "easeOutExpo",
+          interstitialSection : '.footer, .events-section',
+          scrollSpeed: 1600,
+          before:function(i,panels) {
+            var ref = panels[i].attr("data-section-name");
+            $(".pagination .active").removeClass("active");
+            $(".pagination").find("a[href=\"#" + ref + "\"]").addClass("active");
+            
+            // Меняем стили у пагинации и хедера
+            if ($('.pagination a[href*="05"]').hasClass('active')) {
+              $('.pagination').addClass('pagination--hidden');
+            } else {
+              $('.pagination').removeClass('pagination--hidden');
+            }
+            
+            if ($('.pagination a[href*="03"]').hasClass('active')) {
+              $('.header').removeClass('header--white');
+            } else {
+              $('.header').addClass('header--white');
+            }
+            if ($('.pagination a[href*="04"], .pagination a[href*="05"]').hasClass('active')) {
+              $('.header').fadeOut(200)
+            } else {
+              $('.header').fadeIn(200)
+            }
+            if ($('.pagination a[href*="03"], .pagination a[href*="04"]').hasClass('active')) {
+              $('.pagination').addClass('pagination--black');
+            } else {
+              $('.pagination').removeClass('pagination--black');
+            }
+          },
+          afterRender:function() {
+            var pagination = "<ul class=\"pagination\">";
+            var activeClass = "";
+            $(".section").each(function(i) {
+              activeClass = "";
+              if(i===0) {
+                activeClass = "active";
+              }
+              pagination += "<li><a class=\"" + activeClass + "\" href=\"#" + $(this).attr("data-section-name") + "\"><span class=\"hover-text\">" + $(this).attr("data-section-name").charAt(0).toUpperCase() + $(this).attr("data-section-name").slice(1) + "</span></a></li>";
+            });
+            pagination += "</ul>";
+            $("#fullpage").append(pagination);
+            $(".pagination a").on("click",$.scrollify.move);
+            $('.header').addClass('header--white')
+          },
         });
-        pagination += "</ul>";
-        $("#fullpage").append(pagination);
-        $(".pagination a").on("click",$.scrollify.move);
-        $('.header').addClass('header--white')
-      },
-    });
+      }
   } else {
+    // Для остальных страниц
     $('.footer').removeClass('section');
     $('.footer').removeAttr('data-section-name');
   }
   
   
-      // Events slider mobile
+  // Events slider mobile
   var _eventsSlick = $('.events-section__wrap');
   var eventsSlickOptions = {
       slidesToShow: 1,
@@ -190,7 +199,7 @@ $('[js-submit-form]').on('click', function(e){
       adaptiveHeight: true
     }
   if ($(window).width() < 992) { 
-  _eventsSlick.slick(eventsSlickOptions);
+    _eventsSlick.slick(eventsSlickOptions);
   }
   
     $(window).resize(300, function(e){
@@ -232,7 +241,7 @@ $('[js-submit-form]').on('click', function(e){
       ]
     }
     if ($(window).width() < 992) {
-    _footerSlick.slick(footerSlickOptions);
+      _footerSlick.slick(footerSlickOptions);
     }
   
     $(window).resize(300, function(e){
@@ -247,38 +256,40 @@ $('[js-submit-form]').on('click', function(e){
       }
   });
   
-  
+  // Footer mobile
   if ($(window).width() < 992) {
-    //$.scrollify.destroy();
-     // Footer mobile
-      $('.footer__item-title').on('click', function(){
-        if ($(this).hasClass('is-active')) {
-          $(this).next('ul').slideUp(200);
-          $(this).removeClass('is-active');
-        } else {
-          $(this).next('ul').slideDown(200);
-          $(this).addClass('is-active');
-        }
-      });    
+    $.scrollify.destroy();
+    $('.footer__item-title').on('click', function(){
+      if ($(this).hasClass('is-active')) {
+        $(this).next('ul').slideUp(200);
+        $(this).removeClass('is-active');
+      } else {
+        $(this).next('ul').slideDown(200);
+        $(this).addClass('is-active');
+      }
+    });    
   }
   
   
-/////////
-/// Documents
-/////////
+  /////////
+  /// Documents page
+  /////////
   $('[js-select]').selectric();
   
 });
 
-$(window).resize(function(){
+
+// Resize functions
+$(window).resize(300, function(){
+  // Выравнивание точек для слайдера
   if ($('.manufac-section__wrap').length > 0) {
     var posLeft = $('.manufac-section__wrap').offset().left;
-    $('.slick-dots').css('margin-left', posLeft - 5);
+    $('.slick-dots').css('padding-left', posLeft - 5);
   }
   
   if ($(window).width() < 992) {
     $.scrollify.destroy();
-     // Footer mobile
+      // Footer mobile
       $('.footer__item-title').on('click', function(){
         if ($(this).hasClass('is-active')) {
           $(this).next('ul').slideUp(200);
@@ -289,51 +300,59 @@ $(window).resize(function(){
         }
       });
   } else {
-    if ($('body').hasClass('homepage-body')) {
     // Fullpage
-    $.scrollify({
-      section : '.section',
-      scrollbars: false,
-      easing: "easeOutExpo",
-      interstitialSection : '.footer, .events-section',
-      scrollSpeed: 1600,
-      before:function(i,panels) {
-        var ref = panels[i].attr("data-section-name");
-        $(".pagination .active").removeClass("active");
-        $(".pagination").find("a[href=\"#" + ref + "\"]").addClass("active");
-        
-        if ($('.pagination a[href*="03"]').hasClass('active')) {
-          $('.header').removeClass('header--white');
-        } else {
-          $('.header').addClass('header--white');
-        }
-        if ($('.pagination a[href*="04"], .pagination a[href*="05"]').hasClass('active')) {
-          $('.header').fadeOut(200)
-        } else {
-          $('.header').fadeIn(200)
-        }
-        if ($('.pagination a[href*="03"], .pagination a[href*="04"]').hasClass('active')) {
-          $('.pagination').addClass('pagination--black');
-        } else {
-          $('.pagination').removeClass('pagination--black');
-        }
-      },
-      afterRender:function() {
-        var pagination = "<ul class=\"pagination\">";
-        var activeClass = "";
-        $(".section").each(function(i) {
-          activeClass = "";
-          if(i===0) {
-            activeClass = "active";
-          }
-          pagination += "<li><a class=\"" + activeClass + "\" href=\"#" + $(this).attr("data-section-name") + "\"><span class=\"hover-text\">" + $(this).attr("data-section-name").charAt(0).toUpperCase() + $(this).attr("data-section-name").slice(1) + "</span></a></li>";
+    if ($('body').hasClass('homepage-body')) {
+      if ($(window).width() > 991) {
+        $.scrollify({
+          section : '.section',
+          scrollbars: false,
+          easing: "easeOutExpo",
+          interstitialSection : '.footer, .events-section',
+          scrollSpeed: 1600,
+          before:function(i,panels) {
+            var ref = panels[i].attr("data-section-name");
+            $(".pagination .active").removeClass("active");
+            $(".pagination").find("a[href=\"#" + ref + "\"]").addClass("active");
+            
+            if ($('.pagination a[href*="05"]').hasClass('active')) {
+              $('.pagination').addClass('pagination--hidden');
+            } else {
+              $('.pagination').removeClass('pagination--hidden');
+            }
+            
+            if ($('.pagination a[href*="03"]').hasClass('active')) {
+              $('.header').removeClass('header--white');
+            } else {
+              $('.header').addClass('header--white');
+            }
+            if ($('.pagination a[href*="04"], .pagination a[href*="05"]').hasClass('active')) {
+              $('.header').fadeOut(200)
+            } else {
+              $('.header').fadeIn(200)
+            }
+            if ($('.pagination a[href*="03"], .pagination a[href*="04"]').hasClass('active')) {
+              $('.pagination').addClass('pagination--black');
+            } else {
+              $('.pagination').removeClass('pagination--black');
+            }
+          },
+          afterRender:function() {
+            var pagination = "<ul class=\"pagination\">";
+            var activeClass = "";
+            $(".section").each(function(i) {
+              activeClass = "";
+              if(i===0) {
+                activeClass = "active";
+              }
+              pagination += "<li><a class=\"" + activeClass + "\" href=\"#" + $(this).attr("data-section-name") + "\"><span class=\"hover-text\">" + $(this).attr("data-section-name").charAt(0).toUpperCase() + $(this).attr("data-section-name").slice(1) + "</span></a></li>";
+            });
+            pagination += "</ul>";
+            $("#fullpage").append(pagination);
+            $(".pagination a").on("click",$.scrollify.move);
+            $('.header').addClass('header--white')
+          },
         });
-        pagination += "</ul>";
-        $("#fullpage").append(pagination);
-        $(".pagination a").on("click",$.scrollify.move);
-        $('.header').addClass('header--white')
-      },
-    });
+      }
     } else {
       $('.footer').removeClass('section');
       $('.footer').removeAttr('data-section-name');
