@@ -115,7 +115,7 @@ $('[js-submit-form]').on('click', function(e){
         dots: false
       }
     }
-  ]
+    ]
   });
   
   // Выравнивание точек для слайдера
