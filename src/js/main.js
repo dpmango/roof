@@ -258,7 +258,7 @@ $('[js-submit-form]').on('click', function(e){
   
   // Footer mobile
   if ($(window).width() < 992) {
-    $.scrollify.destroy();
+    //$.scrollify.destroy();
     $('.footer__item-title').on('click', function(){
       if ($(this).hasClass('is-active')) {
         $(this).next('ul').slideUp(200);
@@ -280,7 +280,7 @@ $('[js-submit-form]').on('click', function(e){
 
 
 // Resize functions
-$(window).resize(300, function(){
+$(window).resize(function(){
   // Выравнивание точек для слайдера
   if ($('.manufac-section__wrap').length > 0) {
     var posLeft = $('.manufac-section__wrap').offset().left;
