@@ -13,9 +13,10 @@
   a
     color: $whiteColor
     text-decoration: none
-    padding-right: 50px
+    padding-right: 60px
     position: relative
     transition: all $transitionSpeed $ease
+    font-size: 17px
     &:before
       content: ''
       position: absolute
@@ -23,14 +24,14 @@
       transform: translateY(-50%)
       transition: all $transitionSpeed $ease
       left: 25px
-      height: 2px
-      width: 25px
-      background-color: $whiteColor
+      height: 1px
+      width: 30px
+      background-color: transparentize($whiteColor, .3)
     &:hover,
     &.active
       &:before
         background-color: $mainColor
-        width: 50px
+        width: 60px
       .hover-text
         opacity: 1
         visibility: visible

@@ -1,7 +1,7 @@
 .footer
   background-color: $footerBg
   &__companies
-    padding: 50px 0
+    padding: 40px 0
     border-bottom: 1px solid $footerBorder
     .flex-wrap
       padding-left: 15px
@@ -10,8 +10,10 @@
     margin-right: 55px
     display: inline-block
     color: #a7a7a7
-    font-size: 45px
+    font-size: 48px
     transition: all $transitionSpeed $ease
+    .ico-optima
+      font-size: 52px
     &:hover
       color: $main2Color
       cursor: pointer
@@ -58,6 +60,13 @@
     font-size: 27px
     text-align: right
     margin-bottom: 20px
+    color: $blackColor
+    text-decoration: none
+    span
+      border-bottom: 1px solid transparent
+      transition: all $transitionSpeed $ease
+    &:hover span
+      border-bottom: 1px solid $blackColor
   &__mail
     font-size: 16px
     display: inline-block
@@ -93,6 +102,8 @@
   &__dev
     display: inline-block
     vertical-align: middle
+    text-decoration: none
+    color: $blackColor
     i
       vertical-align: middle
       margin-left: 4px
@@ -145,6 +156,7 @@
         font-size: 13px
     &__tel
       text-align: left
+      text-decoration: none
       margin-bottom: 7px
       font-family: $fontExtra
       font-size: 17px

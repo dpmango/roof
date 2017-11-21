@@ -13,12 +13,14 @@
   &__link
     display: block
     font-size: 18px
-    padding: 18px 30px
+    padding: 18px 25px
     font-family: $fontBold
     text-decoration: none
     color: $blackColor
     position: relative
     &--prod
+      padding-left: 30px
+      padding-right: 30px
       .ico
         position: absolute
         top: 50%
@@ -27,6 +29,12 @@
         font-size: 15px
         color: $textColor
       &.is-active
+        background-color: #dff300
+    span
+      padding: 5px
+      transition: all $transitionSpeed $ease
+    &:hover
+      span
         background-color: #dff300
   &__products
     padding: 18px 30px 18px 45px
@@ -51,6 +59,11 @@
     margin: 15px 0
     padding-left: 55px
     padding-right: 30px
+    span
+      border-bottom: 1px solid transparent
+      transition: all $transitionSpeed $ease
+    &:hover span
+      border-color: #6c6c6c
     .icon
       position: absolute
       top: 50%
