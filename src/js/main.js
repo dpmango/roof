@@ -297,7 +297,24 @@ $('[js-submit-form]').on('click', function(e){
 		  $('.doc-section__item').removeClass('is-active');
 		  $('.doc-section__item#' + dataOpt).addClass('is-active');
     }
-  })
+  });
+  
+   // Написать сообщение
+  $('[js-write-form]').on('click', function(e){
+    e.preventDefault();
+    $('body').addClass('no-scroll');
+    $('[js-open-mobile]').removeClass('is-active');
+    $('.mobile-menu').slideUp(300);
+    $(this).addClass('is-active');
+    $('.write-form').addClass('is-active');
+  });
+  
+  $('[js-close-form]').on('click', function(e){
+    e.preventDefault();
+    $('body').removeClass('no-scroll');
+    $(this).removeClass('is-active');
+    $('.write-form').removeClass('is-active');
+  });
 });
 
 

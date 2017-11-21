@@ -1,0 +1,34 @@
+.write-form
+  button.callback-form__close(type="button" js-close-form)
+    +icon('ico-close')
+  form.callback-form__form(action="#")
+    h2.callback-form__title Написать сообщение
+    .callback-form__input(js-input)
+      input(type="text" id="write-name")
+      label.callback-form__placeholder(for="write-name")
+            span Ваше имя
+    .callback-form__input(js-input)
+      input(type="text" id="write-city")
+      label.callback-form__placeholder(for="write-city")
+            span Город
+    .callback-form__row.flex-wrap
+      .callback-form__half
+        .callback-form__input(js-input)
+          input(type="text" id="write-tel")
+          label.callback-form__placeholder(for="write-tel")
+                span Телефон
+      .callback-form__half
+        .callback-form__input(js-input)
+          input(type="text" id="write-mail")
+          label.callback-form__placeholder(for="write-mail")
+                span E-mail
+    .callback-form__input(js-input)
+      input(type="text" id="write-product")
+      label.callback-form__placeholder(for="write-product")
+            span Сообщение
+    .callback-form__buttons.flex-wrap
+      .callback-form__agree
+        input.callback-form__check(type="checkbox" id="check-write" checked)
+        label.callback-form__agree-label(for="check-write") Я принимаю
+          a(href="#") условия передачи информации
+      button.callback-form__btn(type="submit") Отправить
