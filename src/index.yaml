@@ -7,3 +7,5 @@ PageList:
   ready: 85
 - file: our-team.html
   ready: 85
+- file: reviews.html
+  ready: 85
