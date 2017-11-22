@@ -270,12 +270,17 @@
         background-color: #969696
         border-color: #cacaca
   .event-item
+    background-image: none
     margin-bottom: 0
     padding: 25px
+    height: 100%
     &--last
       display: none
     &--full
       height: auto
+    &--image
+      &:before
+        display: none
       
 +r($tablet)
   .manufac-section

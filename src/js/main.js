@@ -223,6 +223,16 @@ $('[js-submit-form]').on('click', function(e){
         return _eventsSlick.slick(eventsSlickOptions);
       }
     });
+  _eventsSlick.on('beforeChange', function(){
+      var maxH = 0;
+      $('.event-item').each(function () {
+         var elemHeight = parseInt($(this).height());
+         if(elemHeight > maxH) {
+            maxH = elemHeight;
+         };
+       });
+      $('.event-item').height(maxH);
+    });
   
   // Footer companies slider mobile
    var _footerSlick = $('.footer__companies .flex-wrap');
@@ -344,12 +354,14 @@ $(window).resize(function(){
     $.scrollify.disable();
     $('.header').removeClass('header--white');
   } else {
+    $('.event-item').removeAttr('style');
     $('.footer__item-title').removeClass('is-active');
     $('.footer__item-title').next('ul').css('display', 'block');
     $('.header').addClass('header--white');
     // Fullpage
     if ($('body').hasClass('homepage-body')) {
       if ($(window).width() > 991) {
+        $.scrollify.enable();
         $.scrollify({
           updateHash: false,
           section : '.section',
