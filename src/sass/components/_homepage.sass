@@ -10,6 +10,7 @@
     height: 100vh
   &__company
     display: inline-block
+    vertical-align: middle
     margin-right: 30px
     color: #a7a7a7
     font-size: 45px
@@ -19,6 +20,8 @@
       cursor: pointer
     &:last-child
       margin-right: 0
+    .icon-dax
+      margin-top: 13px
     
 .product-section
   &__slide
@@ -197,6 +200,8 @@
     
 +r($wide)
   .product-section
+    &__products
+      margin-top: 0
     &__item
       &-title
         font-size: 20px

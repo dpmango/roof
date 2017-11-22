@@ -20,12 +20,14 @@ $(document).ready(function(){
 $('[js-open-catalog]').on('click', function(e){
   e.preventDefault();
   if ($(this).hasClass('is-active')) {
+    $.scrollify.enable();
     $('body').removeClass('no-scroll');
     $(this).removeClass('is-active');
     $(this).find('.hamburger').removeClass('is-active');
     $('.menu').removeClass('is-active');
     $('.header').removeClass('header--menu-open');
   } else {
+    $.scrollify.disable();
     $('body').addClass('no-scroll');
     $(this).addClass('is-active');
     $(this).find('.hamburger').addClass('is-active');
@@ -80,6 +82,7 @@ $('[js-input] input').focusout(function () {
   // Форма обратной связи
 $('[js-open-form]').on('click', function(e){
   e.preventDefault();
+  $.scrollify.disable();
   $('body').addClass('no-scroll');
   $('[js-open-mobile]').removeClass('is-active');
   $('.mobile-menu').slideUp(300);
@@ -89,6 +92,7 @@ $('[js-open-form]').on('click', function(e){
 
 $('[js-close-form]').on('click', function(e){
   e.preventDefault();
+  $.scrollify.enable();
   $('body').removeClass('no-scroll');
   $(this).removeClass('is-active');
   $('.callback-form').removeClass('is-active');
@@ -133,6 +137,7 @@ $('[js-submit-form]').on('click', function(e){
   if ($('body').hasClass('homepage-body')) {
       if ($(window).width() > 991) {
         $.scrollify({
+          updateHash: false,
           section : '.section',
           scrollbars: false,
           easing: "easeOutExpo",
@@ -336,13 +341,18 @@ $(window).resize(function(){
   if ($(window).width() < 992) {
     $('.footer__item-title').next('ul').css('display', 'none');
     $.scrollify.destroy();
+    $.scrollify.disable();
+    $('.header').removeClass('header--white');
   } else {
     $('.footer__item-title').removeClass('is-active');
     $('.footer__item-title').next('ul').css('display', 'block');
+    $('.header').addClass('header--white');
     // Fullpage
     if ($('body').hasClass('homepage-body')) {
       if ($(window).width() > 991) {
+        $.scrollify.enable();
         $.scrollify({
+          updateHash: false,
           section : '.section',
           scrollbars: false,
           easing: "easeOutExpo",

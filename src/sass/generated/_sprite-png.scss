@@ -1,20 +1,29 @@
 $sprite: (
+	dax-f: (
+		offset-x: 0px,
+		offset-y: -105px,
+		width: 120px,
+		height: 38px,
+		total-width: 318px,
+		total-height: 237px,
+		image: '../img/sprite.png'
+	),
 	dax: (
 		offset-x: 0px,
 		offset-y: -55px,
 		width: 137px,
 		height: 40px,
 		total-width: 318px,
-		total-height: 230px,
+		total-height: 237px,
 		image: '../img/sprite.png'
 	),
 	fj: (
-		offset-x: -136px,
-		offset-y: -105px,
+		offset-x: 0px,
+		offset-y: -153px,
 		width: 122px,
 		height: 31px,
 		total-width: 318px,
-		total-height: 230px,
+		total-height: 237px,
 		image: '../img/sprite.png'
 	),
 	folder: (
@@ -23,7 +32,7 @@ $sprite: (
 		width: 104px,
 		height: 48px,
 		total-width: 318px,
-		total-height: 230px,
+		total-height: 237px,
 		image: '../img/sprite.png'
 	),
 	freshm: (
@@ -32,7 +41,7 @@ $sprite: (
 		width: 72px,
 		height: 18px,
 		total-width: 318px,
-		total-height: 230px,
+		total-height: 237px,
 		image: '../img/sprite.png'
 	),
 	logo: (
@@ -41,34 +50,34 @@ $sprite: (
 		width: 149px,
 		height: 45px,
 		total-width: 318px,
-		total-height: 230px,
+		total-height: 237px,
 		image: '../img/sprite.png'
 	),
 	oklent: (
-		offset-x: 0px,
-		offset-y: -148px,
+		offset-x: -132px,
+		offset-y: -153px,
 		width: 121px,
 		height: 29px,
 		total-width: 318px,
-		total-height: 230px,
+		total-height: 237px,
 		image: '../img/sprite.png'
 	),
 	optima: (
-		offset-x: 0px,
+		offset-x: -130px,
 		offset-y: -105px,
 		width: 126px,
 		height: 33px,
 		total-width: 318px,
-		total-height: 230px,
+		total-height: 237px,
 		image: '../img/sprite.png'
 	),
 	prod-icon1: (
 		offset-x: 0px,
-		offset-y: -187px,
+		offset-y: -194px,
 		width: 61px,
 		height: 43px,
 		total-width: 318px,
-		total-height: 230px,
+		total-height: 237px,
 		image: '../img/sprite.png'
 	),
 	prod-icon2: (
@@ -77,16 +86,16 @@ $sprite: (
 		width: 37px,
 		height: 52px,
 		total-width: 318px,
-		total-height: 230px,
+		total-height: 237px,
 		image: '../img/sprite.png'
 	),
 	prod-icon3: (
 		offset-x: -71px,
-		offset-y: -187px,
+		offset-y: -194px,
 		width: 54px,
 		height: 43px,
 		total-width: 318px,
-		total-height: 230px,
+		total-height: 237px,
 		image: '../img/sprite.png'
 	),
 	prod-icon4: (
@@ -95,7 +104,7 @@ $sprite: (
 		width: 45px,
 		height: 48px,
 		total-width: 318px,
-		total-height: 230px,
+		total-height: 237px,
 		image: '../img/sprite.png'
 	),
 	tel-mobile: (
@@ -104,7 +113,7 @@ $sprite: (
 		width: 22px,
 		height: 22px,
 		total-width: 318px,
-		total-height: 230px,
+		total-height: 237px,
 		image: '../img/sprite.png'
 	),
 );
@@ -163,6 +172,9 @@ $sprite: (
 
 
 
+	.icon-dax-f {
+		@include sprite(dax-f)
+	}
 	.icon-dax {
 		@include sprite(dax)
 	}

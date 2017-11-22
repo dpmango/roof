@@ -18,6 +18,13 @@
   &.is-active
     visibility: visible
     opacity: 1
+    .callback-form,
+    .write-form
+      &__title,
+      &__input,
+      &__check-label,
+      &__buttons
+        transform: translateY(0);
   &__form
     width: 100%
     max-width: 640px
@@ -40,6 +47,8 @@
     margin-bottom: 35px
     font-family: $fontExtra
     text-transform: uppercase
+    transform: translateY(50px)
+    transition: all $transitionSpeed $ease
   &__row
     justify-content: space-between
   &__half
@@ -61,6 +70,8 @@
     padding-left: 60px
     position: relative
     margin-bottom: 20px
+    transform: translateY(50px)
+    transition: all $transitionSpeed $ease
     &:before
       content: ''
       position: absolute
@@ -81,6 +92,8 @@
     width: 100%
     position: relative
     margin-bottom: 20px
+    transform: translateY(50px)
+    transition: all $transitionSpeed $ease
     input
       width: 100%
       display: block
@@ -116,6 +129,8 @@
         transform: translateY(-13px)
   &__buttons
     justify-content: space-between
+    transform: translateY(50px)
+    transition: all $transitionSpeed $ease
   &__btn
     flex: 0 0 auto
     font-size: 18px
