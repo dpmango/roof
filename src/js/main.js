@@ -357,9 +357,9 @@ $(window).resize(function(){
     $('.event-item').removeAttr('style');
     $('.footer__item-title').removeClass('is-active');
     $('.footer__item-title').next('ul').css('display', 'block');
-    $('.header').addClass('header--white');
     // Fullpage
     if ($('body').hasClass('homepage-body')) {
+      $('.header').addClass('header--white');
       if ($(window).width() > 991) {
         $.scrollify.enable();
         $.scrollify({
