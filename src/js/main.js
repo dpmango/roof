@@ -350,7 +350,6 @@ $(window).resize(function(){
     // Fullpage
     if ($('body').hasClass('homepage-body')) {
       if ($(window).width() > 991) {
-        $.scrollify.enable();
         $.scrollify({
           updateHash: false,
           section : '.section',
