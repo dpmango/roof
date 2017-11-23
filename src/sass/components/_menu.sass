@@ -52,22 +52,28 @@
     margin-bottom: 30px
   &__link
     font-size: 17px
+    line-height: 24px
     text-decoration: none
-    color: $blackColor
+    color: #4c4c4c
     transition: all $transitionSpeed $ease
     border-bottom: 1px solid transparent
     &:hover
-      border-color: $blackColor
+      border-color: #cbcbcb
   &__brand
     display: table
     text-decoration: none
-    font-size: 40px
+    font-size: 65px
     margin-bottom: 30px
     color: #919191
     transition: all $transitionSpeed $ease
+    .icon-dax
+      opacity: 0.7
+      transition: all $transitionSpeed $ease
     &:hover
       cursor: pointer
       color: $main2Color
+      .icon
+        opacity: 1
     
 +r($desktop)
   .menu
@@ -84,5 +90,7 @@
     &__col
       &--brands
         padding-left: 50px
+    &__brand
+      font-size: 55px
     &__link
       font-size: 16px

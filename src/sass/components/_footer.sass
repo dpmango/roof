@@ -2,10 +2,10 @@
   background-color: $footerBg
   &__companies
     padding: 40px 0
-    border-bottom: 1px solid $footerBorder
+    border-bottom: 1px solid lighten($footerBorder, 10%)
     .flex-wrap
-      padding-left: 15px
-      padding-right: 15px
+      //padding-left: 15px
+      //padding-right: 15px
   &__company
     margin-right: 55px
     display: inline-block
@@ -16,30 +16,38 @@
       font-size: 52px
     .icon-dax
       margin-top: 13px
+      opacity: 0.7
+      transition: all $transitionSpeed $ease
     &:hover
       color: $main2Color
       cursor: pointer
+      .ico,
+      .icon
+        opacity: 1
     &:last-child
       margin-right: 0
   &__mainbar
     padding: 50px 0
-    border-bottom: 1px solid $footerBorder
+    border-bottom: 1px solid lighten($footerBorder, 10%)
     .flex-wrap
       align-items: flex-start
-      margin: 0 -15px
+      margin-left: -85px
     ul
       padding: 0
       margin: 0
     li
       display: block
-      margin-bottom: 20px
+      margin-bottom: 19px
       &:last-child
         margin-bottom: 0
   &__item
-    width: 25%
-    padding: 0 15px
+    width: 26.6%
+    padding: 0 85px
     &--contacts
+      width: 20%
+      flex: 0 0 300px
       text-align: right
+      padding-right: 0
   &__item-title
     text-transform: uppercase
     margin-top: 0
@@ -51,9 +59,10 @@
       display: none
   &__item-link
     display: inline
+    line-height: 21px
     text-decoration: none
     color: $footerText
-    border-bottom: 1px solid transparentize($footerText, .4)
+    border-bottom: 1px solid transparentize($footerText, .7)
     transition: all $transitionSpeed $ease
     &:hover
       border-color: transparent
@@ -83,17 +92,18 @@
     display: block
     margin-left: auto
     text-align: center
-    padding: 9px 20px
+    padding: 11px 20px
     font-size: 16px
     background-color: transparent
-    border: 1px solid $blackColor
-    color: $footerText
+    border: 1px solid #727272
+    color: #727272
     transition: all $transitionSpeed $ease
     border-radius: 0
     &:hover
       cursor: pointer
       color: $whiteColor
-      background-color: $blackColor
+      background-color: $main2Color
+      border-color: $main2Color
   &__copy
     padding: 35px 0
     color: $footerText
@@ -109,6 +119,16 @@
     i
       vertical-align: middle
       margin-left: 4px
++r($custom-wide)
+  .footer
+    &__item
+      padding: 0 25px
+      width: 30%
+      &--contacts
+        padding-right: 0
+    &__mainbar
+      .flex-wrap
+        margin-left: -25px
       
 +r($desktop)
   .footer
@@ -128,6 +148,7 @@
       padding: 0
       &--contacts
         text-align: left
+        flex: 0 1px auto
         padding: 23px 0px
       &-title
         font-size: 13px

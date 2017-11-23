@@ -44,12 +44,16 @@
         #logo-blue
           display: inline-block
       &__tel
-        color: $blackColor
-      &__bid
-        color: transparentize($blackColor, .4)
-        border-bottom: 1px solid transparentize($blackColor, .4)
+        color: #494949
+        border-bottom: 1px solid transparent
+        transition: all $transitionSpeed $ease
         &:hover
-          color: $blackColor
+          border-color: #494949
+      &__bid
+        color: transparentize(#494949, .4)
+        border-bottom: 1px solid transparentize(#494949, .4)
+        &:hover
+          color: #494949
     .main-nav
       &__link
         color: $blackColor
@@ -63,7 +67,7 @@
   &__logo
     display: block
     text-decoration: none
-    margin-right: 25px
+    margin-right: 40px
     #logo-white
       display: none
   &__mobile-toggle
@@ -82,24 +86,24 @@
   &__tel
     display: block
     font-size: 23px
-    color: $blackColor
+    color: #494949
     margin-bottom: 5px
     text-decoration: none
     border-bottom: 1px solid transparent
     transition: all $transitionSpeed $ease
     &:hover
-      border-color: $blackColor
+      border-color: #494949
   &__bid
     font-size: 15px
-    color: transparentize($blackColor, .2)
+    color: transparentize(#494949, .4)
     border: 0
     border-radius: 0
-    border-bottom: 1px solid transparentize($blackColor, .2)
+    border-bottom: 1px solid transparentize(#494949, .4)
     padding: 0
     background-color: transparent
     transition: all $transitionSpeed $ease
     &:hover
-      color: $blackColor
+      color: #494949
       border-color: transparent
       cursor: pointer
     
@@ -109,40 +113,40 @@
     vertical-align: middle
     text-decoration: none
     position: relative
-    overflow: hidden
+    //overflow: hidden
     color: $blackColor
-    margin: 0 29px
+    margin: 0 34px
     padding: 5px 0
     font-size: 17px
     transition: all $transitionSpeed $ease
     &--catalog
       position: relative
-      padding-left: 25px
+      //padding-left: 25px
       .hamburger
         position: absolute
         top: 50%
-        left: 0
+        left: -20px
         transform: translateY(-50%)
         padding: 0
         max-height: 15px
         &:hover
           opacity: 1
         &-box
-          width: 20px
+          width: 15px
           height: 15px
         &-inner
           background-color: $mainColor
-          width: 20px
+          width: 15px
           height: 2px
           &:before,
           &:after
             background-color: $mainColor
-            width: 20px
+            width: 15px
             height: 2px
           &:before
-            top: -6px
+            top: -5px
           &:after
-            bottom: -6px
+            bottom: -5px
           
     &:after
       content: ''
@@ -150,14 +154,15 @@
       bottom: 0px
       left: 0
       height: 2px
-      width: 100%
+      width: 0%
       background-color: $mainColor
       transition: all $transitionSpeed $ease
-      transform: translateX(-200px)
+      //transform: translateX(-200px)
     &:hover,
     &.is-active
       &:after
-        transform: translateX(0px)
+        width: 100%
+        //transform: translateX(0px)
       
 +r($wide)
   .header
@@ -189,6 +194,8 @@
       margin-left: 10px
       margin-right: 10px
       color: $blackColor !important
+      &--catalog
+        margin-left: 25px
     
 +r($tablet)
   .header

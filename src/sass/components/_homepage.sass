@@ -18,10 +18,14 @@
     &:hover
       color: $whiteColor
       cursor: pointer
+      .icon
+        opacity: 1
     &:last-child
       margin-right: 0
     .icon-dax
       margin-top: 13px
+      transition: all $transitionSpeed $ease
+      opacity: 0.8
     
 .product-section
   &__slide
@@ -31,6 +35,7 @@
       background-image: url(../../img/main-bg2.jpg)
   .slick-dots
     padding-left: 30px
+    bottom: 50px
   &__wrap
     flex-direction: column
     justify-content: center
@@ -52,7 +57,7 @@
       display: flex
       justify-content: center
       align-items: center
-      margin-bottom: 45px
+      margin-bottom: 55px
       .ico
         font-size: 55px
         color: $whiteColor
@@ -83,6 +88,8 @@
   &__titles
     width: 50%
     padding-right: 40px
+    .common-title
+      margin-bottom: 50px
   &__more
     width: 50%
     flex-wrap: wrap
@@ -139,6 +146,7 @@
     margin-bottom: 50px
     font-size: 40px
     font-family: $fontExtra
+    letter-spacing: -0.015em
   &__wrap
     align-items: stretch
     justify-content: space-between
@@ -149,7 +157,8 @@
     align-items: stretch
 .event-item
   display: block
-  padding: 50px 45px
+  padding: 55px
+  min-height: 330px
   background-color: $eventsBg
   color: $whiteColor
   margin-bottom: 45px
@@ -170,6 +179,8 @@
       height: 100%
       min-height: 100%
       background-color: transparentize($main2Color, .6)
+    .event-item__title
+      margin-bottom: 22px
   &:last-child
     margin-bottom: 0
   &__title
@@ -179,7 +190,8 @@
     font-weight: 400
     margin-top: 0
     text-transform: uppercase
-    padding-bottom: 30px
+    padding-bottom: 42px
+    margin-bottom: 34px
     position: relative
     &:after
       content: ''
@@ -192,11 +204,18 @@
   &__descr
     position: relative
     z-index: 1
-    font-size: 18px
+    font-size: 20px
+    line-height: 26px
     margin-top: 0
-    margin-bottom: 30px
+    margin-bottom: 32px
     &:last-child
       margin-bottom: 0
+    
+    
++r($custom-wide)
+  .event-item
+    min-height: 1px
+    padding: 40px
     
 +r($wide)
   .product-section
