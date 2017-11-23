@@ -190,6 +190,7 @@ $('[js-submit-form]').on('click', function(e){
       }
   } else {
     // Для остальных страниц
+    $('.header').removeClass('header--white')
     $('.footer').removeClass('section');
     $('.footer').removeAttr('data-section-name');
   }
@@ -291,6 +292,72 @@ $('[js-submit-form]').on('click', function(e){
       }
     }
   });
+  
+  // VIDEO PLAY
+  $('[js-play]').on('click', function() {
+    $('.video-popup').addClass('is-active');
+    playVideo();
+  });
+  $('.video-popup__close').on('click', function(){
+    $('.video-popup').removeClass('is-active');
+    playVideo();
+  });
+  
+  function playVideo() {
+    var videoFrame = $('.video-popup__video')
+    var iframe = videoFrame.find('iframe');
+    var addedSubject;
+    
+    if (!videoFrame.is('.is-playing')) {
+      // check if params are present
+      if (iframe.attr('src').indexOf("?") >= 0) {
+        addedSubject = "&autoplay=1"
+      } else {
+        addedSubject = "?autoplay=1"
+      }
+      iframe.attr("src", iframe.attr('src') + addedSubject);
+
+      videoFrame.addClass('is-playing');
+    } else {
+      iframe.attr("src", "https://www.youtube.com/embed/koW2Clc0xEA")
+      videoFrame.removeClass('is-playing');
+    }
+  }
+
+//  function playVideo(that) {
+//    // that - get's triggered on playbtn
+//    var videoFrame = that.closest('.video')
+//    var iframe = videoFrame.find('iframe');
+//    var addedSubject;
+//
+//    // chrome bug - fullscreen video
+//    if (that.closest('.wow')) {
+//      var thatObj = that.closest('.wow');
+//      thatObj.removeClass('wow').removeClass('wowFadeUp');
+//      thatObj.attr('style', null)
+//
+//      thatObj.css({
+//        'transform': 'translate3d(0,0,0)',
+//        'opacity': 1
+//      })
+//    }
+//
+//    if (!videoFrame.is('.is-playing')) {
+//      // check if params are present
+//      if (iframe.attr('src').indexOf("?") >= 0) {
+//        addedSubject = "&autoplay=1"
+//      } else {
+//        addedSubject = "?autoplay=1"
+//      }
+//      iframe.attr("src", iframe.attr('src') + addedSubject);
+//
+//      videoFrame.addClass('is-playing');
+//    } else {
+//      iframe.attr("src", "https://www.youtube.com/embed/koW2Clc0xEA")
+//      videoFrame.removeClass('is-playing');
+//    }
+//
+//  }
   
   
   /////////

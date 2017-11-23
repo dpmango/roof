@@ -5,7 +5,7 @@ $sprite: (
 		width: 120px,
 		height: 38px,
 		total-width: 318px,
-		total-height: 237px,
+		total-height: 251px,
 		image: '../img/sprite.png'
 	),
 	dax: (
@@ -14,7 +14,7 @@ $sprite: (
 		width: 137px,
 		height: 40px,
 		total-width: 318px,
-		total-height: 237px,
+		total-height: 251px,
 		image: '../img/sprite.png'
 	),
 	fj: (
@@ -23,7 +23,7 @@ $sprite: (
 		width: 122px,
 		height: 31px,
 		total-width: 318px,
-		total-height: 237px,
+		total-height: 251px,
 		image: '../img/sprite.png'
 	),
 	folder: (
@@ -32,7 +32,7 @@ $sprite: (
 		width: 104px,
 		height: 48px,
 		total-width: 318px,
-		total-height: 237px,
+		total-height: 251px,
 		image: '../img/sprite.png'
 	),
 	freshm: (
@@ -41,7 +41,7 @@ $sprite: (
 		width: 72px,
 		height: 18px,
 		total-width: 318px,
-		total-height: 237px,
+		total-height: 251px,
 		image: '../img/sprite.png'
 	),
 	logo: (
@@ -50,7 +50,7 @@ $sprite: (
 		width: 149px,
 		height: 45px,
 		total-width: 318px,
-		total-height: 237px,
+		total-height: 251px,
 		image: '../img/sprite.png'
 	),
 	oklent: (
@@ -59,7 +59,7 @@ $sprite: (
 		width: 121px,
 		height: 29px,
 		total-width: 318px,
-		total-height: 237px,
+		total-height: 251px,
 		image: '../img/sprite.png'
 	),
 	optima: (
@@ -68,16 +68,25 @@ $sprite: (
 		width: 126px,
 		height: 33px,
 		total-width: 318px,
-		total-height: 237px,
+		total-height: 251px,
+		image: '../img/sprite.png'
+	),
+	play: (
+		offset-x: 0px,
+		offset-y: -194px,
+		width: 57px,
+		height: 57px,
+		total-width: 318px,
+		total-height: 251px,
 		image: '../img/sprite.png'
 	),
 	prod-icon1: (
-		offset-x: 0px,
+		offset-x: -67px,
 		offset-y: -194px,
 		width: 61px,
 		height: 43px,
 		total-width: 318px,
-		total-height: 237px,
+		total-height: 251px,
 		image: '../img/sprite.png'
 	),
 	prod-icon2: (
@@ -86,16 +95,16 @@ $sprite: (
 		width: 37px,
 		height: 52px,
 		total-width: 318px,
-		total-height: 237px,
+		total-height: 251px,
 		image: '../img/sprite.png'
 	),
 	prod-icon3: (
-		offset-x: -71px,
+		offset-x: -138px,
 		offset-y: -194px,
 		width: 54px,
 		height: 43px,
 		total-width: 318px,
-		total-height: 237px,
+		total-height: 251px,
 		image: '../img/sprite.png'
 	),
 	prod-icon4: (
@@ -104,7 +113,7 @@ $sprite: (
 		width: 45px,
 		height: 48px,
 		total-width: 318px,
-		total-height: 237px,
+		total-height: 251px,
 		image: '../img/sprite.png'
 	),
 	tel-mobile: (
@@ -113,7 +122,7 @@ $sprite: (
 		width: 22px,
 		height: 22px,
 		total-width: 318px,
-		total-height: 237px,
+		total-height: 251px,
 		image: '../img/sprite.png'
 	),
 );
@@ -195,6 +204,9 @@ $sprite: (
 	}
 	.icon-optima {
 		@include sprite(optima)
+	}
+	.icon-play {
+		@include sprite(play)
 	}
 	.icon-prod-icon1 {
 		@include sprite(prod-icon1)

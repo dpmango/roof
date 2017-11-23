@@ -7,6 +7,8 @@
     margin-bottom: 45px
   &__row
     align-items: flex-start
+    width: 100%
+    max-width: 1170px
     margin-left: -20px
     margin-right: -20px
     margin-bottom: 35px
@@ -17,7 +19,7 @@
   &__img
     position: relative
     overflow: hidden
-    &:before
+    //&:before
       content: ''
       position: absolute
       top: 0
@@ -32,9 +34,6 @@
     &:hover
       .our-team__write
         transform: translateY(0px)
-      &:before
-        visibility: visible
-        opacity: 1
     img
       display: block
       width: 100%
@@ -46,25 +45,26 @@
     left: 0
     width: 100%
     text-align: center
-    padding: 13px 0
+    padding: 16px 0
     font-size: 16px
     color: $blackColor
     text-decoration: none
     background-color: $mainColor
     transition: all $transitionSpeed $ease
-    transform: translateY(45px)
+    transform: translateY(51px)
     z-index: 2
     &:hover
-      background-color: $main2Color
-      color: $whiteColor
+      background-color: darken($mainColor, 5%)
   &__name
     margin-top: 25px
     margin-bottom: 7px
     font-size: 18px
+    line-height: 26px
     font-weight: bold
     font-family: $fontBold
   &__pos
     font-size: 16px
+    line-height: 24px
     margin: 0
     color: #727272
     
