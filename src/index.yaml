@@ -21,3 +21,5 @@ PageList:
   ready: 85
 - file: one-event.html
   ready: 85
+- file: contacts.html
+  ready: 85

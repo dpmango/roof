@@ -1,0 +1,45 @@
+---
+title: Contacts
+---
+extends shared/_layout
+block content
+  section.contacts.page-section
+    .container
+      h1.contacts__title.page-title Контакты
+      .contacts__wrap.flex-wrap
+        .contacts__info
+          h2.contacts__subtitle Телефон/факс
+          a.contacts__tel(href="tel:+7(484)3996184") +7 (484) 399-61-84
+          h2.contacts__subtitle E-mail
+          a.contacts__mail(href="mailto:info@roofcom.ru") info@roofcom.ru
+          h2.contacts__subtitle Режим работы
+          .contacts__hours с 8.00 до 18.00
+          h2.contacts__subtitle Адрес склада
+          .contacts__address Калужская область, Боровский район, дер. Маланьино, строение 2 (99 км Киевского шоссе)
+          a.contacts__print(href="#") Распечать карту проезда (pdf)
+          .contacts__attent
+            h3.contacts__attent-title Внимание!
+            p.contacts__attent-descr При планировании отгрузок учитывайте время обеда склада (12.00 - 13.00)
+            p.contacts__attent-descr Возможна Доставка транспортной  компанией в любой регион России!
+        .contacts__write-us
+          form.contacts__form(action="#")
+            h2.contacts__subtitle Напишите нам
+            .contacts__input(js-input)
+              input(type="text" id="contact-name")
+              label.contacts__placeholder(for="contact-name")
+                span Ваше имя
+            .contacts__input(js-input)
+              input(type="text" id="contact-mail")
+              label.contacts__placeholder(for="contact-mail")
+                span E-mail или телефон
+            .contacts__input(js-input)
+              input(type="text" id="contact-message")
+              label.contacts__placeholder(for="contact-message")
+                span Сообщение
+            .contacts__buttons.flex-wrap
+              .contacts__agree
+                input.contacts__check(type="checkbox" id="contact-agree" checked)
+                label.contacts__agree-label(for="contact-agree") Я принимаю
+                  a(href="#") условия передачи информации
+              button.contacts__btn(type="submit") Отправить
+    .contacts__map#contacts-map

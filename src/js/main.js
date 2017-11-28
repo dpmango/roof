@@ -1,3 +1,30 @@
+// Map
+  function initMap() {
+	  var cntr = {
+	  	lat: 55.1437069,
+	  	lng: 36.6532911
+	  };
+	  var myicon = '../img/map-marker.png';
+	  var mapContacts = new google.maps.Map(document.getElementById('contacts-map'), {
+	  	center: cntr,
+	  	zoom: 15
+	  });
+	  var markers = locations.map(function (location, i) {
+	  	return new google.maps.Marker({
+	  		position: location,
+	  		map: mapContacts,
+	  		icon: myicon
+	  	});
+	  });
+  }
+  var locations = [
+  	{
+  		lat: 55.1437069,
+  		lng: 36.6532911
+  	}
+  	];
+
+
 // Prevent # behavior
   $('[href="#"]').click(function(e) {
     e.preventDefault();
@@ -64,18 +91,12 @@ $('[js-open-mobile]').on('click', function(e){
 // Плавный плейсхолдеры
 $('[js-input] input').focus(function () {
 		$(this).next('[class*=placeholder]').addClass('is-active');
-		$(this).css({
-			"paddingTop": "22px",
-			"paddingBottom": "12px"
-		});
+    $(this).addClass('is-active')
 });
 $('[js-input] input').focusout(function () {
 		if ($(this).val() === "") {
 			$(this).next('[class*=placeholder]').removeClass('is-active');
-			$(this).css({
-				"paddingTop": "17px",
-				"paddingBottom": "17px"
-			});
+			$(this).removeClass('is-active')
 		}
 });
   
@@ -406,11 +427,15 @@ $('[js-submit-form]').on('click', function(e){
   });
   
   /////////
-  /// Documents page
+  /// Event page
   /////////
   if ($('body').hasClass('month-event-body')) {
     $('.header').addClass('header--white')
   }
+  /////////
+  /// Contacts page
+  /////////
+
 });
 
 
