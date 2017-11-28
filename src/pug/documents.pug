@@ -3,17 +3,17 @@ title: Documents
 ---
 extends shared/_layout
 block content
-  section.doc-section
+  section.doc-section.page-section
     .container
-      h1.doc-section__title Сертификаты
-      .doc-section__tabs
-        a.doc-section__tab.is-active(href="#" data-id="all") Все сертификаты
-        a.doc-section__tab(href="#" data-id="tab1") Кровельный крепеж и уплотнители
-        a.doc-section__tab(href="#" data-id="tab2") Изоляционные материалы Folder и Optima
-        a.doc-section__tab(href="#" data-id="tab3") Общестроительный крепеж
-        a.doc-section__tab(href="#" data-id="tab4") Защитная пленка
-        a.doc-section__tab(href="#" data-id="tab5") Комплектующие для монтажа окон
-        select.doc-section__select(js-select)
+      h1.doc-section__title.page-title Сертификаты
+      .page-tabs.doc-section__tabs
+        a.page-tabs__tab.is-active(href="#" data-id="all") Все сертификаты
+        a.page-tabs__tab(href="#" data-id="tab1") Кровельный крепеж и уплотнители
+        a.page-tabs__tab(href="#" data-id="tab2") Изоляционные материалы Folder и Optima
+        a.page-tabs__tab(href="#" data-id="tab3") Общестроительный крепеж
+        a.page-tabs__tab(href="#" data-id="tab4") Защитная пленка
+        a.page-tabs__tab(href="#" data-id="tab5") Комплектующие для монтажа окон
+        select.page-tabs__select(js-select)
           option(data-option="all") Все сертификаты
           option(data-option="tab1") Кровельный крепеж и уплотнители
           option(data-option="tab2") Изоляционные материалы Folder и Optima

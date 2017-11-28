@@ -1,0 +1,32 @@
+.page-pagination
+  text-align: center
+  margin-top: 20px
+  margin-bottom: 30px
+  &__link
+    text-decoration: none
+    font-size: 20px
+    color: #333333
+    padding: 18px 20px
+    margin: 0 3px
+    border-bottom: 1px solid #dddddd
+    transition: all $transitionSpeed $ease
+    &:hover,
+    &.is-active
+      border-color: $blackColor
+      color: $blackColor
+    &--next,
+    &--prev
+      color: #797979
+      font-size: 12px
+      border-color: transparent
+      &:hover
+        border-color: transparent
+      
++r($desktop)
+  .page-pagination
+    &__link
+      font-size: 18px
+      padding: 16px 18px
+      &--prev,
+      &--next
+        font-size: 11px

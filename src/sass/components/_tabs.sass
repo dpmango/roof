@@ -1,0 +1,57 @@
+.page-tabs
+  margin-bottom: 65px
+  max-width: 80%
+  &__tab
+    text-decoration: none
+    display: inline-block
+    vertical-align: middle
+    margin-right: 12px
+    margin-bottom: 12px
+    font-size: 17px
+    padding: 12px 20px
+    background-color: $inputBg
+    color: #767676
+    transition: all $transitionSpeed $ease
+    &:hover,
+    &.is-active
+      color: $whiteColor
+      background-color: $main2Color
+    &:last-child
+      margin-right: 0
+  .page-tabs__select
+    display: none
+  .selectric-page-tabs__select
+    display: none
+    
++r($custom-wide)
+  .page-tabs
+    max-width: 100%
+  
++r($desktop)
+  .page-tabs
+    margin-bottom: 40px
+    &__tab
+      font-size: 16px
+      padding: 10px 18px
+  
++r($tablet)
+  .page-tabs
+    margin-bottom: 35px
+    .selectric-page-tabs__select
+      display: block
+      max-width: 80%
+    .selectric
+      border: 0
+    .label
+      display: inline-block
+      padding: 0
+      font-size: 15px
+      color: $main2Color
+      border-bottom: 1px dashed $main2Color
+      height: auto
+      &:before
+        display: none
+    &__tab
+      display: none
+    &__select
+      display: block

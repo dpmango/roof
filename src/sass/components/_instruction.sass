@@ -1,0 +1,103 @@
+.instruction
+  &__wrapper
+    max-width: 850px
+  &__title
+    margin-bottom: 25px
+  &__text
+    font-size: 17px
+    line-height: 30px
+    color: #4c4c4c
+    margin-top: 0
+    margin-bottom: 20px
+  &__list
+    padding: 0
+    padding-left: 25px
+    margin-top: 0
+    margin-bottom: 40px
+    li
+      color: #4c4c4c
+      font-size: 17px
+      line-height: 30px
+  &__video
+    margin: 30px 0
+  &__date
+    font-size: 16px
+    margin-bottom: 35px
+    color: #4c4c4c
+  &__image
+    margin: 33px 0
+    img
+      display: block
+      height: auto
+      width: 100%
+      max-width: 700px
+  &__caption
+    display: inline-block
+    vertical-align: middle
+    font-size: 15px
+    color: #828282
+    margin-top: 10px
+    margin-right: 50px
+  &__big
+    display: inline-block
+    vertical-align: middle
+    text-decoration: none
+    font-size: 15px
+    color: $main2Color
+    margin-top: 10px
+    border-bottom: 1px solid $main2Color
+    transition: all $transitionSpeed $ease
+    span
+      color: #828282
+      border-bottom: 1px solid $whiteColor
+      margin-left: 2px
+    &:hover
+      border-color: transparent
+  &__tags
+    margin-top: 0
+    margin-bottom: 30px
+  &__tag
+    text-decoration: none
+    padding: 4px
+    font-size: 16px
+    color: $whiteColor
+    background-color: $mainColor
+    margin-right: 2px
+    transition: all $transitionSpeed $ease
+    &:hover
+      background-color: $main2Color
+  &__download
+    display: inline-block
+    font-size: 17px
+    text-decoration: none
+    color: $main2Color
+    position: relative
+    padding-left: 60px
+    margin-bottom: 40px
+    span
+      border-bottom: 1px solid transparent
+      transition: all $transitionSpeed $ease
+    &:hover span
+      border-color: $main2Color
+    &:before
+      content: ''
+      position: absolute
+      top: 50%
+      transform: translateY(-60%)
+      left: 0
+      background-repeat: no-repeat
+      background-repeat: 100%
+      background-image: url(../../img/svg/sprite-src/pdf.svg)
+      width: 30px
+      height: 30px
+  &__share
+    margin-bottom: 50px
+    span
+      font-size: 15px
+      color: #828282
+      margin-right: 10px
+      
++r($tablet)
+  .instruction
+    &__download
+      padding-left: 40px

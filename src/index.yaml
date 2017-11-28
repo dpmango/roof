@@ -9,3 +9,15 @@ PageList:
   ready: 85
 - file: reviews.html
   ready: 85
+- file: service.html
+  ready: 85
+- file: instruction.html
+  ready: 85
+- file: events.html
+  ready: 85
+- file: events2.html
+  ready: 85
+- file: events3.html
+  ready: 85
+- file: one-event.html
+  ready: 85

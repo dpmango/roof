@@ -1,37 +1,4 @@
 .doc-section
-  padding: 20px 0
-  &__title
-    font-size: 40px
-    line-height: 42px
-    margin-top: 0
-    margin-bottom: 45px
-    font-family: $fontExtra
-    text-transform: uppercase
-    font-weight: 900
-  &__tabs
-    margin-bottom: 65px
-    max-width: 80%
-    .doc-section__select
-      display: none
-    .selectric-doc-section__select
-      display: none
-  &__tab
-    text-decoration: none
-    display: inline-block
-    vertical-align: middle
-    margin-right: 12px
-    margin-bottom: 12px
-    font-size: 17px
-    padding: 12px 20px
-    background-color: $inputBg
-    color: #767676
-    transition: all $transitionSpeed $ease
-    &:hover,
-    &.is-active
-      color: $whiteColor
-      background-color: $main2Color
-    &:last-child
-      margin-right: 0
   &__item
     align-items: flex-start
     max-width: 80%
@@ -86,8 +53,6 @@
       
 +r($custom-wide)
   .doc-section
-    &__tabs
-      max-width: 100%
     &__item
       max-width: 100%
 +r($desktop)
@@ -109,26 +74,6 @@
     &__title
       font-size: 29px
       margin-bottom: 5px
-    &__tabs
-      margin-bottom: 35px
-      .selectric-doc-section__select
-        display: block
-        max-width: 80%
-      .selectric
-        border: 0
-      .label
-        display: inline-block
-        padding: 0
-        font-size: 15px
-        color: $main2Color
-        border-bottom: 1px dashed $main2Color
-        height: auto
-        &:before
-          display: none
-    &__tab
-      display: none
-    &__select
-      display: block
     &__subtitle
       font-size: 19px
     &__item
