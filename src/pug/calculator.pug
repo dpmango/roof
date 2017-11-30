@@ -1,0 +1,43 @@
+---
+title: Calculator
+---
+extends shared/_layout
+block content
+  section.calculator
+    .container
+      .calculator__wrap.flex-wrap
+        .calculator__info
+          h1.calculator__title Калькулятор количество-вес
+          p.calculator__descr При помощи этого калькулятора Вы можете рассчитать вес крепежа, необходимого для сборки или монтажа требуемых деталей и конструкций для его дальнейшей закупки
+        form.calculator__form(action="#")
+          .calculator__row.flex-wrap
+            .calculator__item
+              select.calculator__select(js-select)
+                option Тип изделия                                
+                option Вариант 1
+            .calculator__item
+              select.calculator__select(js-select)
+                option Стандарт
+                option Вариант 1
+            .calculator__item
+              select.calculator__select(js-select)
+                option Диаметр
+                option Вариант 1
+          .calculator__row.flex-wrap
+            .calculator__item
+              select.calculator__select(js-select)
+                option Длина 
+                option Вариант 1
+            .calculator__item
+              select.calculator__select(js-select)
+                option Покрытие
+                option Вариант 1
+          .calculator__row
+            .calculator__input-wrap
+              label.calculator__label Количество,
+                span  шт
+              input.calculator__input(type="text" value="10 000")
+            .calculator__input-wrap
+              label.calculator__label Вес,
+                span кг
+              input.calculator__input(type="text" value="4 800")
