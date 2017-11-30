@@ -23,3 +23,5 @@ PageList:
   ready: 85
 - file: contacts.html
   ready: 85
+- file: calculator.html
+  ready: 85
