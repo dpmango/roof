@@ -60,7 +60,8 @@ block content
       .brand-certificate__wrap.flex-wrap
         .brand-certificate__info
           h2.brand-certificate__title Вся линейка материалов «Daxmer» сертифицирована
-          a.brand-certificate__download(href="#") Скачать архивом
+          a.brand-certificate__download(href="#") 
+            span Скачать архивом
             +icon('ico-upload-icon')
         .brand-certificate__items
           a.brand-certificate__item(href="#") Сертификат соответствия на кровельные саморезы Daxmer
@@ -86,7 +87,7 @@ block content
           option(data-option="tab4") Саморезы с пресс-шайбой
           option(data-option="tab5") Дюбель для изоляции
       .brand-catalog__wrap.flex-wrap
-        .brand-catalog__item
+        a.brand-catalog__item(href="#")
           .brand-catalog__img
             img(src="img/brand-prod1.png")
             .brand-catalog__company
@@ -94,7 +95,7 @@ block content
           .brand-catalog__info
             h3.brand-catalog__name Саморезы по дереву
             p.brand-catalog__text Для крепления конструкций к основаниям: дерево, ДСП, ДВП, фанера, и пр.)
-        .brand-catalog__item
+        a.brand-catalog__item(href="#")
           .brand-catalog__img
             img(src="img/brand-prod2.png")
             .brand-catalog__company
@@ -102,7 +103,7 @@ block content
           .brand-catalog__info
             h3.brand-catalog__name Саморезы по дереву
             p.brand-catalog__text Для крепления конструкций к основаниям: дерево, ДСП, ДВП, фанера, и пр.)
-        .brand-catalog__item
+        a.brand-catalog__item(href="#")
           .brand-catalog__img
             img(src="img/brand-prod3.png")
             .brand-catalog__company
@@ -110,7 +111,7 @@ block content
           .brand-catalog__info
             h3.brand-catalog__name Саморезы по дереву
             p.brand-catalog__text Для крепления конструкций к основаниям: дерево, ДСП, ДВП, фанера, и пр.)
-        .brand-catalog__item
+        a.brand-catalog__item(href="#")
           .brand-catalog__img
             img(src="img/brand-prod1.png")
             .brand-catalog__company
@@ -118,7 +119,7 @@ block content
           .brand-catalog__info
             h3.brand-catalog__name Саморезы по дереву
             p.brand-catalog__text Для крепления конструкций к основаниям: дерево, ДСП, ДВП, фанера, и пр.)
-        .brand-catalog__item
+        a.brand-catalog__item(href="#")
           .brand-catalog__img
             img(src="img/brand-prod2.png")
             .brand-catalog__company
@@ -126,7 +127,7 @@ block content
           .brand-catalog__info
             h3.brand-catalog__name Саморезы по дереву
             p.brand-catalog__text Для крепления конструкций к основаниям: дерево, ДСП, ДВП, фанера, и пр.)
-        .brand-catalog__item
+        a.brand-catalog__item(href="#")
           .brand-catalog__img
             img(src="img/brand-prod3.png")
             .brand-catalog__company
@@ -134,7 +135,7 @@ block content
           .brand-catalog__info
             h3.brand-catalog__name Саморезы по дереву
             p.brand-catalog__text Для крепления конструкций к основаниям: дерево, ДСП, ДВП, фанера, и пр.)
-        .brand-catalog__item
+        a.brand-catalog__item(href="#")
           .brand-catalog__img
             img(src="img/brand-prod1.png")
             .brand-catalog__company
@@ -142,7 +143,7 @@ block content
           .brand-catalog__info
             h3.brand-catalog__name Саморезы по дереву
             p.brand-catalog__text Для крепления конструкций к основаниям: дерево, ДСП, ДВП, фанера, и пр.)
-        .brand-catalog__item
+        a.brand-catalog__item(href="#")
           .brand-catalog__img
             img(src="img/brand-prod2.png")
             .brand-catalog__company
@@ -156,7 +157,7 @@ block content
       h2.brand-region__title Региональные представители
       .brand-region__order
         span Хотите стать дилером? 
-        button.brand-region(type="button" js-open-form) Оставьте заявку на дилерство
+        button(type="button" js-open-form) Оставьте заявку на дилерство
       form.brand-region__form(action="#")
         select.brand-region__company(js-select)
           option Компания

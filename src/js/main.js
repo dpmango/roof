@@ -456,9 +456,6 @@ $('[js-submit-form]').on('click', function(e){
   if ($('body').hasClass('month-event-body')) {
     $('.header').addClass('header--white')
   }
-  /////////
-  /// Contacts page
-  /////////
   
   /////////
   /// Dealers page
@@ -470,7 +467,44 @@ $('[js-submit-form]').on('click', function(e){
     $(this).next('.firm-item__map').toggleClass('invisible');
     initMap();
   });
-
+  
+  /////////
+  /// Contacts page
+  /////////
+  $('.brand-slider__wrap').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: true,
+    dots: false,
+    autoplay: false,
+    accessibility: false,
+    pauseOnHover: false,
+    pauseOnFocus: false,
+    responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2
+      }
+    },
+      {
+      breakpoint: 568,
+      settings: {
+        slidesToShow: 1
+      }
+    }
+    ]
+  });
+  $('.brand-info__slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    dots: false,
+    autoplay: false,
+    accessibility: false,
+    pauseOnHover: false,
+    pauseOnFocus: false
+  });
 });
 
 

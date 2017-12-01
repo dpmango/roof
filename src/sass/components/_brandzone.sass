@@ -1,0 +1,518 @@
+.brand-promo
+  background-repeat: no-repeat
+  background-size: cover
+  background-image: url(../../img/brand-promo.jpg)
+  padding-top: 300px
+  padding-bottom: 230px
+  margin-top: -140px
+  &__wrap
+    margin-left: auto
+    margin-right: auto
+    max-width: 530px
+    text-align: center
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      top: -120px
+      left: 50%
+      transform: translateX(-50%)
+      background-repeat: no-repeat
+      background-image: url(../../img/month-event-border.png)
+      width: 310px
+      height: 420px
+  &__title
+    color: #20437e
+    font-size: 120px
+    line-height: 110px
+    font-family: $fontExtra
+    margin: 0
+    position: relative
+    z-index: 2
+  &__descr
+    font-size: 29px
+    line-height: 37px
+    color: #292929
+    margin-top: 15px
+    margin-bottom: 30px
+    position: relative
+    z-index: 2
+  &__more
+    font-size: 22px
+    text-decoration: none
+    border-bottom: 1px solid #292929
+    color: #292929
+    transition: all $transitionSpeed $ease
+    position: relative
+    z-index: 2
+    &:hover
+      border-color: transparent
+    
+.brand-slider
+  padding: 55px 0
+  background-color: #133054
+  &__title
+    color: $whiteColor
+    font-size: 23px
+    line-height: 30px
+    margin-top: 0
+    margin-bottom: 25px
+    padding-bottom: 20px
+    position: relative
+    font-weight: 400
+    font-family: $fontLight
+    span
+      font-family: $fontBold
+      font-size: 47px
+      display: block
+    &:after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0
+      height: 4px
+      width: 70px
+      background-color: $mainColor
+  &__text
+    font-size: 15px
+    line-height: 21px
+    color: #92aacc
+    margin: 0
+  &__wrap
+    align-items: flex-start
+  &__slide
+    width: 30%
+    padding: 10px 70px
+    
+.brand-info
+  &__row
+    align-items: stretch
+  &__item
+    width: 50%
+    background-color: #f6f6f6
+    min-height: 730px
+    padding: 30px 140px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    background-size: cover
+    background-repeat: no-repeat
+    &--first
+      background-image: url(../../img/brand-img1.jpg)
+    &--second
+      background-color: #e1e1e1
+    &--third
+      background-image: url(../../img/brand-img2.jpg)
+    >img
+      display: block
+      margin-left: auto
+      margin-right: auto
+      height: auto
+      width: 100%
+      max-width: 600px
+  &__slider
+    background-color: #e1e1e1
+    padding: 0
+    .slick-prev
+      left: 50px
+      z-index: 5
+    .slick-next
+      right: 50px
+      z-index: 5
+  &__slide
+    padding: 30px 140px
+    display: flex !important
+    justify-content: center
+    align-items: center
+    img
+      display: block
+      max-width: 100%
+      margin-left: auto
+      margin-right: auto
+  &__title
+    font-size: 40px
+    line-height: 50px
+    font-weight: 400
+    margin-top: 0
+    color: #333333
+    position: relative
+    margin-bottom: 45px
+    padding-bottom: 45px
+    &:after
+      content: ''
+      position: absolute
+      width: 70px
+      height: 4px
+      background-color: $mainColor
+      bottom: 0
+      left: 0
+  &__text
+    margin: 0
+    font-size: 17px
+    line-height: 26px
+    color: #535353
+    
+.about-brand
+  padding: 70px 0
+  background-color: $whiteColor
+  text-align: center
+  &__title
+    margin-top: 0
+    font-size: 40px
+    font-weight: 400
+    text-transform: uppercase
+    margin-bottom: 45px
+  &__descr
+    font-size: 17px
+    line-height: 30px
+    margin-top: 0
+    margin-bottom: 30px
+    color: #727272
+    margin-left: auto
+    margin-right: auto
+    max-width: 850px
+    &:last-child
+      margin-bottom: 0
+    
+.brand-certificate
+  padding: 70px 0
+  background-color: #f6f6f6
+  &__wrap
+    align-items: flex-start
+  &__info
+    width: 28%
+  &__title
+    font-size: 29px
+    line-height: 36px
+    margin-top: 0
+    color: $blackColor
+    font-weight: 400
+    margin-bottom: 35px
+  &__download
+    position: relative
+    padding-left: 20px
+    text-decoration: none
+    font-size: 15px
+    color: #696969
+    transition: all $transitionSpeed $ease
+    span
+      border-bottom: 1px solid lighten(#696969, 50%)
+    .ico
+      color: $mainColor
+      top: 50%
+      left: 0
+      position: absolute
+      transform: translateY(-50%)
+    &:hover
+      color: $mainColor
+      span
+        border-color: $mainColor
+  &__items
+    width: 72%
+    padding-left: 100px
+  &__item
+    display: block
+    padding: 20px 3px
+    border-bottom: 1px solid lighten(#696969, 50%)
+    font-size: 17px
+    color: #53638b
+    text-decoration: none
+    position: relative
+    padding-left: 65px
+    transition: all $transitionSpeed $ease
+    &:before
+      content: ''
+      position: absolute
+      top: 50%
+      left: 3px
+      transform: translateY(-50%)
+      background-repeat: no-repeat
+      background-image: url(../../img/svg/sprite-src/pdf.svg)
+      width: 30px
+      height: 33px
+      background-size: 100%
+    &:hover
+      color: $blackColor
+    
+.brand-catalog
+  padding: 70px 0
+  background-color: $whiteColor
+  &__title
+    text-align: center
+    margin-top: 0
+    margin-bottom: 50px
+    font-size: 40px
+    text-transform: uppercase
+    font-weight: 400
+  .page-tabs
+    text-align: center
+    max-width: 100%
+    &__tab
+      margin-bottom: 7px
+      margin-right: 5px
+      &:last-child
+        margin-right: 0
+  &__wrap
+    flex-wrap: wrap
+    align-items: stretch
+  &__item
+    display: block
+    text-decoration: none
+    width: 24%
+    margin-right: 10px
+    margin-bottom: 10px
+    background-color: #efefef
+    padding: 20px 40px 40px 40px
+    transition: all $transitionSpeed $ease
+    &:hover
+      background-color: $whiteColor
+      box-shadow: 0 0 7px darken(#efefef, 20%)
+  &__img
+    text-align: center
+    position: relative
+    img
+      display: block
+      max-width: 100%
+      margin-left: auto
+      margin-right: auto
+  &__company
+    position: absolute
+    top: 0px
+    right: -20px
+  &__name
+    font-size: 19px
+    margin-top: 20px
+    color: #333333
+    margin-bottom: 30px
+    font-family: $fontBold
+  &__text
+    margin: 0
+    font-size: 13px
+    line-height: 20px
+    color: #727272
+    
+.brand-region
+  padding: 70px 0
+  background-repeat: no-repeat
+  background-size: contain
+  background-position: 50% 50%
+  background-image: url(../../img/brand-map.jpg)
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: transparentize(#17263c, .03)
+    z-index: 1
+  &__title
+    color: $whiteColor
+    font-weight: 400
+    font-size: 40px
+    margin-top: 0
+    margin-bottom: 35px
+    padding-bottom: 35px
+    position: relative
+    z-index: 2
+    &:after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0
+      height: 4px
+      width: 70px
+      background-color: $mainColor
+  &__order
+    position: relative
+    z-index: 2
+    margin-bottom: 55px
+    span
+      display: inline-block
+      vertical-align: middle
+      font-size: 17px
+      color: $whiteColor
+      margin-right: 10px
+    button
+      font-size: 17px
+      padding: 0
+      border: 0
+      display: inline-block
+      vertical-align: middle
+      color: #d4ed00
+      border-bottom: 1px dotted transparentize(#d4ed00, 0.5)
+      font-family: $fontLight
+      font-weight: 400
+      background-color: transparent
+      border-radius: 0
+      &:hover
+        cursor: pointer
+  &__form
+    max-width: 625px
+    position: relative
+    z-index: 2
+    .selectric
+      border-color: transparentize($whiteColor, .5)
+      &-brand-region__company
+        margin-bottom: 35px
+        .label:before
+          background-image: url(../../img/svg/sprite-src/arrow-down-gray.svg)
+      &-brand-region__city
+        .label:before
+          display: none
+    .label
+      font-size: 18px
+      height: 32px
+      color: $whiteColor
+      
+.brand-companies
+  padding: 20px 0
+  .firm-item
+    margin-left: 0
+    margin-right: 0
+    &:first-child
+      border: 0
+    
++r($wide)
+  .brand-slider
+    &__slide
+      padding: 10px 40px
+  .brand-info
+    &__item
+      padding: 30px 60px
+      min-height: 600px
+    &__slider
+      padding: 0
+    &__slide
+      padding: 30px 60px
+  .brand-certificate
+    &__items
+      padding-left: 50px
+  .brand-catalog
+    &__item
+      margin-right: 7px
+      margin-bottom: 7px
+      padding: 20px 30px 30px 30px
++r($desktop)
+  .brand-promo
+    margin-top: -60px
+    padding-top: 250px
+    padding-bottom: 170px
+    &__title
+      font-size: 100px
+    &__descr
+      font-size: 24px
+      line-height: 30px
+    &__more
+      font-size: 20px
+  .brand-slider
+    &__slide
+      padding: 10px 20px
+  .brand-info
+    &__item
+      min-height: 400px
+      padding: 30px
+    &__slider
+      padding: 0
+    &__slide
+      padding: 30px
+    &__title
+      font-size: 32px
+      line-height: 40px
+      padding-bottom: 35px
+      margin-bottom: 35px
+    &__text
+      font-size: 16px
+      line-height: 24px
+  .about-brand
+    padding: 40px 0
+    &__title
+      font-size: 36px
+    &__descr
+      font-size: 16px
+      line-height: 24px
+  .brand-certificate
+    padding: 40px 0
+    &__info
+      width: 40%
+    &__items
+      width: 60%
+  .brand-catalog
+    padding: 40px 0
+    &__title
+      font-size: 36px
+      margin-bottom: 30px
+    &__item
+      width: 32%
+  .brand-region
+    padding: 40px 0
+    &__title
+      font-size: 36px
+      padding-bottom: 25px
+      margin-bottom: 25px
+      
++r($tablet)
+  .brand-info
+    &__row
+      flex-direction: column
+      &:first-child
+        .brand-info__item:first-child
+          order: 1
+      &:nth-child(3)
+        .brand-info__item:first-child
+          order: 1
+    &__item
+      width: 100%
+      min-height: 350px
+  .brand-certificate
+    &__wrap
+      flex-direction: column
+    &__info
+      width: 100%
+      margin-bottom: 30px
+    &__items
+      width: 100%
+      padding-left: 0
+  .brand-catalog
+    &__title
+      text-align: left
+    .selectric
+      text-align: left
+    &__item
+      width: 48%
+      
++r($mobile)
+  .brand-promo
+    padding-top: 230px
+    padding-bottom: 150px
+    overflow-x: hidden
+    &__title
+      font-size: 75px
+    &__descr
+      font-size: 22px
+      line-height: 28px
+  .brand-info
+    &__item
+      min-height: 300px
+    &__title
+      font-size: 26px
+      line-height: 36px
+      padding-bottom: 20px
+      margin-bottom: 20px
+  .about-brand
+    &__title
+      font-size: 32px
+      margin-bottom: 20px
+  .brand-certificate
+    &__title
+      font-size: 32px
+  .brand-catalog
+    &__title
+      font-size: 32px
+    &__item
+      width: 100%
+      margin-right: 0
+  .brand-region
+    &__title
+      font-size: 32px
