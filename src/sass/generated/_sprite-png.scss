@@ -1,128 +1,146 @@
 $sprite: (
+	dax-blue-m: (
+		offset-x: -200px,
+		offset-y: -125px,
+		width: 91px,
+		height: 27px,
+		total-width: 359px,
+		total-height: 302px,
+		image: '../img/sprite.png'
+	),
+	dax-blue: (
+		offset-x: 0px,
+		offset-y: 0px,
+		width: 190px,
+		height: 55px,
+		total-width: 359px,
+		total-height: 302px,
+		image: '../img/sprite.png'
+	),
 	dax-f: (
 		offset-x: 0px,
-		offset-y: -105px,
+		offset-y: -170px,
 		width: 120px,
 		height: 38px,
-		total-width: 318px,
-		total-height: 251px,
+		total-width: 359px,
+		total-height: 302px,
 		image: '../img/sprite.png'
 	),
 	dax: (
 		offset-x: 0px,
-		offset-y: -55px,
+		offset-y: -120px,
 		width: 137px,
 		height: 40px,
-		total-width: 318px,
-		total-height: 251px,
+		total-width: 359px,
+		total-height: 302px,
 		image: '../img/sprite.png'
 	),
 	fj: (
 		offset-x: 0px,
-		offset-y: -153px,
+		offset-y: -218px,
 		width: 122px,
 		height: 31px,
-		total-width: 318px,
-		total-height: 251px,
+		total-width: 359px,
+		total-height: 302px,
 		image: '../img/sprite.png'
 	),
 	folder: (
-		offset-x: -159px,
+		offset-x: -200px,
 		offset-y: 0px,
 		width: 104px,
 		height: 48px,
-		total-width: 318px,
-		total-height: 251px,
+		total-width: 359px,
+		total-height: 302px,
 		image: '../img/sprite.png'
 	),
 	freshm: (
-		offset-x: -159px,
-		offset-y: -58px,
+		offset-x: -135px,
+		offset-y: -259px,
 		width: 72px,
 		height: 18px,
-		total-width: 318px,
-		total-height: 251px,
+		total-width: 359px,
+		total-height: 302px,
 		image: '../img/sprite.png'
 	),
 	logo: (
 		offset-x: 0px,
-		offset-y: 0px,
+		offset-y: -65px,
 		width: 149px,
 		height: 45px,
-		total-width: 318px,
-		total-height: 251px,
+		total-width: 359px,
+		total-height: 302px,
 		image: '../img/sprite.png'
 	),
 	oklent: (
 		offset-x: -132px,
-		offset-y: -153px,
+		offset-y: -218px,
 		width: 121px,
 		height: 29px,
-		total-width: 318px,
-		total-height: 251px,
+		total-width: 359px,
+		total-height: 302px,
 		image: '../img/sprite.png'
 	),
 	optima: (
 		offset-x: -130px,
-		offset-y: -105px,
+		offset-y: -170px,
 		width: 126px,
 		height: 33px,
-		total-width: 318px,
-		total-height: 251px,
+		total-width: 359px,
+		total-height: 302px,
 		image: '../img/sprite.png'
 	),
 	play: (
-		offset-x: 0px,
-		offset-y: -194px,
+		offset-x: -200px,
+		offset-y: -58px,
 		width: 57px,
 		height: 57px,
-		total-width: 318px,
-		total-height: 251px,
+		total-width: 359px,
+		total-height: 302px,
 		image: '../img/sprite.png'
 	),
 	prod-icon1: (
-		offset-x: -67px,
-		offset-y: -194px,
+		offset-x: 0px,
+		offset-y: -259px,
 		width: 61px,
 		height: 43px,
-		total-width: 318px,
-		total-height: 251px,
+		total-width: 359px,
+		total-height: 302px,
 		image: '../img/sprite.png'
 	),
 	prod-icon2: (
-		offset-x: -273px,
+		offset-x: -314px,
 		offset-y: -58px,
 		width: 37px,
 		height: 52px,
-		total-width: 318px,
-		total-height: 251px,
+		total-width: 359px,
+		total-height: 302px,
 		image: '../img/sprite.png'
 	),
 	prod-icon3: (
-		offset-x: -138px,
-		offset-y: -194px,
+		offset-x: -71px,
+		offset-y: -259px,
 		width: 54px,
 		height: 43px,
-		total-width: 318px,
-		total-height: 251px,
+		total-width: 359px,
+		total-height: 302px,
 		image: '../img/sprite.png'
 	),
 	prod-icon4: (
-		offset-x: -273px,
+		offset-x: -314px,
 		offset-y: 0px,
 		width: 45px,
 		height: 48px,
-		total-width: 318px,
-		total-height: 251px,
+		total-width: 359px,
+		total-height: 302px,
 		image: '../img/sprite.png'
 	),
 	tel-mobile: (
-		offset-x: -273px,
+		offset-x: -314px,
 		offset-y: -120px,
 		width: 22px,
 		height: 22px,
-		total-width: 318px,
-		total-height: 251px,
+		total-width: 359px,
+		total-height: 302px,
 		image: '../img/sprite.png'
 	),
 );
@@ -181,6 +199,12 @@ $sprite: (
 
 
 
+	.icon-dax-blue-m {
+		@include sprite(dax-blue-m)
+	}
+	.icon-dax-blue {
+		@include sprite(dax-blue)
+	}
 	.icon-dax-f {
 		@include sprite(dax-f)
 	}

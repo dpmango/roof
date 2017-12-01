@@ -1,0 +1,72 @@
+---
+title: Dealers
+---
+extends shared/_layout
+block content
+  section.dealers-promo
+    .container
+      h1.dealers-promo__title Дилерская сеть
+      form.dealers-promo__form(action="#")
+        select.dealers-promo__segment(js-select)
+          option Выберете сегмент
+          option Пункт 1
+        select.dealers-promo__city(js-select)
+          option Город
+          option Москва
+  section.dealers
+    .container
+      .firm-item
+        h2.firm-item__title ООО «ФИРМА»
+        p.firm-item__address 43-й км МКАД, внешняя сторона, Москва  
+        p.firm-item__tel Тел.: 8 495 411 71 00, 8 495 411 71 00
+        a.firm-item__mail(href="mailto:info@firma.ru") info@firma.ru
+        a.firm-item__site(href="#") www.firma.ru
+        button.firm-item__on-map(type="button" js-dealer-map) 
+          span Показать на карте
+          +icon('ico-location')
+        .firm-item__map#dealer-map1
+      .firm-item
+        h2.firm-item__title ООО «ФИРМА»
+        p.firm-item__address 43-й км МКАД, внешняя сторона, Москва  
+        p.firm-item__tel Тел.: 8 495 411 71 00, 8 495 411 71 00
+        a.firm-item__mail(href="mailto:info@firma.ru") info@firma.ru
+        a.firm-item__site(href="#") www.firma.ru
+        button.firm-item__on-map(type="button" js-dealer-map) 
+          span Показать на карте
+          +icon('ico-location')
+        .firm-item__map#dealer-map2
+  section.no-dealers
+    .container
+      h2.no-dealers__title В вашем городе дилеры не найдены
+      button.no-dealers__order(type="button" js-open-form) Оставить заявку на дилерство
+      h3.no-dealers__subtitle Дилеры рядом:
+      .firm-item
+        h2.firm-item__title ООО «ФИРМА»
+        p.firm-item__address 43-й км МКАД, внешняя сторона, Москва  
+        p.firm-item__tel Тел.: 8 495 411 71 00, 8 495 411 71 00
+        a.firm-item__mail(href="mailto:info@firma.ru") info@firma.ru
+        a.firm-item__site(href="#") www.firma.ru
+        button.firm-item__on-map(type="button" js-dealer-map) 
+          span Показать на карте
+          +icon('ico-location')
+        .firm-item__map#dealer-map3
+      .firm-item
+        h2.firm-item__title ООО «ФИРМА»
+        p.firm-item__address 43-й км МКАД, внешняя сторона, Москва  
+        p.firm-item__tel Тел.: 8 495 411 71 00, 8 495 411 71 00
+        a.firm-item__mail(href="mailto:info@firma.ru") info@firma.ru
+        a.firm-item__site(href="#") www.firma.ru
+        button.firm-item__on-map(type="button" js-dealer-map) 
+          span Показать на карте
+          +icon('ico-location')
+        .firm-item__map#dealer-map4
+      .firm-item.firm-item--main
+        h2.firm-item__title Головной офис и логистический центр «Руфкомплект»
+        p.firm-item__address Калужская обл., Обнинск, Киевское ш., 99-й км, стр.2
+        p.firm-item__tel Тел.: +7 (48439) 9-61-84
+        a.firm-item__mail(href="mailto:info@roofcom.ru") info@roofcom.ru
+        a.firm-item__site(href="www.roofcom.ru") www.roofcom.ru
+        button.firm-item__on-map(type="button" js-dealer-map) 
+          span Показать на карте
+          +icon('ico-location')
+        .firm-item__map#dealer-map-main

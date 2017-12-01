@@ -5,10 +5,34 @@
 	  	lng: 36.6532911
 	  };
 	  var myicon = '../img/map-marker.png';
-	  var mapContacts = new google.maps.Map(document.getElementById('contacts-map'), {
+    
+	  if($('#contacts-map').length > 0) {
+      var mapContacts = new google.maps.Map(document.getElementById('contacts-map'), {
+	  	center: cntr,
+	  	zoom: 15
+      });
+   }
+    var dealerMap1 = new google.maps.Map(document.getElementById('dealer-map1'), {
 	  	center: cntr,
 	  	zoom: 15
 	  });
+    var dealerMap2 = new google.maps.Map(document.getElementById('dealer-map2'), {
+	  	center: cntr,
+	  	zoom: 15
+	  });
+    var dealerMap3 = new google.maps.Map(document.getElementById('dealer-map3'), {
+	  	center: cntr,
+	  	zoom: 15
+	  });
+    var dealerMap4 = new google.maps.Map(document.getElementById('dealer-map4'), {
+	  	center: cntr,
+	  	zoom: 15
+	  });
+    var dealerMapMain = new google.maps.Map(document.getElementById('dealer-map-main'), {
+	  	center: cntr,
+	  	zoom: 15
+	  });
+    
 	  var markers = locations.map(function (location, i) {
 	  	return new google.maps.Marker({
 	  		position: location,
@@ -435,6 +459,17 @@ $('[js-submit-form]').on('click', function(e){
   /////////
   /// Contacts page
   /////////
+  
+  /////////
+  /// Dealers page
+  /////////
+  setTimeout(function(){
+    $('.firm-item__map').addClass('invisible')
+  }, 400)
+  $('[js-dealer-map]').on('click', function(){
+    $(this).next('.firm-item__map').toggleClass('invisible');
+    initMap();
+  });
 
 });
 
