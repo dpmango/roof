@@ -25,3 +25,7 @@ PageList:
   ready: 85
 - file: calculator.html
   ready: 85
+- file: dealers.html
+  ready: 85
+- file: brandzone.html
+  ready: 85

@@ -1,0 +1,188 @@
+---
+title: Brandzone
+---
+extends shared/_layout
+block content
+  section.brand-promo
+    .container
+      .brand-promo__wrap
+        h1.brand-promo__title DAXMER
+        p.brand-promo__descr Профессиональный строительный крепеж премиум-класса
+        a.brand-promo__more(href="#") Подробнее
+  section.brand-slider
+    .container
+      .brand-slider__wrap.flex-wrap
+        .brand-slider__slide
+          h3.brand-slider__title <span>8</span> лет на рынке
+          p.brand-slider__text Бренд Daxmer зарегистрирован с 2006. Продуция представлена в 29 регионах страны
+        .brand-slider__slide
+          h3.brand-slider__title <span>7</span> видов продукции
+          p.brand-slider__text Продкукция Daxmer постоянно расширяется, на данный нас ассортимент: кровельные саморезы, кровельные саморезы без шайбы, саморезы по дереву, самозезы по металлу, заклепки, шайбы.
+        .brand-slider__slide
+          h3.brand-slider__title <span>350</span> контейнеров в год
+          p.brand-slider__text Мы лидеры по производству профессионального крепежа в РФ. Постоянные независимые протоколы испытаний гарантируют отличное качество продукции DAXMER
+        .brand-slider__slide
+          h3.brand-slider__title <span>7</span> видов продукции
+          p.brand-slider__text Продкукция Daxmer постоянно расширяется, на данный нас ассортимент: кровельные саморезы, кровельные саморезы без шайбы, саморезы по дереву, самозезы по металлу, заклепки, шайбы.
+  section.brand-info
+    .brand-info__row.flex-wrap
+      .brand-info__item
+        h3.brand-info__title Идеальное сочетание цвета самореза с кровельным покрытием
+        p.brand-info__text Благодаря собственным линиям автоматической покраски. Уникальная технология и цифровое управление процессом (система EPS) гарантирует стабильно высокое качество продукции Даксмер.
+      .brand-info__item.brand-info__item--first
+    .brand-info__row.flex-wrap
+      .brand-info__item.brand-info__slider
+        .brand-info__slide
+          img(src="img/brand-slide1.png")
+        .brand-info__slide
+          img(src="img/brand-slide2.png")
+      .brand-info__item
+        h3.brand-info__title Дополнительная защита от коррозии
+        p.brand-info__text Полимерное покрытие под головкой самореза обеспечивает дополнительную защиту от коррозии в самом уязвимом месте
+    .brand-info__row.flex-wrap
+      .brand-info__item
+        h3.brand-info__title Правильая геометрия бура
+        p.brand-info__text Благодаря собственным линиям автоматической покраски. Уникальная технология и цифровое управление процессом (система EPS) гарантирует стабильно высокое качество продукции Даксмер.
+      .brand-info__item.brand-info__item--second
+        img(src="img/brand-slide2.png")
+    .brand-info__row.flex-wrap
+      .brand-info__item.brand-info__item--third
+      .brand-info__item
+        h3.brand-info__title Максимальая гидроизоляция повехности кровли
+        p.brand-info__text Благодаря собственным линиям автоматической покраски. Уникальная технология и цифровое управление процессом (система EPS) гарантирует стабильно высокое качество продукции Даксмер.
+  section.about-brand
+    .container
+      h2.about-brand__title О Daxmer
+      p.about-brand__descr Компания "Руфкомплект" - ведущий производитель и поставщик профессиональных комплектующих для строительства. С 2006 года компания непрерывно расширяет ассортимент продукции, и на сегодняшний день представлена четырьмя актуальными бизнес-направлениями. Компания "Руфкомплект" - ведущий производитель и поставщик профессиональных комплектующих для строительства.
+      p.about-brand__descr С 2006 года компания непрерывно расширяет ассортимент продукции, и на сегодняшний день представлена четырьмя актуальными бизнес-направлениями. Педставлена четырьмя актуальными бизнес-направлениями.
+  section.brand-certificate
+    .container
+      .brand-certificate__wrap.flex-wrap
+        .brand-certificate__info
+          h2.brand-certificate__title Вся линейка материалов «Daxmer» сертифицирована
+          a.brand-certificate__download(href="#") Скачать архивом
+            +icon('ico-upload-icon')
+        .brand-certificate__items
+          a.brand-certificate__item(href="#") Сертификат соответствия на кровельные саморезы Daxmer
+          a.brand-certificate__item(href="#") Протокол испытаний кровельных саморезов Daxmer
+          a.brand-certificate__item(href="#") Сертификат соответствия на вытяжные заклепки Daxmer
+          a.brand-certificate__item(href="#") Отказное письмо шайбы Daxmer для монтажа сотового поликарбоната 
+          a.brand-certificate__item(href="#") Сертификат соответствия на шайбы Daxmer для монтажа поликарбоната
+  section.brand-catalog
+    .container
+      h2.brand-catalog__title Каталог продукции DAXMER
+      .page-tabs.doc-section__tabs
+        a.page-tabs__tab.is-active(href="#" data-id="all") Все
+        a.page-tabs__tab(href="#" data-id="tab1") Кровельные саморезы
+        a.page-tabs__tab(href="#" data-id="tab2") Саморезы для сэндвич-панелей
+        a.page-tabs__tab(href="#" data-id="tab3") Заклепки вытяжные
+        a.page-tabs__tab(href="#" data-id="tab4") Саморезы с пресс-шайбой
+        a.page-tabs__tab(href="#" data-id="tab5") Дюбель для изоляции
+        select.page-tabs__select(js-select)
+          option(data-option="all") Все
+          option(data-option="tab1") Кровельные саморезы
+          option(data-option="tab2") Саморезы для сэндвич-панелей
+          option(data-option="tab3") Заклепки вытяжные
+          option(data-option="tab4") Саморезы с пресс-шайбой
+          option(data-option="tab5") Дюбель для изоляции
+      .brand-catalog__wrap.flex-wrap
+        .brand-catalog__item
+          .brand-catalog__img
+            img(src="img/brand-prod1.png")
+            .brand-catalog__company
+              i.icon.icon-dax-blue-m
+          .brand-catalog__info
+            h3.brand-catalog__name Саморезы по дереву
+            p.brand-catalog__text Для крепления конструкций к основаниям: дерево, ДСП, ДВП, фанера, и пр.)
+        .brand-catalog__item
+          .brand-catalog__img
+            img(src="img/brand-prod2.png")
+            .brand-catalog__company
+              i.icon.icon-dax-blue-m
+          .brand-catalog__info
+            h3.brand-catalog__name Саморезы по дереву
+            p.brand-catalog__text Для крепления конструкций к основаниям: дерево, ДСП, ДВП, фанера, и пр.)
+        .brand-catalog__item
+          .brand-catalog__img
+            img(src="img/brand-prod3.png")
+            .brand-catalog__company
+              i.icon.icon-dax-blue-m
+          .brand-catalog__info
+            h3.brand-catalog__name Саморезы по дереву
+            p.brand-catalog__text Для крепления конструкций к основаниям: дерево, ДСП, ДВП, фанера, и пр.)
+        .brand-catalog__item
+          .brand-catalog__img
+            img(src="img/brand-prod1.png")
+            .brand-catalog__company
+              i.icon.icon-dax-blue-m
+          .brand-catalog__info
+            h3.brand-catalog__name Саморезы по дереву
+            p.brand-catalog__text Для крепления конструкций к основаниям: дерево, ДСП, ДВП, фанера, и пр.)
+        .brand-catalog__item
+          .brand-catalog__img
+            img(src="img/brand-prod2.png")
+            .brand-catalog__company
+              i.icon.icon-dax-blue-m
+          .brand-catalog__info
+            h3.brand-catalog__name Саморезы по дереву
+            p.brand-catalog__text Для крепления конструкций к основаниям: дерево, ДСП, ДВП, фанера, и пр.)
+        .brand-catalog__item
+          .brand-catalog__img
+            img(src="img/brand-prod3.png")
+            .brand-catalog__company
+              i.icon.icon-dax-blue-m
+          .brand-catalog__info
+            h3.brand-catalog__name Саморезы по дереву
+            p.brand-catalog__text Для крепления конструкций к основаниям: дерево, ДСП, ДВП, фанера, и пр.)
+        .brand-catalog__item
+          .brand-catalog__img
+            img(src="img/brand-prod1.png")
+            .brand-catalog__company
+              i.icon.icon-dax-blue-m
+          .brand-catalog__info
+            h3.brand-catalog__name Саморезы по дереву
+            p.brand-catalog__text Для крепления конструкций к основаниям: дерево, ДСП, ДВП, фанера, и пр.)
+        .brand-catalog__item
+          .brand-catalog__img
+            img(src="img/brand-prod2.png")
+            .brand-catalog__company
+              i.icon.icon-dax-blue-m
+          .brand-catalog__info
+            h3.brand-catalog__name Саморезы по дереву
+            p.brand-catalog__text Для крепления конструкций к основаниям: дерево, ДСП, ДВП, фанера, и пр.)
+            
+  section.brand-region
+    .container
+      h2.brand-region__title Региональные представители
+      .brand-region__order
+        span Хотите стать дилером? 
+        button.brand-region(type="button" js-open-form) Оставьте заявку на дилерство
+      form.brand-region__form(action="#")
+        select.brand-region__company(js-select)
+          option Компания
+          option DAXMER
+        select.brand-region__city(js-select)
+          option Город
+          option Москва
+  section.brand-companies
+    .container
+      .firm-item
+        h2.firm-item__title ООО «ФИРМА»
+        p.firm-item__address 43-й км МКАД, внешняя сторона, Москва  
+        p.firm-item__tel Тел.: 8 495 411 71 00, 8 495 411 71 00
+        a.firm-item__mail(href="mailto:info@firma.ru") info@firma.ru
+        a.firm-item__site(href="#") www.firma.ru
+        button.firm-item__on-map(type="button" js-dealer-map) 
+          span Показать на карте
+          +icon('ico-location')
+        .firm-item__map#dealer-map1
+      .firm-item
+        h2.firm-item__title ООО «ФИРМА»
+        p.firm-item__address 43-й км МКАД, внешняя сторона, Москва  
+        p.firm-item__tel Тел.: 8 495 411 71 00, 8 495 411 71 00
+        a.firm-item__mail(href="mailto:info@firma.ru") info@firma.ru
+        a.firm-item__site(href="#") www.firma.ru
+        button.firm-item__on-map(type="button" js-dealer-map) 
+          span Показать на карте
+          +icon('ico-location')
+        .firm-item__map#dealer-map2
