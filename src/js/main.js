@@ -505,6 +505,19 @@ $('[js-submit-form]').on('click', function(e){
     pauseOnHover: false,
     pauseOnFocus: false
   });
+    
+  /////////
+  /// Catalog page
+  /////////
+  $('[js-catalog-btn]').on('click', function(){
+    if ($(this).hasClass('is-active')) {
+      $(this).removeClass('is-active');
+      $(this).parents('.catalog__item-btnwrap').prev('.catalog__hidden').removeClass('is-active');
+    } else {
+      $(this).addClass('is-active');
+      $(this).parents('.catalog__item-btnwrap').prev('.catalog__hidden').addClass('is-active');
+    }
+  });
 });
 
 

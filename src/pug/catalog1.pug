@@ -1,0 +1,33 @@
+---
+title: Catalog
+---
+extends shared/_layout
+block content
+  section.catalog.page-section
+    .container
+      .breadcrumbs
+        a.breadcrumbs__link(href="#") Главная
+        a.breadcrumbs__link(href="#") Каталог
+        a.breadcrumbs__link(href="#") Защитная пленка
+      h1.catalog__title.page-title Защитные пленки
+      .catalog__row.flex-wrap
+        .catalog__simple-item.catalog__simple-item--metal
+          h2.catalog__simple-title Для металлочерепицы
+        .catalog__simple-item.catalog__simple-item--podok
+          h2.catalog__simple-title Для подоконников
+        .catalog__simple-item.catalog__simple-item--door
+          h2.catalog__simple-title Для дверей
+        .catalog__simple-item.catalog__simple-item--alum
+          h2.catalog__simple-title Для аллюминия
+        .catalog__simple-item.catalog__simple-item--mebel
+          h2.catalog__simple-title Для мебельных фасдов
+        .catalog__simple-item.catalog__simple-item--pvh
+          h2.catalog__simple-title Для ПВХ изделий
+        .catalog__simple-item.catalog__simple-item--panel
+          h2.catalog__simple-title Для сендвич-панелей
+        .catalog__simple-item.catalog__simple-item--pogon
+          h2.catalog__simple-title Для дверного погоножа
+        .catalog__info-item
+          h2.catalog__info-title
+            a(href="#") Показать все виды пленок
+          span.catalog__info-company Roofcomplect

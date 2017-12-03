@@ -29,3 +29,15 @@ PageList:
   ready: 85
 - file: brandzone.html
   ready: 85
+- file: catalog1.html
+  ready: 85
+- file: catalog2.html
+  ready: 85
+- file: catalog3.html
+  ready: 85
+- file: catalog4.html
+  ready: 85
+- file: catalog5.html
+  ready: 85
+- file: catalog6.html
+  ready: 85

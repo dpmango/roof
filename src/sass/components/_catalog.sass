@@ -1,0 +1,344 @@
+.catalog
+  padding-bottom: 60px
+  &__row
+    align-items: stretch
+    justify-content: space-between
+    flex-wrap: wrap
+  &__simple-item
+    width: 33%
+    background-color: $footerText
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: 50% 50%
+    padding: 70px 40px
+    min-height: 530px
+    display: flex
+    align-items: flex-end
+    justify-content: center
+    text-align: center
+    margin-bottom: 7px
+    &--metal
+      background-image: url(../../img/metal-catl.jpg)
+      .catalog__simple-title
+        color: $whiteColor
+    &--podok
+      background-image: url(../../img/podok-catl.jpg)
+    &--door
+      background-image: url(../../img/door-catl.jpg)
+    &--alum
+      background-image: url(../../img/alum-catl.jpg)
+    &--mebel
+      background-image: url(../../img/mebel-catl.jpg)
+      .catalog__simple-title
+        color: $whiteColor
+    &--pvh
+      background-image: url(../../img/pvh-catl.jpg)
+    &--panel
+      background-image: url(../../img/panel-catl.jpg)
+    &--pogon
+      background-image: url(../../img/pogon-catl.jpg)
+  &__simple-title
+    margin: 0
+    font-weight: 400
+    font-size: 30px
+    text-align: center
+  &__info-item
+    margin-bottom: 7px
+    width: 33%
+    padding: 70px 40px
+    min-height: 530px
+    display: flex
+    align-items: center
+    justify-content: center
+    text-align: center
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: 50% 50%
+    background-image: url(../../img/info-catl.jpg)
+    position: relative
+  &__info-title
+    font-size: 35px
+    line-height: 50px
+    text-align: center
+    margin: 0
+    color: $whiteColor
+    position: relative
+    z-index: 2
+    max-width: 250px
+    margin-left: auto
+    margin-right: auto
+    &:before
+      content: ''
+      position: absolute
+      top: 50% 
+      left: 50%
+      transform: translate(-50%, -50%)
+      background-repeat: no-repeat
+      background-image: url(../../img/info-catl-border.png)
+      width: 190px
+      height: 270px
+      z-index: 1
+    a
+      color: $whiteColor
+      text-decoration: none
+      border-bottom: 1px solid #1585c9
+      position: relative
+      transition: all $transitionSpeed $ease
+      z-index: 2
+    &:hover
+      a
+        border-color: $whiteColor
+  &__info-company
+    position: absolute
+    bottom: 10px
+    right: 10px
+    text-transform: uppercase
+    color: $whiteColor
+    font-size: 14px
+  
+  // Catalog 2
+  &__item
+    width: 33%
+    background-color: #eaeadf
+    padding: 30px 25px
+    position: relative
+    margin-bottom: 7px
+    &:nth-child(2)
+      background-color: #f4f4e9
+    &:nth-child(3)
+      background-color: #dedede
+    &-img
+      display: flex
+      justify-content: center
+      align-items: center
+      padding: 40px 0
+      min-height: 300px
+      img
+        display: block
+        height: auto
+        max-width: 100%
+    &-btnwrap
+      position: absolute
+      top: 25px
+      right: 25px
+      z-index: 5
+    &-btn
+      padding: 8px
+      border: 1px solid #888888
+      border-radius: 0
+      transition: all $transitionSpeed $ease
+      &:hover
+        border: 1px solid $main2Color
+        opacity: 1
+        .hamburger-inner
+          background-color: $main2Color
+          &:before,
+          &:after
+            background-color: $main2Color
+        + .catalog__item-span
+          color: $main2Color
+      &.is-active
+        border-color: transparent
+        + .catalog__item-span
+            color: transparent
+        .hamburger-inner
+          background-color: $mainColor
+          &:before,
+          &:after
+            background-color: $mainColor
+      .hamburger-box
+        width: 25px
+        height: 8px
+      .hamburger-inner
+        width: 25px
+        height: 2px
+        background-color: #6e6e6b
+        &:before,
+        &:after
+          width: 25px
+          height: 2px
+          background-color: #6e6e6b
+        &:before
+          top: -7px
+        &:after
+          bottom: -7px
+    &-span
+      font-size: 13px
+      margin-top: 7px
+      display: block
+      transition: all $transitionSpeed $ease
+      color: #888888
+      text-align: center
+    &-title
+      margin-top: 0
+      margin-bottom: 10px
+      text-align: center
+      font-size: 30px
+      line-height: 42px
+      font-weight: 400
+      color: #333333
+      a
+        text-decoration: none
+        color: #333333
+        border-bottom: 1px solid transparent
+        transition: all $transitionSpeed $ease
+      &:hover
+        a
+          color: $main2Color
+          border-color: $main2Color
+    &-naming
+      display: block
+      font-size: 15px
+      text-align: center
+      color: #aeaeae
+  &__hidden
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: #003b5f
+    padding: 30px 25px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    transition: all $transitionSpeed $ease
+    opacity: 0
+    visibility: hidden
+    &.is-active
+      opacity: 1
+      visibility: visible
+    &-item
+      text-decoration: none
+      color: $whiteColor
+      position: relative
+      margin-bottom: 25px
+      margin-left: 20px
+      display: table
+      font-size: 16px
+      line-height: 20px
+      span
+        border-bottom: 1px solid transparentize($whiteColor, .8)
+        transition: all $transitionSpeed $ease
+      &:before
+        content: ''
+        position: absolute
+        top: 50%
+        left: -20px
+        transform: translateY(-50%)
+        background-color: #00a2ff
+        width: 3px
+        height: 3px
+      &:hover span
+        border-color: $whiteColor
+        
+  // Catalog 5
+  &__lent-row
+    justify-content: flex-start
+  &__lent-item
+    width: 24%
+    margin-bottom: 7px
+    margin-right: 7px
+    background-color: #efefef
+    padding: 45px
+    position: relative
+  &__lent-img
+    text-align: center
+    min-height: 200px
+    display: flex
+    align-items: center
+    justify-content: center
+    img
+      display: block
+      margin-left: auto
+      margin-right: auto
+      max-width: 100%
+  &__lent-company
+    position: absolute
+    top: 25px
+    right: 25px
+  &__lent-title
+    margin-top: 15px
+    margin-bottom: 30px
+    font-family: $fontBold
+    font-size: 19px
+    color: #333333
+  &__lent-text
+    margin: 0
+    font-size: 13px
+    line-height: 20px
+    color: #727272
+  &__lent-info
+    margin-top: 25px
+    &-title
+      font-size: 15px
+      margin-top: 0
+      margin-bottom: 25px
+      line-height: 25px
+      color: #727272
+      position: relative
+      padding-left: 60px
+      &:last-child
+        margin-bottom: 0
+      span
+        color: #333333
+        display: block
+      .icon
+        position: absolute
+        top: 5px
+        left: 0
+    
++r($wide)
+  .catalog
+    &__lent-item
+      width: 32.5%
+    
++r($desktop)
+  .catalog
+    &__simple-item
+      width: 49%
+    &__info-item
+      width: 49%
+    &__item
+      width: 49%
+    &__lent-row
+      justify-content: space-between
+    &__lent-item
+      margin-right: 0
+      width: 49%
+      padding: 30px
+      
++r($tablet)
+  .catalog
+    &__info-item,
+    &__simple-item
+      min-height: 430px
+      padding: 30px
+    &__simple-title
+      font-size: 24px
+      line-height: 30px
+    &__info-title
+      font-size: 30px
+      line-height: 42px
+    &__item
+      &-title
+        font-size: 24px
+        line-height: 30px
+      &-img
+        min-height: 250px
+      &-btnwrap
+        top: 15px
+        right: 15px
+      &-span
+        display: none
+      
+      
++r($mobile)
+  .catalog
+    &__info-item,
+    &__simple-item
+      width: 100%
+    &__item
+      width: 100%
+    &__lent-item
+      width: 100%

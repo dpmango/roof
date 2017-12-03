@@ -1,0 +1,65 @@
+---
+title: Catalog
+---
+extends shared/_layout
+block content
+  section.catalog.page-section
+    .container
+      .breadcrumbs
+        a.breadcrumbs__link(href="#") Главная
+        a.breadcrumbs__link(href="#") Каталог
+        a.breadcrumbs__link(href="#") Комплектующие для монтажа окон
+      h1.catalog__title.page-title Комплектующие для монтажа окон
+      .page-tabs.doc-section__tabs
+        a.page-tabs__tab.is-active(href="#" data-id="tab-all") Все
+        a.page-tabs__tab(href="#" data-id="tab1") ПСУ лента  OKLENT
+        a.page-tabs__tab(href="#" data-id="tab2") Изоляционные ленты OKLENT
+        a.page-tabs__tab(href="#" data-id="tab3") Нащедьник ПВХ самоклеящийся
+        select.page-tabs__select(js-select)
+          option(data-option="tab-all") Все
+          option(data-option="tab1") ПСУ лента  OKLENT
+          option(data-option="tab2") Изоляционные ленты OKLENT
+          option(data-option="tab3") Нащедьник ПВХ самоклеящийся
+      .catalog__row.flex-wrap.catalog__lent-row
+        .catalog__lent-item
+          .catalog__lent-company
+            i.icon.icon-oklent-b
+          .catalog__lent-img
+            img(src="img/catl-lenta1.png")
+          h3.catalog__lent-title Предварительно сжатая уплотнительная лента
+          p.catalog__lent-text Rомплексная защиа швов и стыков от негативного климатического воздействия на протяжении всего срока эксплуатации
+        .catalog__lent-item
+          .catalog__lent-company
+            i.icon.icon-oklent-b
+          .catalog__lent-img
+            img(src="img/catl-lenta2.png")
+          h3.catalog__lent-title OKLent Alum
+          p.catalog__lent-text Для внутренней пароизоляции откосов и защиты монтажной пены от влаги и конденсата со стороны помещения
+        .catalog__lent-item
+          .catalog__lent-company
+            i.icon.icon-oklent-b
+          .catalog__lent-img
+            img(src="img/catl-lenta3.png")
+          h3.catalog__lent-title OKLent DUB
+          p.catalog__lent-text Для внутренней гидро-пароизоляции монтажного шва по всему периметру окна под последующую отделку откосов
+        .catalog__lent-item
+          .catalog__lent-company
+            i.icon.icon-oklent-b
+          .catalog__lent-img
+            img(src="img/catl-lenta1.png")
+          h3.catalog__lent-title Предварительно сжатая уплотнительная лента
+          p.catalog__lent-text Rомплексная защиа швов и стыков от негативного климатического воздействия на протяжении всего срока эксплуатации
+        .catalog__lent-item
+          .catalog__lent-company
+            i.icon.icon-oklent-b
+          .catalog__lent-img
+            img(src="img/catl-lenta2.png")
+          h3.catalog__lent-title OKLent Alum
+          p.catalog__lent-text Для внутренней пароизоляции откосов и защиты монтажной пены от влаги и конденсата со стороны помещения
+        .catalog__lent-item
+          .catalog__lent-company
+            i.icon.icon-oklent-b
+          .catalog__lent-img
+            img(src="img/catl-lenta3.png")
+          h3.catalog__lent-title OKLent DUB
+          p.catalog__lent-text Для внутренней гидро-пароизоляции монтажного шва по всему периметру окна под последующую отделку откосов
