@@ -43,3 +43,5 @@ PageList:
   ready: 85
 - file: product-card.html
   ready: 85
+- file: about.html
+  ready: 85

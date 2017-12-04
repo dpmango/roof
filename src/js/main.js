@@ -469,7 +469,7 @@ $('[js-submit-form]').on('click', function(e){
   });
   
   /////////
-  /// Contacts page
+  /// Brandzone page
   /////////
   $('.brand-slider__wrap').slick({
     slidesToShow: 3,
@@ -482,7 +482,7 @@ $('[js-submit-form]').on('click', function(e){
     pauseOnFocus: false,
     responsive: [
     {
-      breakpoint: 768,
+      breakpoint: 991,
       settings: {
         slidesToShow: 2
       }
@@ -542,6 +542,13 @@ $('[js-submit-form]').on('click', function(e){
 		  $('.product-card__tab-item').removeClass('is-active');
 		  $('.product-card__tab-item#' + dataTab).addClass('is-active');
   });
+  
+  /////////
+  /// About page
+  /////////
+  if ($('body').hasClass('about-body')) {
+    $('.header').addClass('header--white')
+  }
 });
 
 
