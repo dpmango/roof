@@ -41,3 +41,5 @@ PageList:
   ready: 85
 - file: catalog6.html
   ready: 85
+- file: product-card.html
+  ready: 85

@@ -518,6 +518,30 @@ $('[js-submit-form]').on('click', function(e){
       $(this).parents('.catalog__item-btnwrap').prev('.catalog__hidden').addClass('is-active');
     }
   });
+  
+  /////////
+  /// Product card page
+  /////////
+  $('.product-card__slider-wrap').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: true,
+    autoplay: false,
+    accessibility: false,
+    pauseOnHover: false,
+    pauseOnFocus: false
+  });
+  
+  
+   $('.product-card__tab').on('click', function(e){
+    e.preventDefault();
+    $('.product-card__tab').removeClass('is-active');
+		$(this).addClass('is-active');
+		var dataTab = $(this).attr('data-tab');
+		  $('.product-card__tab-item').removeClass('is-active');
+		  $('.product-card__tab-item#' + dataTab).addClass('is-active');
+  });
 });
 
 

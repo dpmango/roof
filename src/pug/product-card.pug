@@ -1,0 +1,226 @@
+---
+title: Product-card
+---
+extends shared/_layout
+block content
+  section.product-card.page-section
+    .container
+      .breadcrumbs
+        a.breadcrumbs__link(href="#") Главная
+        a.breadcrumbs__link(href="#") Каталог
+        a.breadcrumbs__link(href="#") Крепеж
+        a.breadcrumbs__link(href="#") Саморезы
+      h1.product-card__title.page-title Саморез универсальный PZ DIN 7962
+      .product-card__wrap.flex-wrap
+        .product-card__info
+          p.product-card__text Саморез с напрессованой шайбой предназначен для монтажных работ, крепления элементов листового металла и тонколистовой стали толщиной до 0,9 мм без предварительного просверливания. Оцинкованный, наконечник острый. Монтаж осуществля
+          .product-card__descr.flex-wrap
+            .product-card__descr-item Головка: потайная
+              i.icon.icon-bolt1
+            .product-card__descr-item Наконечник: острый
+              i.icon.icon-bolt3
+            .product-card__descr-item Шлиц: Philips
+              i.icon.icon-bolt2
+            .product-card__descr-item Материал: сталь С1022
+              i.icon.icon-bolt4
+          a.product-card__calc(href="#calc-section") Рассчитать вес по количеству
+        .product-card__slider
+          .product-card__slider-wrap
+            .product-card__slide
+              img(src="img/prod-slide1.png")
+            .product-card__slide
+              img(src="img/prod-slide1.png")
+            .product-card__slide
+              img(src="img/prod-slide1.png")
+      .product-card__tabs
+        a.product-card__tab.is-active(href="#" data-tab="tab-descr") Описание
+          +icon('ico-arrow-down')
+        a.product-card__tab(href="#" data-tab="tab-sizes") Типоразмеры
+          +icon('ico-arrow-down')
+        a.product-card__tab(href="#" data-tab="tab-charac") Характеристики
+          +icon('ico-arrow-down')
+        a.product-card__tab(href="#" data-tab="tab-certif") Сертификаты
+          +icon('ico-arrow-down')
+        a.product-card__tab(href="#" data-tab="tab-montazh") Монтажникам
+          +icon('ico-arrow-down')
+      .product-card__tab-item.is-active#tab-descr
+        .product-card__tab-wrap.flex-wrap
+          .product-card__descr-text
+            h2 Описание
+            ul
+              li Саморезы с прессшайбой DIN 968
+              li Саморез для монтажных работ
+            h3 Конструкция
+            p Саморез с напрессованой шайбой предназначен для монтажных работ, крепления элементов листового металла и тонколистовой стали толщиной до 0,9 мм без предварительного просверливания. Оцинкованный, наконечник острый. Монтаж осуществляется с помощью отвертки или дрели с соответствующей насадкой. Также наша компания имеет возможность окрашивать саморезы с прессшайбой в цвета по каталогам RAL.
+            h3 Собственное производство дюбеля для изоляции "DAXMER"
+            p Прессшайба, расположенная под головой самореза, обеспечивает дополнительную прочность крепления и устойчивость к повышенным механическим нагрузкам.  Саморезы ПШС могут применяться как для внутренних, так и наружных работ. Цинковое покрытие обеспечивает длительный срок службы и защиту от коррозии.
+          .product-card__descr-note
+            p Прессшайба, расположенная под головой самореза, обеспечивает дополнительную прочность крепления и устойчивость к повышенным механическим нагрузкам.  Саморезы ПШС могут применяться как для внутренних.
+      .product-card__tab-item#tab-sizes
+        .product-card__sizes
+          .product-card__sizes-row.flex-wrap.product-card__sizes-row--header
+            .product-card__sizes-item
+              img(src="img/catl-bolt.png")
+              span Диаметр <br>3мм
+            .product-card__sizes-item
+              img(src="img/catl-bolt.png")
+              span Диаметр <br>3.5мм
+            .product-card__sizes-item
+              img(src="img/catl-bolt.png")
+              span Диаметр <br>4мм
+            .product-card__sizes-item
+              img(src="img/catl-bolt.png")
+              span Диаметр <br>4.5мм
+            .product-card__sizes-item
+              img(src="img/catl-bolt.png")
+              span Диаметр <br>5мм
+            .product-card__sizes-item
+              img(src="img/catl-bolt.png")
+              span Диаметр <br>5.5мм
+          .product-card__sizes-row.flex-wrap
+            .product-card__sizes-item
+              span 3х10
+            .product-card__sizes-item
+              span 3х10
+            .product-card__sizes-item
+              span 3х10
+            .product-card__sizes-item
+              span 3х10
+            .product-card__sizes-item
+              span 3х10
+            .product-card__sizes-item
+              span 3х10
+          .product-card__sizes-row.flex-wrap
+            .product-card__sizes-item
+              span 3х10
+            .product-card__sizes-item
+              span 3х10
+            .product-card__sizes-item
+              span 3х10
+            .product-card__sizes-item
+              span 3х10
+            .product-card__sizes-item
+              span 3х10
+            .product-card__sizes-item
+              span 3х10
+          .product-card__sizes-row.flex-wrap
+            .product-card__sizes-item
+              span 3х10
+            .product-card__sizes-item
+              span 3х10
+            .product-card__sizes-item
+              span 3х10
+            .product-card__sizes-item
+              span 3х10
+            .product-card__sizes-item
+              span 3х10
+            .product-card__sizes-item
+              span 3х10
+          .product-card__sizes-row.flex-wrap
+            .product-card__sizes-item
+              span 3х10
+            .product-card__sizes-item
+              span 3х10
+            .product-card__sizes-item
+              span 3х10
+            .product-card__sizes-item
+              span 3х10
+            .product-card__sizes-item
+              span 3х10
+            .product-card__sizes-item
+              span 3х10
+          .product-card__sizes-row.flex-wrap
+            .product-card__sizes-item
+              span 3х10
+            .product-card__sizes-item
+              span 3х10
+            .product-card__sizes-item
+              span 3х10
+            .product-card__sizes-item
+              span 3х10
+            .product-card__sizes-item
+              span 3х10
+            .product-card__sizes-item
+              span 3х10
+          .product-card__sizes-row.flex-wrap
+            .product-card__sizes-item
+              span 3х10
+            .product-card__sizes-item
+              span 3х10
+            .product-card__sizes-item
+              span 3х10
+            .product-card__sizes-item
+              span 3х10
+            .product-card__sizes-item
+              span 3х10
+            .product-card__sizes-item
+              span 3х10
+      .product-card__tab-item#tab-charac
+      .product-card__tab-item#tab-certif
+        .product-card__certif
+          h2.product-card__certif-title Сертификаты
+          a.product-card__certif-item(href="#") Диплом кровельных саморезов "100 лучших товаров России"
+          a.product-card__certif-item(href="#") Техническое свидетельство заклепки Daxmer
+          a.product-card__certif-item(href="#") Отказное письмо, кровельные манжеты и проходки MasterFlash
+          a.product-card__certif-item(href="#") Диплом кровельных саморезов "100 лучших товаров России"
+          a.product-card__certif-item(href="#") Техническое свидетельство заклепки Daxmer
+          a.product-card__certif-item(href="#") Отказное письмо, кровельные манжеты и проходки MasterFlash
+      .product-card__tab-item#tab-montazh
+        .product-card__montazh
+          h2.product-card__certif-title Инструкции
+          a.product-card__certif-item(href="#") Диплом кровельных саморезов "100 лучших товаров России"
+          a.product-card__certif-item(href="#") Техническое свидетельство заклепки Daxmer
+          a.product-card__certif-item(href="#") Отказное письмо, кровельные манжеты и проходки MasterFlash
+          .product-card__montazh-videos
+            h2.product-card__certif-title Видео
+            .product-card__montazh-wrap.flex-wrap
+              .product-card__montazh-item
+                h3.product-card__montazh-title 
+                  a(href="#") Инструкция монтажа перекрытий усиленным уголком
+              .product-card__montazh-item
+                h3.product-card__montazh-title 
+                  a(href="#") Инструкция монтажа перекрытий усиленным уголком
+              .product-card__montazh-item
+                h3.product-card__montazh-title 
+                  a(href="#") Инструкция монтажа перекрытий усиленным уголком
+              .product-card__montazh-item
+                h3.product-card__montazh-title 
+                  a(href="#") Инструкция монтажа перекрытий усиленным уголком
+  section.calculator
+    .container
+      .calculator__wrap.flex-wrap
+        .calculator__info
+          h1.calculator__title Калькулятор количество-вес
+          p.calculator__descr При помощи этого калькулятора Вы можете рассчитать вес крепежа, необходимого для сборки или монтажа требуемых деталей и конструкций для его дальнейшей закупки
+        form.calculator__form(action="#")
+          .calculator__row.flex-wrap
+            .calculator__item
+              select.calculator__select(js-select)
+                option Тип изделия                                
+                option Вариант 1
+            .calculator__item
+              select.calculator__select(js-select)
+                option Стандарт
+                option Вариант 1
+            .calculator__item
+              select.calculator__select(js-select)
+                option Диаметр
+                option Вариант 1
+          .calculator__row.flex-wrap
+            .calculator__item
+              select.calculator__select(js-select)
+                option Длина 
+                option Вариант 1
+            .calculator__item
+              select.calculator__select(js-select)
+                option Покрытие
+                option Вариант 1
+          .calculator__row
+            .calculator__input-wrap
+              label.calculator__label Количество,
+                span  шт
+              input.calculator__input(type="text" value="10 000")
+            .calculator__input-wrap
+              label.calculator__label Вес,
+                span кг
+              input.calculator__input(type="text" value="4 800")

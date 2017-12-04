@@ -19,6 +19,15 @@ $sprite: (
 	),
 	bolt3: (
 		offset-x: -314px,
+		offset-y: -248px,
+		width: 20px,
+		height: 33px,
+		total-width: 359px,
+		total-height: 302px,
+		image: '../img/sprite.png'
+	),
+	bolt4: (
+		offset-x: -314px,
 		offset-y: -205px,
 		width: 20px,
 		height: 33px,
@@ -171,8 +180,8 @@ $sprite: (
 		image: '../img/sprite.png'
 	),
 	tel-mobile: (
-		offset-x: -314px,
-		offset-y: -248px,
+		offset-x: -267px,
+		offset-y: -58px,
 		width: 22px,
 		height: 22px,
 		total-width: 359px,
@@ -243,6 +252,9 @@ $sprite: (
 	}
 	.icon-bolt3 {
 		@include sprite(bolt3)
+	}
+	.icon-bolt4 {
+		@include sprite(bolt4)
 	}
 	.icon-dax-blue-m {
 		@include sprite(dax-blue-m)

@@ -1,0 +1,405 @@
+.product-card
+  &__wrap
+    align-items: flex-start
+    justify-content: space-between
+    padding-bottom: 80px
+  &__info
+    width: 49%
+    padding-right: 100px
+  &__title
+    max-width: 49%
+    padding-right: 100px
+  &__slider
+    width: 49%
+    margin-top: -140px
+  &__slider-wrap
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: center
+    width: 620px
+    height: 620px
+    border-radius: 50%
+    background-color: #eee
+    margin-left: auto
+    .slick-dots
+      text-align: center
+      bottom: 50px
+      li 
+        button
+          border-color: #c2c2c2
+          background-color: transparent
+        &.slick-active button
+          border-color: $mainColor
+  &__slide
+    text-align: center
+    img
+      display: block
+      height: auto
+      max-width: 80%
+      margin-left: auto
+      margin-right: auto
+  &__text
+    font-size: 20px
+    line-height: 38px
+    color: #333333
+    margin-top: 0
+    margin-bottom: 60px
+  &__descr
+    align-items: flex-start
+    justify-content: space-between
+    flex-wrap: wrap
+  &__descr-item
+    width: 45%
+    color: #4c4c4c
+    font-size: 16px
+    position: relative
+    padding-left: 40px
+    margin-bottom: 35px
+    .icon
+      position: absolute
+      top: 50%
+      left: 0
+      transform: translateY(-50%)
+  &__calc
+    text-align: center
+    text-decoration: none
+    font-size: 20px
+    color: #062437
+    border: 1px solid #062437
+    display: inline-block
+    margin-top: 35px
+    padding: 12px 50px
+    transition: all $transitionSpeed $ease
+    &:hover
+      background-color: #062437
+      color: $whiteColor
+  &__tabs
+    display: flex
+    flex-direction: row
+    align-items: stretch
+  &__tab
+    display: inline-block
+    text-decoration: none
+    position: relative
+    padding: 12px 20px
+    flex: 0 0 auto
+    text-align: center
+    background-color: #fcfcfc
+    font-size: 18px
+    color: #727272
+    border: 1px solid #727272
+    transition: all $transitionSpeed $ease
+    .ico
+      display: none
+      position: absolute
+      top: 50%
+      right: 15px
+      transform: translateY(-50%) rotate(-90deg)
+      transition: all $transitionSpeed $ease
+      color: lighten(#727272, 20%)
+    &:hover,
+    &.is-active
+      border-color: #094265
+      background-color: #094265
+      color: $whiteColor
+      .ico
+        transform: translateY(-50%) rotate(0deg)
+        color: $mainColor
+  &__tab-item
+    padding: 40px 0
+    display: none
+    &.is-active
+      display: block
+  &__tab-wrap
+    align-items: flex-start
+    justify-content: space-between
+  &__descr-text
+    width: 65%
+    h2
+      margin-top: 0
+      font-size: 28px
+      line-height: 30px
+      font-weight: 400
+      margin-bottom: 20px
+    ul
+      margin-top: 0
+      margin-bottom: 30px
+      padding-left: 30px
+    li
+      font-size: 16px
+      line-height: 33px
+      color: #4c4c4c
+    p
+      font-size: 16px
+      line-height: 33px
+      color: #4c4c4c
+      margin-top: 0
+      margin-bottom: 30px
+    h3
+      margin-top: 0
+      margin-bottom: 10px
+      color: #4c4c4c
+      font-family: $fontBold
+      font-size: 16px
+  &__descr-note
+    width: 30%
+    p
+      margin-top: 175px
+      margin-bottom: 0
+      font-size: 16px
+      line-height: 28px
+      color: #4c4c4c
+      padding: 30px 50px
+      background-color: #f6f6f6
+      border-left: 4px solid $mainColor
+    
+  &__sizes
+    max-width: 1024px
+  &__sizes-row
+    align-items: flex-end
+    justify-content: space-between
+    padding: 12px 0
+    text-align: center
+    border-bottom: 1px solid #dbdbdb
+    &--header
+      border-bottom: 2px solid $mainColor
+    img
+      display: block
+      margin-left: auto
+      margin-right: auto
+      max-width: 100%
+      margin-bottom: 20px
+  &__sizes-item
+    font-size: 17px
+    text-align: center
+    color: #474747
+    padding: 0 10px
+    width: 16.66%
+    flex: 0 0 auto
+    min-width: 120px
+  
+  &__certif
+    &-title
+      margin-top: 0
+      font-weight: 400
+      margin-bottom: 30px
+      font-size: 28px
+      line-height: 30px
+      color: #333333
+    &-item
+      position: relative
+      padding: 20px 20px 20px 60px
+      font-size: 17px
+      text-decoration: none
+      color: #53638b
+      border-bottom: 1px solid #e8e8e8
+      display: block
+      max-width: 700px
+      transition: all $transitionSpeed $ease
+      &:hover
+        color: $blackColor
+      &:before
+        content: ''
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        left: 5px
+        background-repeat: no-repeat
+        background-image: url(../../img/svg/sprite-src/pdf.svg)
+        background-size: 100%
+        width: 30px
+        height: 33px
+      
+  &__montazh
+    &-videos
+      padding-top: 30px
+    &-wrap
+      justify-content: space-between
+      align-items: flex-start
+    &-item
+      width: 23%
+    &-title
+      font-size: 17px
+      line-height: 27px
+      color: #53638b
+      margin-bottom: 0
+      margin-top: 15px
+      a
+        text-decoration: none
+        color: #53638b
+        transition: all $transitionSpeed $ease
+        border-bottom: 1px solid transparent
+      &:hover
+        a
+          border-color: #53638b
+      
++r($hd)
+  .product-card
+    &__slider-wrap
+      height: 550px
+      width: 550px
++r($custom-wide)
+  .product-card
+    &__slider-wrap
+      height: 480px
+      width: 480px
+    &__info
+      padding-right: 50px
+    &__title
+      padding-right: 50px
+    &__descr-text
+      width: 60%
+    &__descr-note
+      width: 37%
++r($desktop)
+  .product-card
+    &__title
+      padding-right: 0
+      max-width: 100%
+      font-size: 36px
+      margin-bottom: 25px
+    &__wrap
+      flex-direction: column
+    &__info
+      order: 1
+      width: 100%
+      padding-right: 0
+    &__slider
+      order: 0
+      width: 100%
+      margin-top: 0
+      margin-bottom: 20px
+    &__slider-wrap
+      margin-left: 0
+      width: 430px
+      height: 430px
+      .slick-dots
+        bottom: 40px
+    &__text
+      font-size: 18px
+      line-height: 30px
+      margin-bottom: 40px
+    &__calc
+      margin-top: 25px
+      font-size: 18px
+      padding: 10px 35px
+    &__tab
+      font-size: 17px
+      padding: 10px 15px
+    &__tab-wrap
+      flex-direction: column
+    &__descr-text
+      width: 100%
+    &__descr-note
+      width: 100%
+      p
+        margin-top: 0
+    &__montazh
+      &-wrap
+        flex-wrap: wrap
+      &-item
+        width: 31%
+        margin-bottom: 15px
+        
++r($tablet)
+  .product-card
+    &__title
+      font-size: 20px
+      line-height: 21px
+      margin-bottom: 25px
+    &__wrap
+      padding-bottom: 30px
+    &__slider
+      margin-bottom: 25px
+    &__slider-wrap
+      width: 310px
+      height: 310px
+      .slick-dots
+        bottom: 20px
+        li
+          height: 10px
+          height: 10px
+          margin: 0 3px
+        button
+          height: 10px
+          width: 10px
+          border-width: 2px
+    &__text
+      margin-bottom: 30px
+      font-size: 13px
+      line-height: 20px
+    &__descr-item
+      font-size: 12px
+    &__descr-item
+      width: 47%
+    &__calc
+      margin-top: 5px
+      font-size: 15px
+      padding: 8px 23px
+    &__tabs
+      flex-direction: column
+      align-items: flex-start
+    &__tab
+      border: 0
+      border-bottom: 1px solid lighten(#727272, 40%)
+      width: calc(100% + 30px)
+      margin-left: -15px
+      text-align: left
+      font-size: 13px
+      padding-left: 15px
+      padding-right: 15px
+      .ico
+        display: inline-block
+    &__tab-item
+      padding: 25px 0
+    &__descr-text
+      h2
+        font-size: 20px
+        margin-bottom: 10px
+      h3
+        font-size: 13px
+        margin-bottom: 7px
+      p
+        font-size: 13px
+        line-height: 20px
+      li
+        font-size: 13px
+        line-height: 20px
+    &__descr-note
+      p
+        font-size: 13px
+        line-height: 22px
+        padding: 25px 35px
+        
+    &__sizes
+      overflow-x: scroll
+    &__sizes-item
+      font-size: 13px
+    &__sizes-row
+      padding: 8px 0
+  
+      
+    &__certif
+      &-title
+        font-size: 20px
+        margin-bottom: 10px
+      &-item
+        padding: 12px 12px 12px 35px
+        font-size: 13px
+        &:before
+          width: 20px
+          height: 23px
+        
+    &__montazh
+      &-item
+        width: 48%
+      &-title
+        font-size: 15px
+        line-height: 20px
+        
++r($mobile)
+  .product-card
+    &__montazh
+      &-item
+        width: 100%
