@@ -7,15 +7,15 @@ block content
     .container
       h1.service__title.page-title События компании
       .page-tabs.doc-section__tabs
-        a.page-tabs__tab.is-active(href="#" data-id="0") Саморезы
-        a.page-tabs__tab(href="#" data-id="tab1") Шурупы
-        a.page-tabs__tab(href="#" data-id="tab2") Дюбели
-        a.page-tabs__tab(href="#" data-id="tab3") Анкеры
-        a.page-tabs__tab(href="#" data-id="tab4") Метрический крепеж
-        a.page-tabs__tab(href="#" data-id="tab5") Комплектующие для монтажа окон
-        a.page-tabs__tab(href="#" data-id="tab6") Такелаж
-        a.page-tabs__tab(href="#" data-id="tab7") Перфорированный крепеж
-        a.page-tabs__tab(href="#" data-id="tab8") Вытяжные заклепки
+        a.page-tabs__tab.filter-tab.is-active(href="#" data-filter="tab-first") Саморезы
+        a.page-tabs__tab.filter-tab(href="#" data-filter="tab-first") Шурупы
+        a.page-tabs__tab.filter-tab(href="#" data-filter="tab-second") Дюбели
+        a.page-tabs__tab.filter-tab(href="#" data-filter="tab-third") Анкеры
+        a.page-tabs__tab.filter-tab(href="#" data-filter="tab-first") Метрический крепеж
+        a.page-tabs__tab.filter-tab(href="#" data-filter="tab-second") Комплектующие для монтажа окон
+        a.page-tabs__tab.filter-tab(href="#" data-filter="tab-third") Такелаж
+        a.page-tabs__tab.filter-tab(href="#" data-filter="tab-first") Перфорированный крепеж
+        a.page-tabs__tab.filter-tab(href="#" data-filter="tab-second") Вытяжные заклепки
         select.page-tabs__select(js-select)
           option(data-option="tab0") Саморезы
           option(data-option="tab1") Шурупы
@@ -26,106 +26,97 @@ block content
           option(data-option="tab6") Такелаж
           option(data-option="tab7") Перфорированный крепеж
           option(data-option="tab8") Вытяжные заклепки
-      .service__wrap.flex-wrap
-        .service-item
+      .service__wrap.flex-wrap#filter-tabs
+        a.service-item.is-active.tab-first(href="#")
           .service-item__img
             img(src="img/serv1.jpg")
             .service-item__tags
-              a.service-item__tag(href="#") #folder
-              a.service-item__tag(href="#") #диллерам
-              a.service-item__tag(href="#") #мануал
+              button.service-item__tag(type="button") #folder
+              button.service-item__tag(type="button") #диллерам
+              button.service-item__tag(type="button") #мануал
           .service-item__wrap
             .service-item__date 18.08.2017
-            h3.service-item__title 
-              a(href="#") Инструкция монтажа перекрытий усиленным уголком
-        .service-item
+            h3.service-item__title  Инструкция монтажа перекрытий усиленным уголком
+        a.service-item.is-active.tab-first(href="#")
           .service-item__img
             img(src="img/serv2.jpg")
             .service-item__tags
-              a.service-item__tag(href="#") #folder
-              a.service-item__tag(href="#") #диллерам
-              a.service-item__tag(href="#") #мануал
+              button.service-item__tag(type="button") #folder
+              button.service-item__tag(type="button") #диллерам
+              button.service-item__tag(type="button") #мануал
           .service-item__wrap
             .service-item__date 18.08.2017
-            h3.service-item__title 
-              a(href="#") Крепеж стропил своими силами, нюансы
-        .service-item
+            h3.service-item__title  Крепеж стропил своими силами, нюансы
+        a.service-item.is-active.tab-second(href="#")
           .service-item__img
             img(src="img/serv3.jpg")
             .service-item__tags
-              a.service-item__tag(href="#") #folder
-              a.service-item__tag(href="#") #диллерам
-              a.service-item__tag(href="#") #мануал
+              button.service-item__tag(type="button") #folder
+              button.service-item__tag(type="button") #диллерам
+              button.service-item__tag(type="button") #мануал
           .service-item__wrap
             .service-item__date 18.08.2017
-            h3.service-item__title 
-              a(href="#") Монтаж балок в кирпичном доме с помощью анкерного болта с гайкой
-        .service-item
+            h3.service-item__title  Монтаж балок в кирпичном доме с помощью анкерного болта с гайкой)
+        a.service-item.is-active.tab-second(href="#")
           .service-item__img
             img(src="img/serv1.jpg")
             .service-item__tags
-              a.service-item__tag(href="#") #folder
-              a.service-item__tag(href="#") #диллерам
-              a.service-item__tag(href="#") #мануал
+              button.service-item__tag(type="button") #folder
+              button.service-item__tag(type="button") #диллерам
+              button.service-item__tag(type="button") #мануал
           .service-item__wrap
             .service-item__date 18.08.2017
-            h3.service-item__title 
-              a(href="#") Инструкция монтажа перекрытий усиленным уголком
-        .service-item
+            h3.service-item__title  Инструкция монтажа перекрытий усиленным уголком
+        a.service-item.is-active.tab-third(href="#")
           .service-item__img
             img(src="img/serv2.jpg")
             .service-item__tags
-              a.service-item__tag(href="#") #folder
-              a.service-item__tag(href="#") #диллерам
-              a.service-item__tag(href="#") #мануал
+              button.service-item__tag(type="button") #folder
+              button.service-item__tag(type="button") #диллерам
+              button.service-item__tag(type="button") #мануал
           .service-item__wrap
             .service-item__date 18.08.2017
-            h3.service-item__title 
-              a(href="#") Крепеж стропил своими силами, нюансы
-        .service-item
+            h3.service-item__title  Крепеж стропил своими силами, нюансы
+        a.service-item.is-active.tab-third(href="#")
           .service-item__img
             img(src="img/serv3.jpg")
             .service-item__tags
-              a.service-item__tag(href="#") #folder
-              a.service-item__tag(href="#") #диллерам
-              a.service-item__tag(href="#") #мануал
+              button.service-item__tag(type="button") #folder
+              button.service-item__tag(type="button") #диллерам
+              button.service-item__tag(type="button") #мануал
           .service-item__wrap
             .service-item__date 18.08.2017
-            h3.service-item__title 
-              a(href="#") Монтаж балок в кирпичном доме с помощью анкерного болта с гайко
-        .service-item
+            h3.service-item__title  Монтаж балок в кирпичном доме с помощью анкерного болта с гайко
+        a.service-item.is-active.tab-first(href="#")
           .service-item__img
             img(src="img/serv1.jpg")
             .service-item__tags
-              a.service-item__tag(href="#") #folder
-              a.service-item__tag(href="#") #диллерам
-              a.service-item__tag(href="#") #мануал
+              button.service-item__tag(type="button") #folder
+              button.service-item__tag(type="button") #диллерам
+              button.service-item__tag(type="button") #мануал
           .service-item__wrap
             .service-item__date 18.08.2017
-            h3.service-item__title 
-              a(href="#") Инструкция монтажа перекрытий усиленным уголком
-        .service-item
+            h3.service-item__title  Инструкция монтажа перекрытий усиленным уголком
+        a.service-item.is-active.tab-first(href="#")
           .service-item__img
             img(src="img/serv2.jpg")
             .service-item__tags
-              a.service-item__tag(href="#") #folder
-              a.service-item__tag(href="#") #диллерам
-              a.service-item__tag(href="#") #мануал
+              button.service-item__tag(type="button") #folder
+              button.service-item__tag(type="button") #диллерам
+              button.service-item__tag(type="button") #мануал
           .service-item__wrap
             .service-item__date 18.08.2017
-            h3.service-item__title 
-              a(href="#") Крепеж стропил своими силами, нюансы
-        .service-item
+            h3.service-item__title  Крепеж стропил своими силами, нюансы
+        a.service-item.is-active.tab-third(href="#")
           .service-item__img
             img(src="img/serv3.jpg")
             .service-item__tags
-              a.service-item__tag(href="#") #folder
-              a.service-item__tag(href="#") #диллерам
-              a.service-item__tag(href="#") #мануал
+              button.service-item__tag(type="button") #folder
+              button.service-item__tag(type="button") #диллерам
+              button.service-item__tag(type="button") #мануал
           .service-item__wrap
             .service-item__date 18.08.2017
-            h3.service-item__title 
-              a(href="#") Монтаж балок в кирпичном доме с помощью анкерного болта с гайко
+            h3.service-item__title  Монтаж балок в кирпичном доме с помощью анкерного болта с гайко
       .page-pagination
         a.page-pagination__link.is-active(href="#") 1
         a.page-pagination__link(href="#") 2

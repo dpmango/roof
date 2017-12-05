@@ -451,6 +451,21 @@ $('[js-submit-form]').on('click', function(e){
   });
   
   /////////
+  /// Service page
+  /////////
+  
+  $('.filter-tab').on('click', function(e){
+    e.preventDefault();
+		var dataFilter = $(this).attr('data-filter');
+    if (dataFilter == 'all') {
+      $('.doc-section__item').addClass('is-active');
+    } else {
+		  $('.service-item').hide(500);
+		  $('.service-item.' + dataFilter).show(500);
+    }
+  });
+  
+  /////////
   /// Event page
   /////////
   if ($('body').hasClass('month-event-body')) {
