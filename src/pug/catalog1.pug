@@ -3,6 +3,12 @@ title: Catalog
 ---
 extends shared/_layout
 block content
+  .submenu
+    .container
+      a.main-nav__link(href="#") Для монтажа кровли
+      a.main-nav__link.is-active(href="#") Крепеж
+      a.main-nav__link(href="#") Защитные пленки
+      a.main-nav__link(href="#") Комплектующие для монтажа окон
   section.catalog.page-section
     .container
       .breadcrumbs
@@ -11,21 +17,29 @@ block content
         a.breadcrumbs__link(href="#") Защитная пленка
       h1.catalog__title.page-title Защитные пленки
       .catalog__row.flex-wrap
-        .catalog__simple-item.catalog__simple-item--metal
+        a.catalog__simple-item.catalog__simple-item--metal(href="#")
+          img(src="img/metal-catl.jpg")
           h2.catalog__simple-title Для металлочерепицы
-        .catalog__simple-item.catalog__simple-item--podok
+        a.catalog__simple-item.catalog__simple-item--podok(href="#")
+          img(src="img/podok-catl.jpg")
           h2.catalog__simple-title Для подоконников
-        .catalog__simple-item.catalog__simple-item--door
+        a.catalog__simple-item.catalog__simple-item--door(href="#")
+          img(src="img/door-catl.jpg")
           h2.catalog__simple-title Для дверей
-        .catalog__simple-item.catalog__simple-item--alum
+        a.catalog__simple-item.catalog__simple-item--alum(href="#")
+          img(src="img/alum-catl.jpg")
           h2.catalog__simple-title Для аллюминия
-        .catalog__simple-item.catalog__simple-item--mebel
+        a.catalog__simple-item.catalog__simple-item--mebel(href="#")
+          img(src="img/mebel-catl.jpg")
           h2.catalog__simple-title Для мебельных фасдов
-        .catalog__simple-item.catalog__simple-item--pvh
+        a.catalog__simple-item.catalog__simple-item--pvh(href="#")
+          img(src="img/pvh-catl.jpg")
           h2.catalog__simple-title Для ПВХ изделий
-        .catalog__simple-item.catalog__simple-item--panel
+        a.catalog__simple-item.catalog__simple-item--panel(href="#")
+          img(src="img/panel-catl.jpg")
           h2.catalog__simple-title Для сендвич-панелей
-        .catalog__simple-item.catalog__simple-item--pogon
+        a.catalog__simple-item.catalog__simple-item--pogon(href="#")
+          img(src="img/pogon-catl.jpg")
           h2.catalog__simple-title Для дверного погоножа
         .catalog__info-item
           h2.catalog__info-title

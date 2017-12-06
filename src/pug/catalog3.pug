@@ -3,6 +3,12 @@ title: Catalog
 ---
 extends shared/_layout
 block content
+  .submenu
+    .container
+      a.main-nav__link.is-active(href="#") Для монтажа кровли
+      a.main-nav__link(href="#") Крепеж
+      a.main-nav__link(href="#") Защитные пленки
+      a.main-nav__link(href="#") Комплектующие для монтажа окон
   section.catalog.page-section
     .container
       .breadcrumbs
@@ -35,8 +41,7 @@ block content
             a(href="#") Шайбы для монтажа поликарбоната
           span.catalog__item-naming наименований: 21
         .catalog__info-item
-          h2.catalog__info-title
-            a(href="#") Качество. Надежность. Долговечность.
+          h2.catalog__info-title Качество. Надежность. Долговечность.
           span.catalog__info-company Roofcomplect
         .catalog__item
           .catalog__hidden

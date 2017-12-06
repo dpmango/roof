@@ -5,6 +5,7 @@
     justify-content: space-between
     flex-wrap: wrap
   &__simple-item
+    text-decoration: none
     width: 33%
     background-color: $footerText
     background-repeat: no-repeat
@@ -16,32 +17,52 @@
     align-items: flex-end
     justify-content: center
     text-align: center
+    position: relative
     margin-bottom: 7px
+    color: $blackColor
+    overflow: hidden
+    img
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      width: 105%
+      height: 105%
+      z-index: 1
+      transition: filter $transitionSpeed $ease
     &--metal
-      background-image: url(../../img/metal-catl.jpg)
+      //background-image: url(../../img/metal-catl.jpg)
       .catalog__simple-title
         color: $whiteColor
     &--podok
-      background-image: url(../../img/podok-catl.jpg)
+      //background-image: url(../../img/podok-catl.jpg)
     &--door
-      background-image: url(../../img/door-catl.jpg)
+      //background-image: url(../../img/door-catl.jpg)
     &--alum
-      background-image: url(../../img/alum-catl.jpg)
+      //background-image: url(../../img/alum-catl.jpg)
     &--mebel
-      background-image: url(../../img/mebel-catl.jpg)
+      //background-image: url(../../img/mebel-catl.jpg)
       .catalog__simple-title
         color: $whiteColor
     &--pvh
-      background-image: url(../../img/pvh-catl.jpg)
+      //background-image: url(../../img/pvh-catl.jpg)
     &--panel
-      background-image: url(../../img/panel-catl.jpg)
+      //background-image: url(../../img/panel-catl.jpg)
     &--pogon
-      background-image: url(../../img/pogon-catl.jpg)
+      //background-image: url(../../img/pogon-catl.jpg)
+    &:hover
+      img
+        filter: blur(3px)
+      .catalog__simple-title
+        transform: translateY(-20px)
   &__simple-title
     margin: 0
     font-weight: 400
     font-size: 30px
     text-align: center
+    transition: all $transitionSpeed $ease
+    position: relative
+    z-index: 2
   &__info-item
     margin-bottom: 7px
     width: 33%
@@ -236,12 +257,18 @@
   &__lent-row
     justify-content: flex-start
   &__lent-item
+    text-decoration: none
     width: 24%
     margin-bottom: 7px
     margin-right: 7px
     background-color: #efefef
     padding: 45px
     position: relative
+    color: $blackColor
+    transition: background $transitionSpeed $ease, box-shadow $transitionSpeed $ease
+    &:hover
+      background-color: $whiteColor
+      box-shadow: 0 0 7px #ccc
   &__lent-img
     text-align: center
     min-height: 200px

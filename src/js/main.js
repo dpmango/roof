@@ -70,6 +70,44 @@
     e.preventDefault();
   });
 
+// Smooth Scroll
+
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
+
 // Preloader
 $(window).on('load', function() {
   $('#status').fadeOut();
@@ -474,10 +512,15 @@ $('[js-submit-form]').on('click', function(e){
     e.preventDefault();
 		var dataFilter = $(this).attr('data-filter');
     if (dataFilter == 'all') {
-      $('.doc-section__item').addClass('is-active');
+      $('.brand-catalog__item').addClass('is-active').show(400);
+      $('.catalog__lent-item').addClass('is-active').show(400);
     } else {
-		  $('.service-item').hide(500);
-		  $('.service-item.' + dataFilter).show(500);
+		  $('.service-item').hide(400);
+		  $('.brand-catalog__item').hide(400);
+		  $('.catalog__lent-item').hide(400);
+		  $('.service-item.' + dataFilter).show(400);
+		  $('.brand-catalog__item.' + dataFilter).show(400);
+		  $('.catalog__lent-item.' + dataFilter).show(400);
     }
   });
   

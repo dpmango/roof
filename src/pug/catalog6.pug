@@ -3,6 +3,12 @@ title: Catalog
 ---
 extends shared/_layout
 block content
+  .submenu
+    .container
+      a.main-nav__link(href="#") Для монтажа кровли
+      a.main-nav__link.is-active(href="#") Крепеж
+      a.main-nav__link(href="#") Защитные пленки
+      a.main-nav__link(href="#") Комплектующие для монтажа окон
   section.catalog.page-section
     .container
       .breadcrumbs
@@ -11,15 +17,15 @@ block content
         a.breadcrumbs__link(href="#") Комплектующие для монтажа окон
       h1.catalog__title.page-title Комплектующие для монтажа окон
       .page-tabs.doc-section__tabs
-        a.page-tabs__tab.is-active(href="#" data-id="tab0") Саморезы
-        a.page-tabs__tab(href="#" data-id="tab1") Шурупы
-        a.page-tabs__tab(href="#" data-id="tab2") Дюбели
-        a.page-tabs__tab(href="#" data-id="tab3") Анкеры
-        a.page-tabs__tab(href="#" data-id="tab4") Метрический крепеж
-        a.page-tabs__tab(href="#" data-id="tab5") Комплектующие для монтажа окон
-        a.page-tabs__tab(href="#" data-id="tab6") Такелаж
-        a.page-tabs__tab(href="#" data-id="tab7") Перфорированный крепеж
-        a.page-tabs__tab(href="#" data-id="tab8") Вытяжные заклепки
+        a.page-tabs__tab.filter-tab.is-active(href="#" data-filter="tab-second") Саморезы
+        a.page-tabs__tab.filter-tab(href="#" data-filter="tab-first") Шурупы
+        a.page-tabs__tab.filter-tab(href="#" data-filter="tab-third") Дюбели
+        a.page-tabs__tab.filter-tab(href="#" data-filter="tab-second") Анкеры
+        a.page-tabs__tab.filter-tab(href="#" data-filter="tab-first") Метрический крепеж
+        a.page-tabs__tab.filter-tab(href="#" data-filter="tab-third") Комплектующие для монтажа окон
+        a.page-tabs__tab.filter-tab(href="#" data-filter="tab-first") Такелаж
+        a.page-tabs__tab.filter-tab(href="#" data-filter="tab-third") Перфорированный крепеж
+        a.page-tabs__tab.filter-tab(href="#" data-filter="tab-second") Вытяжные заклепки
         select.page-tabs__select(js-select)
           option(data-option="tab0") Саморезы
           option(data-option="tab1") Шурупы
@@ -31,7 +37,7 @@ block content
           option(data-option="tab7") Перфорированный крепеж
           option(data-option="tab8") Вытяжные заклепки
       .catalog__row.flex-wrap.catalog__lent-row
-        .catalog__lent-item
+        a(href="#").tab-first.catalog__lent-item
           .catalog__lent-img
             img(src="img/catl-bolt.png")
           h3.catalog__lent-title Саморезы ГКД
@@ -46,7 +52,7 @@ block content
             h3.catalog__lent-info-title Покрытие:
               i.icon.icon-bolt3
               span фосфатированный
-        .catalog__lent-item
+        a(href="#").tab-third.catalog__lent-item
           .catalog__lent-img
             img(src="img/catl-bolt2.png")
           h3.catalog__lent-title Саморезы ГКД
@@ -61,7 +67,7 @@ block content
             h3.catalog__lent-info-title Покрытие:
               i.icon.icon-bolt3
               span фосфатированный
-        .catalog__lent-item
+        a(href="#").tab-second.catalog__lent-item
           .catalog__lent-img
             img(src="img/catl-bolt.png")
           h3.catalog__lent-title Саморезы ГКД
@@ -76,7 +82,7 @@ block content
             h3.catalog__lent-info-title Покрытие:
               i.icon.icon-bolt3
               span фосфатированный
-        .catalog__lent-item
+        a(href="#").tab-second.catalog__lent-item
           .catalog__lent-img
             img(src="img/catl-bolt2.png")
           h3.catalog__lent-title Саморезы ГКД
@@ -91,7 +97,7 @@ block content
             h3.catalog__lent-info-title Покрытие:
               i.icon.icon-bolt3
               span фосфатированный
-        .catalog__lent-item
+        a(href="#").tab-third.catalog__lent-item
           .catalog__lent-img
             img(src="img/catl-bolt.png")
           h3.catalog__lent-title Саморезы ГКД
@@ -106,7 +112,7 @@ block content
             h3.catalog__lent-info-title Покрытие:
               i.icon.icon-bolt3
               span фосфатированный
-        .catalog__lent-item
+        a(href="#").tab-first.catalog__lent-item
           .catalog__lent-img
             img(src="img/catl-bolt2.png")
           h3.catalog__lent-title Саморезы ГКД
@@ -121,7 +127,7 @@ block content
             h3.catalog__lent-info-title Покрытие:
               i.icon.icon-bolt3
               span фосфатированный
-        .catalog__lent-item
+        a(href="#").tab-third.catalog__lent-item
           .catalog__lent-img
             img(src="img/catl-bolt.png")
           h3.catalog__lent-title Саморезы ГКД
@@ -136,7 +142,7 @@ block content
             h3.catalog__lent-info-title Покрытие:
               i.icon.icon-bolt3
               span фосфатированный
-        .catalog__lent-item
+        a(href="#").tab-first.catalog__lent-item
           .catalog__lent-img
             img(src="img/catl-bolt2.png")
           h3.catalog__lent-title Саморезы ГКД

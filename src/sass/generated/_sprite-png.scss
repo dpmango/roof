@@ -1,7 +1,7 @@
 $sprite: (
 	bolt1: (
 		offset-x: -358px,
-		offset-y: -161px,
+		offset-y: -206px,
 		width: 20px,
 		height: 34px,
 		total-width: 403px,
@@ -18,8 +18,8 @@ $sprite: (
 		image: '../img/sprite.png'
 	),
 	bolt3: (
-		offset-x: -358px,
-		offset-y: -248px,
+		offset-x: -325px,
+		offset-y: -50px,
 		width: 20px,
 		height: 33px,
 		total-width: 403px,
@@ -28,7 +28,7 @@ $sprite: (
 	),
 	bolt4: (
 		offset-x: -358px,
-		offset-y: -205px,
+		offset-y: -250px,
 		width: 20px,
 		height: 33px,
 		total-width: 403px,
@@ -103,6 +103,15 @@ $sprite: (
 		offset-y: -127px,
 		width: 149px,
 		height: 45px,
+		total-width: 403px,
+		total-height: 321px,
+		image: '../img/sprite.png'
+	),
+	mouse: (
+		offset-x: -358px,
+		offset-y: -161px,
+		width: 22px,
+		height: 35px,
 		total-width: 403px,
 		total-height: 321px,
 		image: '../img/sprite.png'
@@ -190,7 +199,7 @@ $sprite: (
 	),
 	tel-mobile: (
 		offset-x: -358px,
-		offset-y: -291px,
+		offset-y: -293px,
 		width: 22px,
 		height: 22px,
 		total-width: 403px,
@@ -288,6 +297,9 @@ $sprite: (
 	}
 	.icon-logo {
 		@include sprite(logo)
+	}
+	.icon-mouse {
+		@include sprite(mouse)
 	}
 	.icon-oklent-b {
 		@include sprite(oklent-b)

@@ -1,10 +1,24 @@
+.brandzone-body
+  .header__contacts
+    opacity: 0
+    visibility: hidden
+.brand-logo
+  position: absolute
+  z-index: 100
+  width: 100%
+  left: 0
+  top: 40px
+  .container
+    text-align: right
 .brand-promo
   background-repeat: no-repeat
   background-size: cover
   background-image: url(../../img/brand-promo.jpg)
-  padding-top: 300px
+  padding-top: 400px
   padding-bottom: 230px
   margin-top: -140px
+  min-height: 100vh
+  position: relative
   &__wrap
     margin-left: auto
     margin-right: auto
@@ -34,7 +48,7 @@
     line-height: 37px
     color: #292929
     margin-top: 15px
-    margin-bottom: 30px
+    margin-bottom: 38px
     position: relative
     z-index: 2
   &__more
@@ -47,23 +61,39 @@
     z-index: 2
     &:hover
       border-color: transparent
+  &__scroll
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    bottom: 30px
+    text-decoration: none
+    display: flex
+    justify-content: center
+    align-items: center
+    transition: all $transitionSpeed $ease
+    opacity: 0.8
+    &:hover
+      opacity: 1
+      transform: translate(-50%, -5px)
     
 .brand-slider
-  padding: 55px 0
+  padding-top: 85px
+  padding-bottom: 65px
   background-color: #133054
   &__title
     color: $whiteColor
     font-size: 23px
     line-height: 30px
     margin-top: 0
-    margin-bottom: 25px
-    padding-bottom: 20px
+    margin-bottom: 30px
+    padding-bottom: 25px
     position: relative
     font-weight: 400
     font-family: $fontLight
     span
       font-family: $fontBold
       font-size: 47px
+      line-height: 40px
       display: block
     &:after
       content: ''
@@ -71,11 +101,11 @@
       bottom: 0
       left: 0
       height: 4px
-      width: 70px
+      width: 50px
       background-color: $mainColor
   &__text
     font-size: 15px
-    line-height: 21px
+    line-height: 23px
     color: #92aacc
     margin: 0
   &__wrap
@@ -83,6 +113,19 @@
   &__slide
     width: 30%
     padding: 10px 70px
+  .slick-prev,
+  .slick-next
+    height: 50px
+    width: 25px
+    background-image: url(../../img/slick-next.png)
+    background-repeat: no-repeat
+    background-size: 100%
+  .slick-prev
+    transform: translateY(-50%) rotate(180deg)
+    left: -25px
+  .slick-next
+    transform: translateY(-50%) rotate(0deg)
+    right: -25px
     
 .brand-info
   &__row
@@ -115,9 +158,15 @@
     padding: 0
     .slick-prev
       left: 50px
+      height: 30px
+      width: 30px
+      background-repeat: no-repeat
       z-index: 5
     .slick-next
       right: 50px
+      height: 30px
+      width: 30px
+      background-repeat: no-repeat
       z-index: 5
   &__slide
     padding: 30px 140px
@@ -136,12 +185,12 @@
     margin-top: 0
     color: #333333
     position: relative
-    margin-bottom: 45px
-    padding-bottom: 45px
+    margin-bottom: 55px
+    padding-bottom: 55px
     &:after
       content: ''
       position: absolute
-      width: 70px
+      width: 50px
       height: 4px
       background-color: $mainColor
       bottom: 0
@@ -153,7 +202,7 @@
     color: #535353
     
 .about-brand
-  padding: 70px 0
+  padding: 80px 0
   background-color: $whiteColor
   text-align: center
   &__title
@@ -212,7 +261,7 @@
     padding-left: 100px
   &__item
     display: block
-    padding: 20px 3px
+    padding: 24px 3px
     border-bottom: 1px solid lighten(#696969, 50%)
     font-size: 17px
     color: #53638b
@@ -235,7 +284,7 @@
       color: $blackColor
     
 .brand-catalog
-  padding: 70px 0
+  padding: 80px 0
   background-color: $whiteColor
   &__title
     text-align: center
@@ -262,8 +311,8 @@
     margin-right: 10px
     margin-bottom: 10px
     background-color: #efefef
-    padding: 20px 40px 40px 40px
-    transition: all $transitionSpeed $ease
+    padding: 50px 40px 75px 40px
+    transition: background $transitionSpeed $ease, box-shadow $transitionSpeed $ease
     &:hover
       background-color: $whiteColor
       box-shadow: 0 0 7px darken(#efefef, 20%)
@@ -277,13 +326,13 @@
       margin-right: auto
   &__company
     position: absolute
-    top: 0px
+    top: -28px
     right: -20px
   &__name
     font-size: 19px
-    margin-top: 20px
+    margin-top: 45px
     color: #333333
-    margin-bottom: 30px
+    margin-bottom: 37px
     font-family: $fontBold
   &__text
     margin: 0
@@ -292,7 +341,7 @@
     color: #727272
     
 .brand-region
-  padding: 70px 0
+  padding: 80px 0 105px 0
   background-repeat: no-repeat
   background-size: contain
   background-position: 50% 50%
@@ -312,8 +361,8 @@
     font-weight: 400
     font-size: 40px
     margin-top: 0
-    margin-bottom: 35px
-    padding-bottom: 35px
+    margin-bottom: 55px
+    padding-bottom: 45px
     position: relative
     z-index: 2
     &:after
@@ -322,12 +371,12 @@
       bottom: 0
       left: 0
       height: 4px
-      width: 70px
+      width: 50px
       background-color: $mainColor
   &__order
     position: relative
     z-index: 2
-    margin-bottom: 55px
+    margin-bottom: 75px
     span
       display: inline-block
       vertical-align: middle
@@ -355,7 +404,7 @@
     .selectric
       border-color: transparentize($whiteColor, .5)
       &-brand-region__company
-        margin-bottom: 35px
+        margin-bottom: 45px
         .label:before
           background-image: url(../../img/svg/sprite-src/arrow-down-gray.svg)
       &-brand-region__city
@@ -375,9 +424,15 @@
       border: 0
     
 +r($wide)
+  .brand-logo
+    display: none
   .brand-slider
     &__slide
       padding: 10px 40px
+    .slick-prev
+      left: -15px
+    .slick-next
+      right: -15px
   .brand-info
     &__item
       padding: 30px 60px
@@ -393,7 +448,7 @@
     &__item
       margin-right: 7px
       margin-bottom: 7px
-      padding: 20px 30px 30px 30px
+      padding: 50px 30px 55px 30px
 +r($desktop)
   .brand-promo
     margin-top: -60px
@@ -406,9 +461,11 @@
       line-height: 30px
     &__more
       font-size: 20px
+    &__scroll
+      display: none
   .brand-slider
     &__slide
-      padding: 10px 20px
+      padding: 10px 25px
   .brand-info
     &__item
       min-height: 400px
@@ -445,6 +502,9 @@
       margin-bottom: 30px
     &__item
       width: 32%
+    &__name
+      margin-top: 30px
+      margin-bottom: 20px
   .brand-region
     padding: 40px 0
     &__title
@@ -453,6 +513,13 @@
       margin-bottom: 25px
       
 +r($tablet)
+  .brand-promo
+    min-height: 1px
+  .brand-slider
+    .slick-prev,
+    .slick-next
+      height: 40px
+      width: 20px
   .brand-info
     &__row
       flex-direction: column

@@ -1,15 +1,21 @@
 ---
 title: Brandzone
+bodyClass: brandzone-body
 ---
 extends shared/_layout
 block content
+  .brand-logo
+    .container
+      i.icon.icon-dax-blue
   section.brand-promo
     .container
       .brand-promo__wrap
         h1.brand-promo__title DAXMER
         p.brand-promo__descr Профессиональный строительный крепеж премиум-класса
         a.brand-promo__more(href="#") Подробнее
-  section.brand-slider
+      a.brand-promo__scroll(href="#brand-start")
+        i.icon.icon-mouse
+  section.brand-slider#brand-start
     .container
       .brand-slider__wrap.flex-wrap
         .brand-slider__slide
@@ -73,12 +79,12 @@ block content
     .container
       h2.brand-catalog__title Каталог продукции DAXMER
       .page-tabs.doc-section__tabs
-        a.page-tabs__tab.is-active(href="#" data-id="all") Все
-        a.page-tabs__tab(href="#" data-id="tab1") Кровельные саморезы
-        a.page-tabs__tab(href="#" data-id="tab2") Саморезы для сэндвич-панелей
-        a.page-tabs__tab(href="#" data-id="tab3") Заклепки вытяжные
-        a.page-tabs__tab(href="#" data-id="tab4") Саморезы с пресс-шайбой
-        a.page-tabs__tab(href="#" data-id="tab5") Дюбель для изоляции
+        a.page-tabs__tab.filter-tab.is-active(href="#" data-filter="all") Все
+        a.page-tabs__tab.filter-tab(href="#" data-filter="tab-first") Кровельные саморезы
+        a.page-tabs__tab.filter-tab(href="#" data-filter="tab-second") Саморезы для сэндвич-панелей
+        a.page-tabs__tab.filter-tab(href="#" data-filter="tab-third") Заклепки вытяжные
+        a.page-tabs__tab.filter-tab(href="#" data-filter="tab-first") Саморезы с пресс-шайбой
+        a.page-tabs__tab.filter-tab(href="#" data-filter="tab-second") Дюбель для изоляции
         select.page-tabs__select(js-select)
           option(data-option="all") Все
           option(data-option="tab1") Кровельные саморезы
@@ -87,7 +93,7 @@ block content
           option(data-option="tab4") Саморезы с пресс-шайбой
           option(data-option="tab5") Дюбель для изоляции
       .brand-catalog__wrap.flex-wrap
-        a.brand-catalog__item(href="#")
+        a.brand-catalog__item.is-active.tab-first(href="#")
           .brand-catalog__img
             img(src="img/brand-prod1.png")
             .brand-catalog__company
@@ -95,7 +101,7 @@ block content
           .brand-catalog__info
             h3.brand-catalog__name Саморезы по дереву
             p.brand-catalog__text Для крепления конструкций к основаниям: дерево, ДСП, ДВП, фанера, и пр.)
-        a.brand-catalog__item(href="#")
+        a.brand-catalog__item.is-active.tab-second(href="#")
           .brand-catalog__img
             img(src="img/brand-prod2.png")
             .brand-catalog__company
@@ -103,7 +109,7 @@ block content
           .brand-catalog__info
             h3.brand-catalog__name Саморезы по дереву
             p.brand-catalog__text Для крепления конструкций к основаниям: дерево, ДСП, ДВП, фанера, и пр.)
-        a.brand-catalog__item(href="#")
+        a.brand-catalog__item.is-active.tab-second(href="#")
           .brand-catalog__img
             img(src="img/brand-prod3.png")
             .brand-catalog__company
@@ -111,7 +117,7 @@ block content
           .brand-catalog__info
             h3.brand-catalog__name Саморезы по дереву
             p.brand-catalog__text Для крепления конструкций к основаниям: дерево, ДСП, ДВП, фанера, и пр.)
-        a.brand-catalog__item(href="#")
+        a.brand-catalog__item.is-active.tab-first(href="#")
           .brand-catalog__img
             img(src="img/brand-prod1.png")
             .brand-catalog__company
@@ -119,7 +125,7 @@ block content
           .brand-catalog__info
             h3.brand-catalog__name Саморезы по дереву
             p.brand-catalog__text Для крепления конструкций к основаниям: дерево, ДСП, ДВП, фанера, и пр.)
-        a.brand-catalog__item(href="#")
+        a.brand-catalog__item.is-active.tab-third(href="#")
           .brand-catalog__img
             img(src="img/brand-prod2.png")
             .brand-catalog__company
@@ -127,7 +133,7 @@ block content
           .brand-catalog__info
             h3.brand-catalog__name Саморезы по дереву
             p.brand-catalog__text Для крепления конструкций к основаниям: дерево, ДСП, ДВП, фанера, и пр.)
-        a.brand-catalog__item(href="#")
+        a.brand-catalog__item.is-active.tab-third(href="#")
           .brand-catalog__img
             img(src="img/brand-prod3.png")
             .brand-catalog__company
@@ -135,7 +141,7 @@ block content
           .brand-catalog__info
             h3.brand-catalog__name Саморезы по дереву
             p.brand-catalog__text Для крепления конструкций к основаниям: дерево, ДСП, ДВП, фанера, и пр.)
-        a.brand-catalog__item(href="#")
+        a.brand-catalog__item.is-active.tab-first(href="#")
           .brand-catalog__img
             img(src="img/brand-prod1.png")
             .brand-catalog__company
@@ -143,7 +149,7 @@ block content
           .brand-catalog__info
             h3.brand-catalog__name Саморезы по дереву
             p.brand-catalog__text Для крепления конструкций к основаниям: дерево, ДСП, ДВП, фанера, и пр.)
-        a.brand-catalog__item(href="#")
+        a.brand-catalog__item.is-active.tab-second(href="#")
           .brand-catalog__img
             img(src="img/brand-prod2.png")
             .brand-catalog__company
