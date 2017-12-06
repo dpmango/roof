@@ -65,6 +65,9 @@
           &:before,
           &:after
             background-color: $mainColor
+    + .submenu
+      visibility: hidden
+      opacity: 0
   &__logo
     display: block
     text-decoration: none
@@ -165,6 +168,18 @@
         width: 100%
         //transform: translateX(0px)
       
+.submenu
+  transform: translateY(-45px)
+  position: relative
+  z-index: 102
+  &--white
+    .main-nav__link
+      color: $whiteColor
+      &:before
+        background-color: $mainColor
+  .container
+    padding-left: 220px
+      
 +r($wide)
   .header
     &__contacts
@@ -175,6 +190,9 @@
       margin: 0 20px
       &:last-child
         margin-right: 0
+  .submenu
+    margin-left: auto
+    text-align: right
       
 +r($desktop)
   .header
@@ -197,6 +215,8 @@
       color: $blackColor !important
       &--catalog
         margin-left: 25px
+  .submenu
+    transform: translateY(-15px)
     
 +r($tablet)
   .header
@@ -217,5 +237,6 @@
           top: -7px
         &:after
           bottom: -7px
-  .main-nav
+  .main-nav,
+  .submenu
     display: none

@@ -9,29 +9,45 @@
 	  if($('#contacts-map').length > 0) {
       var mapContacts = new google.maps.Map(document.getElementById('contacts-map'), {
 	  	center: cntr,
-	  	zoom: 15
+	  	zoom: 15,
+        disableDefaultUI: true
       });
    }
+     if($('#dealer-map1').length > 0) {
     var dealerMap1 = new google.maps.Map(document.getElementById('dealer-map1'), {
 	  	center: cntr,
-	  	zoom: 15
+	  	zoom: 15,
+      disableDefaultUI: true
 	  });
+     }
+     if($('#dealer-map2').length > 0) {
     var dealerMap2 = new google.maps.Map(document.getElementById('dealer-map2'), {
 	  	center: cntr,
-	  	zoom: 15
+	  	zoom: 15,
+      disableDefaultUI: true
 	  });
+     }
+     if($('#dealer-map3').length > 0) {
     var dealerMap3 = new google.maps.Map(document.getElementById('dealer-map3'), {
 	  	center: cntr,
-	  	zoom: 15
+	  	zoom: 15,
+      disableDefaultUI: true
 	  });
+     }
+     if($('#dealer-map4').length > 0) {
     var dealerMap4 = new google.maps.Map(document.getElementById('dealer-map4'), {
 	  	center: cntr,
-	  	zoom: 15
+	  	zoom: 15,
+      disableDefaultUI: true
 	  });
+     }
+     if($('#dealer-map-main').length > 0) {
     var dealerMapMain = new google.maps.Map(document.getElementById('dealer-map-main'), {
 	  	center: cntr,
-	  	zoom: 15
+	  	zoom: 15,
+      disableDefaultUI: true
 	  });
+     }
     
 	  var markers = locations.map(function (location, i) {
 	  	return new google.maps.Marker({
@@ -464,6 +480,46 @@ $('[js-submit-form]').on('click', function(e){
 		  $('.service-item.' + dataFilter).show(500);
     }
   });
+  
+  // VIDEO PLAY
+  $('.instruction__video-play').on('click', function() {
+    playCustomVideo($(this))
+  });
+
+  function playCustomVideo(that) {
+    // that - get's triggered on playbtn
+    var videoFrame = that.closest('.video')
+    var iframe = videoFrame.find('iframe');
+    var addedSubject;
+
+    // chrome bug - fullscreen video
+    if (that.closest('.wow')) {
+      var thatObj = that.closest('.wow');
+      thatObj.removeClass('wow').removeClass('wowFadeUp');
+      thatObj.attr('style', null)
+
+      thatObj.css({
+        'transform': 'translate3d(0,0,0)',
+        'opacity': 1
+      })
+    }
+
+    if (!videoFrame.is('.is-playing')) {
+      // check if params are present
+      if (iframe.attr('src').indexOf("?") >= 0) {
+        addedSubject = "&autoplay=1"
+      } else {
+        addedSubject = "?autoplay=1"
+      }
+      iframe.attr("src", iframe.attr('src') + addedSubject);
+
+      videoFrame.addClass('is-playing');
+    } else {
+      iframe.attr("src", "https://www.youtube.com/embed/DG8e9TIKnuU")
+      videoFrame.removeClass('is-playing');
+    }
+
+  }
   
   /////////
   /// Event page

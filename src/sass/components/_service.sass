@@ -11,7 +11,7 @@
   margin-bottom: 45px
   margin-right: 2.3%
   overflow: hidden
-  transition: background 0.5s $ease
+  transition: background 0.5s $ease, box-shadow 0.5s $ease
   text-decoration: none
   //opacity: 0
   //visibility: hidden
@@ -120,7 +120,7 @@
   padding-bottom: 160px
   text-align: center
   margin-bottom: 50px
-  margin-top: -170px
+  margin-top: -200px
   &__wrap
     margin-left: auto
     margin-right: auto
@@ -180,6 +180,7 @@
   .service-item
     width: 32%
     margin-bottom: 25px
+    margin-right: 1.3%
     &--empty
       min-height: 320px
       .service-item
@@ -205,8 +206,12 @@
     &__date
       font-size: 120px
 +r($tablet)
+  .service
+    &__wrap
+      justify-content: space-between
   .service-item
     width: 48%
+    margin-right: 0
   .month-event
     padding-left: 15px
     padding-right: 15px

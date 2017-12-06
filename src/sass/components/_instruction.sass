@@ -20,6 +20,48 @@
       line-height: 30px
   &__video
     margin: 30px 0
+    position: relative
+    height: 500px
+    &.is-playing
+      .instruction__video-placeholder
+        opacity: 0
+        pointer-events: none
+      .instruction__video-play
+        opacity: 0
+        pointer-events: none
+    &-placeholder
+      width: 100%
+      display: block
+      height: 100%
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 3
+    &-play
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      transition: all $transitionSpeed $ease
+      width: 70px
+      height: 70px
+      background-color: transparent
+      background-repeat: no-repeat
+      background-size: 100%
+      background-image: url(../../img/play-icon.png)
+      border-radius: 50%
+      z-index: 3
+      &:hover
+        opacity: 0.7
+        cursor: pointer
+      .ico
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-40%, -50%)
+    iframe
+      height: 500px
+      width: 100%
   &__date
     font-size: 16px
     margin-bottom: 35px
@@ -96,8 +138,41 @@
       font-size: 15px
       color: #828282
       margin-right: 10px
+      display: inline-block
+      vertical-align: middle
+  &__icon
+    text-decoration: none
+    display: inline-block
+    vertical-align: middle
+    position: relative
+    top: 3px
+    margin-right: 7px
+    font-size: 24px
+    color: $blackColor
+    transition: all $transitionSpeed $ease
+    opacity: 0.7
+    &:hover
+      opacity: 1
+    .ico-vk
+      color: #48729e
+    .ico-facebook
+      color: #3b5998
+    .ico-odnokl
+      color: #eb722e
+    
       
 +r($tablet)
   .instruction
     &__download
       padding-left: 40px
+    &__video
+      height: 400px
+      iframe
+        height: 400px
+        
++r($mobile)
+  .instruction
+    &__video
+      height: 320px
+      iframe
+        height: 320px
