@@ -3,6 +3,12 @@ title: Product-card
 ---
 extends shared/_layout
 block content
+  .submenu
+    .container
+      a.main-nav__link(href="#") Для монтажа кровли
+      a.main-nav__link.is-active(href="#") Крепеж
+      a.main-nav__link(href="#") Защитные пленки
+      a.main-nav__link(href="#") Комплектующие для монтажа окон
   section.product-card.page-section
     .container
       .breadcrumbs
@@ -13,7 +19,8 @@ block content
       h1.product-card__title.page-title Саморез универсальный PZ DIN 7962
       .product-card__wrap.flex-wrap
         .product-card__info
-          p.product-card__text Саморез с напрессованой шайбой предназначен для монтажных работ, крепления элементов листового металла и тонколистовой стали толщиной до 0,9 мм без предварительного просверливания. Оцинкованный, наконечник острый. Монтаж осуществля
+          .product-card__full-descr
+            p.product-card__text.show-more Саморез с напрессованой шайбой предназначен для монтажных работ, крепления элементов листового металла и тонколистовой стали толщиной до 0,9 мм без предварительного просверливания. Оцинкованный, наконечник острый. Монтаж осуществля Саморез с напрессованой шайбой предназначен для монтажных работ, крепления элементов листового металла и тонколистовой стали толщиной до 0,9 мм без предварительного просверливания. Оцинкованный, наконечник острый. Монтаж осуществля Саморез с напрессованой шайбой предназначен для монтажных работ, крепления элементов листового металла и тонколистовой стали толщиной до 0,9 мм без предварительного просверливания. Оцинкованный, наконечник острый. Монтаж осуществля
           .product-card__descr.flex-wrap
             .product-card__descr-item Головка: потайная
               i.icon.icon-bolt1
@@ -175,18 +182,30 @@ block content
             h2.product-card__certif-title Видео
             .product-card__montazh-wrap.flex-wrap
               .product-card__montazh-item
+                a(href="#" js-play).product-card__montazh-video
+                  i.icon.icon-play-w
+                  img(src="img/serv1.jpg")
                 h3.product-card__montazh-title 
                   a(href="#") Инструкция монтажа перекрытий усиленным уголком
               .product-card__montazh-item
+                a(href="#" js-play).product-card__montazh-video
+                  i.icon.icon-play-w
+                  img(src="img/serv3.jpg")
                 h3.product-card__montazh-title 
                   a(href="#") Инструкция монтажа перекрытий усиленным уголком
               .product-card__montazh-item
+                a(href="#" js-play).product-card__montazh-video
+                  i.icon.icon-play-w
+                  img(src="img/serv1.jpg")
                 h3.product-card__montazh-title 
                   a(href="#") Инструкция монтажа перекрытий усиленным уголком
               .product-card__montazh-item
+                a(href="#" js-play).product-card__montazh-video
+                  i.icon.icon-play-w
+                  img(src="img/serv3.jpg")
                 h3.product-card__montazh-title 
                   a(href="#") Инструкция монтажа перекрытий усиленным уголком
-  section.calculator
+  section.calculator#calc-section
     .container
       .calculator__wrap.flex-wrap
         .calculator__info
@@ -224,3 +243,9 @@ block content
               label.calculator__label Вес,
                 span кг
               input.calculator__input(type="text" value="4 800")
+              
+  .video-popup.video-popup--card
+    .video-popup__close
+      +icon('ico-close')
+    .video-popup__video
+      iframe(width="560" height="315" src="https://www.youtube.com/embed/koW2Clc0xEA?rel=0&showinfo=0" frameborder="0" allowfullscreen)

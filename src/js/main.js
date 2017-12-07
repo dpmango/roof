@@ -394,10 +394,12 @@ $('[js-submit-form]').on('click', function(e){
   
   // VIDEO PLAY
   $('[js-play]').on('click', function() {
+    $('body').addClass('no-scroll')
     $('.video-popup').addClass('is-active');
     playVideo();
   });
   $('.video-popup__close').on('click', function(){
+    $('body').removeClass('no-scroll')
     $('.video-popup').removeClass('is-active');
     playVideo();
   });
@@ -582,6 +584,12 @@ $('[js-submit-form]').on('click', function(e){
     initMap();
   });
   
+    $('.dealers-promo select').on('change', function(){
+    if ($('.dealers-promo option:selected').is('[disabled]') == false) {
+      $('.dealers, .no-dealers').show();
+    }
+    });
+  
   /////////
   /// Brandzone page
   /////////
@@ -656,6 +664,13 @@ $('[js-submit-form]').on('click', function(e){
 		  $('.product-card__tab-item').removeClass('is-active');
 		  $('.product-card__tab-item#' + dataTab).addClass('is-active');
   });
+  
+  $('.show-more').readmore({
+		lessLink: '<a href="#" class="show-more-btn show-more-btn--less">Меньше</a>',
+		moreLink: '<a href="#" class="show-more-btn">Еще</a>',
+		collapsedHeight: 115,
+		speed: 200
+	});
   
   /////////
   /// About page

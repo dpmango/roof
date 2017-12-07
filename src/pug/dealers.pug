@@ -8,11 +8,13 @@ block content
       h1.dealers-promo__title Дилерская сеть
       form.dealers-promo__form(action="#")
         select.dealers-promo__segment(js-select)
-          option Выберете сегмент
+          option(disabled selected) Выберете сегмент
           option Пункт 1
+          option Пункт 2
         select.dealers-promo__city(js-select)
-          option Город
+          option(disabled selected) Город
           option Москва
+          option Санкт-Петербург
   section.dealers
     .container
       .firm-item

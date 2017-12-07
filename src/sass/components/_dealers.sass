@@ -4,6 +4,10 @@
   background-image: url(../../img/dealers-bg.jpg)
   background-size: cover
   padding: 95px 0
+  min-height: calc(100vh - 140px)
+  display: flex
+  flex-direction: column
+  justify-content: center
   &__title
     color: $blackColor
     text-transform: uppercase
@@ -42,6 +46,7 @@
     
 .dealers
   padding-bottom: 30px
+  display: none
 .firm-item
   margin-left: auto
   margin-right: auto
@@ -107,6 +112,7 @@
     visibility: visible
     opacity: 1
     min-height: 320px
+    transition: min-height $transitionSpeed $ease
     &.invisible
       min-height: 0px
       visibility: hidden
@@ -114,6 +120,7 @@
       margin-top: 0
       
 .no-dealers
+  display: none
   padding-top: 50px
   padding-bottom: 30px
   .container
