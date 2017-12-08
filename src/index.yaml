@@ -3,31 +3,7 @@ ProjectTitle: Roof
 PageList:
 - file: homepage.html
   ready: 85
-- file: documents.html
-  ready: 85
-- file: our-team.html
-  ready: 85
-- file: reviews.html
-  ready: 85
-- file: service.html
-  ready: 85
-- file: instruction.html
-  ready: 85
-- file: events.html
-  ready: 85
-- file: events2.html
-  ready: 85
-- file: events3.html
-  ready: 85
-- file: one-event.html
-  ready: 85
-- file: contacts.html
-  ready: 85
-- file: calculator.html
-  ready: 85
-- file: dealers.html
-  ready: 85
-- file: brandzone.html
+- file: product-card.html
   ready: 85
 - file: catalog1.html
   ready: 85
@@ -41,7 +17,31 @@ PageList:
   ready: 85
 - file: catalog6.html
   ready: 85
-- file: product-card.html
+- file: calculator.html
+  ready: 85
+- file: dealers.html
+  ready: 85
+- file: brandzone.html
+  ready: 85
+- file: contacts.html
+  ready: 85
+- file: our-team.html
   ready: 85
 - file: about.html
+  ready: 85
+- file: reviews.html
+  ready: 85
+- file: documents.html
+  ready: 85
+- file: service.html
+  ready: 85
+- file: instruction.html
+  ready: 85
+- file: events.html
+  ready: 85
+- file: events2.html
+  ready: 85
+- file: events3.html
+  ready: 85
+- file: one-event.html
   ready: 85

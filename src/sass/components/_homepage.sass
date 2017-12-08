@@ -181,6 +181,10 @@
   background-size: cover
   position: relative
   text-decoration: none
+  transition: transform $transitionSpeed $ease
+  &:hover
+    //box-shadow: 0 0 10px $main2Color
+    transform: scale(1.02)
   &--full
     height: 100%
   &--image
