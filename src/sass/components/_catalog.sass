@@ -26,8 +26,8 @@
       top: 50%
       left: 50%
       transform: translate(-50%, -50%)
-      width: 105%
-      height: 105%
+      width: 107%
+      height: 107%
       z-index: 1
       transition: filter $transitionSpeed $ease
     &--metal
@@ -72,22 +72,33 @@
     align-items: center
     justify-content: center
     text-align: center
+    flex-direction: column
     background-repeat: no-repeat
     background-size: cover
     background-position: 50% 50%
     background-image: url(../../img/info-catl.jpg)
     position: relative
+    text-decoration: none
+    &:hover
+      .catalog__info-title span
+        border-color: $whiteColor
   &__info-title
+    display: inline
     font-size: 35px
+    font-weight: 400
     line-height: 50px
     text-align: center
     margin: 0
     color: $whiteColor
     position: relative
     z-index: 2
-    max-width: 250px
+    max-width: 260px
     margin-left: auto
     margin-right: auto
+    color: $whiteColor
+    span 
+      transition: all $transitionSpeed $ease
+      border-bottom: 1px solid #1585c9
     &:before
       content: ''
       position: absolute
@@ -99,16 +110,6 @@
       width: 190px
       height: 270px
       z-index: 1
-    a
-      color: $whiteColor
-      text-decoration: none
-      border-bottom: 1px solid #1585c9
-      position: relative
-      transition: all $transitionSpeed $ease
-      z-index: 2
-    &:hover
-      a
-        border-color: $whiteColor
   &__info-company
     position: absolute
     bottom: 10px
@@ -124,10 +125,14 @@
     padding: 30px 25px
     position: relative
     margin-bottom: 7px
-    &:nth-child(2)
+    &:nth-child(2n)
       background-color: #f4f4e9
-    &:nth-child(3)
+    &--gray
       background-color: #dedede
+    &--empty
+      background-color: transparent
+      height: 1px
+      padding: 0
     &-img
       display: flex
       justify-content: center
@@ -138,6 +143,7 @@
         display: block
         height: auto
         max-width: 100%
+        mix-blend-mode: multiply
     &-btnwrap
       position: absolute
       top: 25px
@@ -218,6 +224,7 @@
     left: 0
     width: 100%
     height: 100%
+    z-index: 2
     background-color: #003b5f
     padding: 30px 25px
     display: flex
@@ -252,10 +259,44 @@
         height: 3px
       &:hover span
         border-color: $whiteColor
-        
+  
+  // Catalog 4
+  &__row--krep
+    .catalog__item
+      position: relative
+      &:before
+        content: ''
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        font-size: 300px
+        font-family: $fontBold
+        color: darken(#eaeadf, 1%)
+        z-index: 0
+      &:nth-child(2n+1):before
+        color: darken(#f4f4e9, 1%)
+      &:nth-child(1):before
+        content: '1'
+      &:nth-child(2):before
+        content: '2'
+      &:nth-child(3):before
+        content: '3'
+      &:nth-child(4):before
+        content: '4'
+      &:nth-child(5):before
+        content: '5'
+      &:nth-child(6):before
+        content: '6'
+      &:nth-child(7):before
+        content: '7'
+      &:nth-child(8):before
+        content: '8'
   // Catalog 5
   &__lent-row
     justify-content: flex-start
+    + .page-pagination
+      margin-top: 60px
   &__lent-item
     text-decoration: none
     width: 24%

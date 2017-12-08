@@ -289,7 +289,9 @@ $('[js-submit-form]').on('click', function(e){
       }
   } else {
     // Для остальных страниц
-    $('.header').removeClass('header--white')
+    setTimeout(function(){
+      $('.header').removeClass('header--white')
+    }, 500)
     $('.footer').removeClass('section');
     $('.footer').removeAttr('data-section-name');
   }
@@ -587,6 +589,7 @@ $('[js-submit-form]').on('click', function(e){
     $('.dealers-promo select').on('change', function(){
     if ($('.dealers-promo option:selected').is('[disabled]') == false) {
       $('.dealers, .no-dealers').show();
+      $('.dealers-promo').css('min-height', '1px');
     }
     });
   

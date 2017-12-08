@@ -113,6 +113,22 @@
   &__slide
     width: 30%
     padding: 10px 70px
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      top: 50%
+      left: -10px
+      transform: translateY(-50%)
+      font-size: 150px
+      font-family: $fontBold
+      color: lighten(#133054, 1%)
+    &--first:before
+      content: '1'
+    &--second:before
+      content: '2'
+    &--third:before
+      content: '3'
   .slick-prev,
   .slick-next
     height: 50px
@@ -316,6 +332,10 @@
     &:hover
       background-color: $whiteColor
       box-shadow: 0 0 7px darken(#efefef, 20%)
+    &:nth-child(2n)
+      background-color: #f4f4f4
+      &:hover
+        background-color: $whiteColor
   &__img
     text-align: center
     position: relative
@@ -324,6 +344,7 @@
       max-width: 100%
       margin-left: auto
       margin-right: auto
+      mix-blend-mode: multiply
   &__company
     position: absolute
     top: -28px
@@ -343,11 +364,11 @@
 .brand-region
   padding: 80px 0 105px 0
   background-repeat: no-repeat
-  background-size: contain
+  background-size: cover
   background-position: 50% 50%
   background-image: url(../../img/brand-map.jpg)
   position: relative
-  &:before
+  //&:before
     content: ''
     position: absolute
     top: 0
