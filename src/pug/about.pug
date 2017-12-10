@@ -9,19 +9,21 @@ block content
       .brand-promo__wrap.about-promo__wrap
         h1.brand-promo__title.about-promo__title +5 000 тонн 
         p.brand-promo__descr.about-promo__descr Обьем отгрузок в 2016 году.<br> Мы лидеры по поставкам продукции крепления в РФ!
-  section.brand-slider.about-slider
+      a.brand-promo__scroll(href="#about-slider")
+        i.icon.icon-mouse-w
+  section.brand-slider.about-slider#about-slider
     .container
       .brand-slider__wrap.flex-wrap
-        .brand-slider__slide
+        .brand-slider__slide.brand-slider__slide--first
           h3.brand-slider__title <span>80</span> регионов продаж
           p.brand-slider__text Собственное производство гарантирует 100% контроль качества выпускаемой продукции собственное производство
-        .brand-slider__slide
+        .brand-slider__slide.brand-slider__slide--second
           h3.brand-slider__title <span>65 000 м<sup>2</sup> </span> производственных площадей
           p.brand-slider__text Собственное производство гарантирует 100% контроль качества выпускаемой продукции собственное производство
-        .brand-slider__slide
+        .brand-slider__slide.brand-slider__slide--third
           h3.brand-slider__title <span>35</span> автоматизованных линий
           p.brand-slider__text Собственное производство гарантирует 100% контроль качества выпускаемой продукции собственное производство
-        .brand-slider__slide
+        .brand-slider__slide.brand-slider__slide--first
           h3.brand-slider__title <span>65 000 м<sup>2</sup> </span> производственных площадей
           p.brand-slider__text Собственное производство гарантирует 100% контроль качества выпускаемой продукции собственное производство
   section.about-brand
@@ -37,6 +39,18 @@ block content
           h2.about-catalog__title Комплектующие для кровли и фасадов
           a.about-catalog__link(href="#") В каталог
         .about-catalog__img
+          div.about-catalog__hint-btn.about-catalog__hint-btn--one +
+            .about-catalog__hint
+              h3.about-catalog__hint-title Кровельные саморезы
+              p.about-catalog__hint-text Окраска саморезов УФ-стойкой полиэфирной порошковой краской в цвета RAL (более 65 цветов). Цинковое антикоррозийное покрытие обеспечивает длительный срок службы саморезов (не менее 25 лет)
+          div.about-catalog__hint-btn.about-catalog__hint-btn--two +
+            .about-catalog__hint
+              h3.about-catalog__hint-title Кровельные саморезы
+              p.about-catalog__hint-text Окраска саморезов УФ-стойкой полиэфирной порошковой краской в цвета RAL (более 65 цветов). Цинковое антикоррозийное покрытие обеспечивает длительный срок службы саморезов (не менее 25 лет)
+          div.about-catalog__hint-btn.about-catalog__hint-btn--three +
+            .about-catalog__hint
+              h3.about-catalog__hint-title Кровельные саморезы
+              p.about-catalog__hint-text Окраска саморезов УФ-стойкой полиэфирной порошковой краской в цвета RAL (более 65 цветов). Цинковое антикоррозийное покрытие обеспечивает длительный срок службы саморезов (не менее 25 лет)
           img(src="img/about-img1.png")
       .about-catalog__item.flex-wrap.about-catalog__item--light
         .about-catalog__info
@@ -50,6 +64,14 @@ block content
           h2.about-catalog__title Комплектующие для монтажа окон
           a.about-catalog__link(href="#") В каталог
         .about-catalog__img
+          div.about-catalog__hint-btn.about-catalog__hint-btn--two +
+            .about-catalog__hint
+              h3.about-catalog__hint-title Нащельник ПВХ самоклеющийся
+              p.about-catalog__hint-text Нащельники OkLent представляют собой планку из жесткого ПВХ с коэкструдированной мягкой кромкой
+          div.about-catalog__hint-btn.about-catalog__hint-btn--three +
+            .about-catalog__hint
+              h3.about-catalog__hint-title Нащельник ПВХ самоклеющийся
+              p.about-catalog__hint-text Нащельники OkLent представляют собой планку из жесткого ПВХ с коэкструдированной мягкой кромкой
           img(src="img/about-img3.png")
       .about-catalog__item.flex-wrap
         .about-catalog__info
@@ -77,12 +99,32 @@ block content
           
   section.about-dev
     .container
-      .about-dev__wrap
-        .about-dev__slide
+      .about-dev__wrap.flex-wrap
+        .about-dev__nav
+          button.about-dev__nav-btn.is-active(type="button" data-index="0" js-about-slide) 2006
+          button.about-dev__nav-btn(type="button" data-index="1" js-about-slide) 2007-2008
+          button.about-dev__nav-btn(type="button" data-index="2" js-about-slide) 2009-2011
+          button.about-dev__nav-btn(type="button" data-index="3" js-about-slide) 2012-2014
+          button.about-dev__nav-btn(type="button" data-index="4" js-about-slide) 2015-2017
+        .about-dev__main
           h2.about-dev__title 10 лет непрерывного роста
-          h3.about-dev__subtitle 2007-2008
-          p.about-dev__text Компания продолжает набирать обороты, увеличивать складские и производственные мощности.  Для кровельного крепежа разрабатывает торговая марка DAXMER и регистрируется товарный знак «М». После трех лет  деятельности продукция ООО ТПК Руфкомплект представлена в 29 регионах России.
+          .about-dev__slider
+            .about-dev__slide
+              h3.about-dev__subtitle 2006
+              p.about-dev__text Компания продолжает набирать обороты, увеличивать складские и производственные мощности.  Для кровельного крепежа разрабатывает торговая марка DAXMER и регистрируется товарный знак «М». После трех лет  деятельности продукция ООО ТПК Руфкомплект представлена в 29 регионах России.
+            .about-dev__slide
+              h3.about-dev__subtitle 2007-2008
+              p.about-dev__text Компания продолжает набирать обороты, увеличивать складские и производственные мощности.  Для кровельного крепежа разрабатывает торговая марка DAXMER и регистрируется товарный знак «М». После трех лет  деятельности продукция ООО ТПК Руфкомплект представлена в 29 регионах России.
+            .about-dev__slide
+              h3.about-dev__subtitle 2009-2011
+              p.about-dev__text Компания продолжает набирать обороты, увеличивать складские и производственные мощности.  Для кровельного крепежа разрабатывает торговая марка DAXMER и регистрируется товарный знак «М». После трех лет  деятельности продукция ООО ТПК Руфкомплект представлена в 29 регионах России.
+            .about-dev__slide
+              h3.about-dev__subtitle 2012-2014
+              p.about-dev__text Компания продолжает набирать обороты, увеличивать складские и производственные мощности.  Для кровельного крепежа разрабатывает торговая марка DAXMER и регистрируется товарный знак «М». После трех лет  деятельности продукция ООО ТПК Руфкомплект представлена в 29 регионах России.
+            .about-dev__slide
+              h3.about-dev__subtitle 2015-2017
+              p.about-dev__text Компания продолжает набирать обороты, увеличивать складские и производственные мощности.  Для кровельного крепежа разрабатывает торговая марка DAXMER и регистрируется товарный знак «М». После трех лет  деятельности продукция ООО ТПК Руфкомплект представлена в 29 регионах России.
   section.about-map
     .container
       h2.about-map__title Широкая география поставок
-      .about-map__map
+    .about-map__map#about-map

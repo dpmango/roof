@@ -4,13 +4,18 @@
 	  	lat: 55.1437069,
 	  	lng: 36.6532911
 	  };
+    var russiaCenter = {
+      lat: 60.814122,
+      lng: 90.1855027
+    }
 	  var myicon = '../img/map-marker.png';
+	  var aboutIcon = '../img/about-marker.png';
     
 	  if($('#contacts-map').length > 0) {
       var mapContacts = new google.maps.Map(document.getElementById('contacts-map'), {
 	  	center: cntr,
 	  	zoom: 15,
-        disableDefaultUI: true
+      disableDefaultUI: true
       });
    }
      if($('#dealer-map1').length > 0) {
@@ -48,6 +53,206 @@
       disableDefaultUI: true
 	  });
      }
+    
+    // ABOUT MAP
+    if($('#about-map').length > 0) {
+      var aboutMap = new google.maps.Map(document.getElementById('about-map'), {
+	    	center: russiaCenter,
+	    	zoom: 4,
+        styles: [
+        {
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#c5c5c5"
+            }
+          ]
+        },
+        {
+          "elementType": "labels.icon",
+          "stylers": [
+            {
+              "visibility": "off"
+            }
+          ]
+        },
+        {
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#c5c5c5"
+            }
+          ]
+        },
+        {
+          "elementType": "labels.text.stroke",
+          "stylers": [
+            {
+              "color": "#c5c5c5"
+            }
+          ]
+        },
+        {
+          "featureType": "administrative.land_parcel",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#c5c5c5"
+            }
+          ]
+        },
+        {
+          "featureType": "poi",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#c5c5c5"
+            }
+          ]
+        },
+        {
+          "featureType": "poi",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#c5c5c5"
+            }
+          ]
+        },
+        {
+          "featureType": "poi.park",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#c5c5c5"
+            }
+          ]
+        },
+        {
+          "featureType": "poi.park",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#c5c5c5"
+            }
+          ]
+        },
+        {
+          "featureType": "road",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#c5c5c5"
+            }
+          ]
+        },
+        {
+          "featureType": "road.arterial",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#c5c5c5"
+            }
+          ]
+        },
+        {
+          "featureType": "road.highway",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#c5c5c5"
+            }
+          ]
+        },
+        {
+          "featureType": "road.highway",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#c5c5c5"
+            }
+          ]
+        },
+        {
+          "featureType": "road.local",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#c5c5c5"
+            }
+          ]
+        },
+        {
+          "featureType": "transit.line",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#c5c5c5"
+            }
+          ]
+        },
+        {
+          "featureType": "transit.station",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#c5c5c5"
+            }
+          ]
+        },
+        {
+          "featureType": "water",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#e3e3e3"
+            }
+          ]
+        },
+        {
+          "featureType": "water",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#e3e3e3"
+            }
+          ]
+        }
+      ],
+        disableDefaultUI: true
+	    });
+    }
+    var aboutLocations = [
+  	  {
+  	  	lat: 59.9174925,
+  	  	lng: 30.044887
+  	  },
+      {
+  	  	lat: 55.7498598,
+  	  	lng: 37.3523222
+  	  }, 
+      {
+  	  	lat: 47.2611562,
+  	  	lng: 39.4879178
+  	  },
+      {
+  	  	lat: 56.026842,
+  	  	lng: 92.7256528
+  	  },
+      {
+  	  	lat: 62.033008,
+  	  	lng: 129.5661114
+  	  }
+  	];
+    var aboutMarkers = aboutLocations.map(function (location, i) {
+	  	return new google.maps.Marker({
+	  		position: location,
+	  		map: aboutMap,
+	  		icon: aboutIcon
+	  	});
+	  });
+    
+    
     
 	  var markers = locations.map(function (location, i) {
 	  	return new google.maps.Marker({
@@ -289,9 +494,7 @@ $('[js-submit-form]').on('click', function(e){
       }
   } else {
     // Для остальных страниц
-    setTimeout(function(){
       $('.header').removeClass('header--white')
-    }, 500)
     $('.footer').removeClass('section');
     $('.footer').removeAttr('data-section-name');
   }
@@ -575,6 +778,17 @@ $('[js-submit-form]').on('click', function(e){
     $('.header').addClass('header--white')
   }
   
+  $('[js-open-photo]').on('click', function(e){
+    e.preventDefault();
+    $('body').addClass('no-scroll');
+    $('.instruction-photo').addClass('is-active');
+  });
+   $('[js-close-photo]').on('click', function(e){
+    e.preventDefault();
+    $('body').removeClass('no-scroll');
+    $('.instruction-photo').removeClass('is-active');
+  });
+  
   /////////
   /// Dealers page
   /////////
@@ -678,9 +892,40 @@ $('[js-submit-form]').on('click', function(e){
   /////////
   /// About page
   /////////
-  if ($('body').hasClass('about-body')) {
+    if ($('body').hasClass('about-body')) {
     $('.header').addClass('header--white')
-  }
+    };
+  
+  // SLIDER
+  $('.about-dev__slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: false,
+    autoplay: false,
+    accessibility: false,
+    pauseOnHover: false,
+    pauseOnFocus: false,
+    vertical: true,
+    verticalSwiping: true,
+    responsive: [
+    {
+      breakpoint: 767,
+      settings: {
+        dots: true
+      }
+    }
+    ]
+  });
+  
+  $('[js-about-slide]').on('click', function(e){
+    e.preventDefault();
+    $('[js-about-slide]').removeClass('is-active');
+    $(this).addClass('is-active');
+    var dataIndex = $(this).attr('data-index');
+    $('.about-dev__slider').slick('slickGoTo', dataIndex)
+  });
+  
 });
 
 

@@ -39,19 +39,15 @@ block content
         a.service-item.is-active.tab-first(href="#")
           .service-item__img
             img(src="img/serv2.jpg")
-            .service-item__tags
-              button.service-item__tag(type="button") #folder
-              button.service-item__tag(type="button") #диллерам
-              button.service-item__tag(type="button") #мануал
+            button(type="button" js-play).service-item__video
+              i.icon.icon-play-w
           .service-item__wrap
             h3.service-item__title  Крепеж стропил своими силами, нюансы
         a.service-item.is-active.tab-second(href="#")
           .service-item__img
             img(src="img/serv3.jpg")
-            .service-item__tags
-              button.service-item__tag(type="button") #folder
-              button.service-item__tag(type="button") #диллерам
-              button.service-item__tag(type="button") #мануал
+            button(type="button" js-play).service-item__video
+              i.icon.icon-play-w
           .service-item__wrap
             h3.service-item__title  Монтаж балок в кирпичном доме с помощью анкерного болта с гайкой)
         a.service-item.is-active.tab-second(href="#")
@@ -114,3 +110,9 @@ block content
         a.page-pagination__link(href="#") 3
         a.page-pagination__link(href="#") 4
         a.page-pagination__link.page-pagination__link--next(href="#") ▶
+        
+  .video-popup.video-popup--card
+    .video-popup__close
+      +icon('ico-close')
+    .video-popup__video
+      iframe(width="560" height="315" src="https://www.youtube.com/embed/koW2Clc0xEA?rel=0&showinfo=0" frameborder="0" allowfullscreen)

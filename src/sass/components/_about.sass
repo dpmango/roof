@@ -17,8 +17,25 @@
     font-size: 33px
     line-height: 36px
     color: $whiteColor
+  &__scroll
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    bottom: 30px
+    text-decoration: none
+    display: flex
+    justify-content: center
+    align-items: center
+    transition: all $transitionSpeed $ease
+    opacity: 0.8
+    &:hover
+      opacity: 1
+      transform: translate(-50%, -5px)
 .about-slider
   background-color: #efefef
+  .slick-prev,
+  .slick-next
+    background-image: url(../../img/slick-next-gr.png)
   .brand-slider__title
     color: $blackColor
     &:after
@@ -28,6 +45,8 @@
   .brand-slider__slide
     padding-top: 15px
     padding-bottom: 15px
+    &:before
+      color: darken(#efefef, 1.5%)
     
 .about-catalog
   &__row
@@ -44,10 +63,65 @@
     width: 45%
   &__img
     width: 45%
+    position: relative
     img
       display: block
       height: auto
       max-width: 100%
+      mix-blend-mode: multiply
+  &__hint-btn
+    position: absolute
+    width: 27px
+    height: 27px
+    border-radius: 50%
+    background-color: transparentize(#003352, .3)
+    color: #d4ed00
+    font-family: $fontBold
+    z-index: 1
+    font-size: 23px
+    display: flex
+    justify-content: center
+    align-items: center
+    transition: background $transitionSpeed $ease
+    &:hover
+      cursor: pointer
+      background-color: #003352
+      z-index: 2
+      .about-catalog__hint
+        opacity: 1
+        visibility: visible
+    &--one
+      top: 20px
+      left: 70%
+    &--two
+      bottom: 30px
+      left: 70%
+    &--three
+      bottom: 20px
+      left: 40%
+  &__hint
+    min-width: 360px
+    position: absolute
+    z-index: 3
+    right: 30px
+    top: -40px
+    background-color: $whiteColor
+    padding: 20px
+    opacity: 0
+    visibility: hidden
+    transition: all $transitionSpeed $ease
+    &-title
+      margin-top: 0
+      margin-bottom: 15px
+      font-size: 17px
+      color: #333333
+    &-text
+      font-size: 15px
+      line-height: 23px
+      margin: 0
+      color: #515151
+      font-weight: 400
+      font-family: $fontLight
   &__title
     font-size: 32px
     line-height: 44px
@@ -123,7 +197,59 @@
   background-position: 50%
   background-image: url(../../img/about-slider.jpg)
   &__wrap
-    padding-left: 20%
+    align-items: stretch
+  &__nav
+    width: 140px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: flex-start
+    position: relative
+    &:after
+      content: ''
+      position: absolute
+      width: 2px
+      height: calc(100% + 50px)
+      background-color: transparentize($whiteColor, .4)
+      top: 50%
+      transform: translateY(-50%)
+      right: 10px
+  &__nav-btn
+    background-color: transparent
+    font-size: 18px
+    color: $whiteColor
+    text-align: right
+    font-family: $fontReg
+    border-radius: 0
+    padding: 6px 7px
+    border: 2px solid transparent
+    position: relative
+    min-width: 110px
+    transition: all $transitionSpeed $ease
+    &:after
+      content: ''
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      right: -26px
+      width: 10px
+      height: 10px
+      background-color: transparentize($whiteColor, .4)
+      transition: all $transitionSpeed $ease
+      border-radius: 50%
+      opacity: 0
+      z-index: 2
+    &:hover,
+    &.is-active
+      cursor: pointer
+      background-color: rgba(0,0,0, 0.45)
+      border-color: $mainColor
+      &:after
+        opacity: 1
+        background-color: $mainColor
+  &__main
+    width: calc(100% - 140px)
+    padding-left: calc(20% - 140px)
   &__title
     font-size: 40px
     line-height: 34px
@@ -146,18 +272,24 @@
     
 .about-map
   background-color: #e3e3e3
-  padding: 60px 0
+  position: relative
   &__title
+    position: absolute
+    top: 0
+    left: 50%
+    transform: translateX(-50%)
+    padding-top: 60px
     margin: 0
     font-weight: 400
     font-size: 40px
     text-transform: uppercase
     text-align: center
+    z-index: 10
   &__map
-    background-repeat: no-repeat
-    background-position: 50% 50%
-    background-image: url(../../img/about-map.png)
-    background-size: 100% 100%
+    //background-repeat: no-repeat
+    //background-position: 50% 50%
+    //background-image: url(../../img/about-map.png)
+    //background-size: 100% 100%
     min-height: 700px
     
     
@@ -182,6 +314,9 @@
   .about-map
     &__map
       min-height: 500px
+  .about-dev
+    &__main
+      padding-left: 30px
       
 +r($tablet)
   .about-brands
@@ -191,8 +326,17 @@
   .about-map
     &__map
       min-height: 420px
+  .about-dev
+    &__nav
+      display: none
+    &__main
+      width: 100%
+      padding-left: 0
+    .slick-dots
+      bottom: -60px
 +r($mobile)
   .about-catalog
+    overflow-x: hidden
     &__item
       padding: 32px 15px
       flex-direction: column
@@ -210,6 +354,14 @@
       img
         margin-left: auto
         margin-right: auto
+    &__hint
+      top: 110%
+      right: -110px
+      padding: 10px
+      &-title
+        font-size: 16px
+      &-text
+        font-size: 14px
   .about-brands
     &__title
       font-size: 32px
@@ -226,11 +378,12 @@
   .about-dev
     padding-top: 36px
     padding-bottom: 125px
-    &__wrap
+    &__main
       padding-left: 0
     &__title
       font-size: 25px
       margin-bottom: 35px
+      padding-left: 0
     &__subtitle
       font-size: 23px
       margin-bottom: 15px

@@ -1,7 +1,7 @@
 $sprite: (
 	bolt1: (
-		offset-x: -159px,
-		offset-y: -127px,
+		offset-x: -71px,
+		offset-y: -299px,
 		width: 20px,
 		height: 34px,
 		total-width: 415px,
@@ -18,7 +18,7 @@ $sprite: (
 		image: '../img/sprite.png'
 	),
 	bolt3: (
-		offset-x: -101px,
+		offset-x: -131px,
 		offset-y: -299px,
 		width: 20px,
 		height: 33px,
@@ -27,7 +27,7 @@ $sprite: (
 		image: '../img/sprite.png'
 	),
 	bolt4: (
-		offset-x: -71px,
+		offset-x: -101px,
 		offset-y: -299px,
 		width: 20px,
 		height: 33px,
@@ -103,6 +103,15 @@ $sprite: (
 		offset-y: -127px,
 		width: 149px,
 		height: 45px,
+		total-width: 415px,
+		total-height: 342px,
+		image: '../img/sprite.png'
+	),
+	mouse-w: (
+		offset-x: -159px,
+		offset-y: -127px,
+		width: 22px,
+		height: 35px,
 		total-width: 415px,
 		total-height: 342px,
 		image: '../img/sprite.png'
@@ -306,6 +315,9 @@ $sprite: (
 	}
 	.icon-logo {
 		@include sprite(logo)
+	}
+	.icon-mouse-w {
+		@include sprite(mouse-w)
 	}
 	.icon-mouse {
 		@include sprite(mouse)
