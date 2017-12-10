@@ -251,6 +251,15 @@
 	  		icon: aboutIcon
 	  	});
 	  });
+    var contentString = '<div id="about-window"><h3>Москва и Московская область</h3><a href="#">350 дилеров</a><p>Региональный представитель:<br>Центральный Федеральный округ<br>Иванов Андрей<br>+7 (900) 985-15-65<br>ivanov@roofcom.ru</p></div>';
+    var infowindow = new google.maps.InfoWindow({
+      content: contentString
+    });
+    aboutMarkers.forEach(function(i){
+      i.addListener('click', function() {
+      infowindow.open(aboutMap, i);
+      });
+    })
     
     
     

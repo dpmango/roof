@@ -275,6 +275,7 @@
   position: relative
   &__title
     position: absolute
+    width: 100%
     top: 0
     left: 50%
     transform: translateX(-50%)
@@ -291,6 +292,22 @@
     //background-image: url(../../img/about-map.png)
     //background-size: 100% 100%
     min-height: 700px
+    #about-window
+      h3
+        font-size: 17px
+        font-weight: bold
+        color: #333333
+        margin-top: 0
+        margin-bottom: 12px
+      a
+        color: $main2Color
+        &:hover
+          text-decoration: none
+      p
+        font-size: 15px
+        line-height: 23px
+        margin-bottom: 0
+        color: #515151
     
     
 +r($wide)
@@ -392,9 +409,9 @@
       line-height: 19px
       
   .about-map
-    padding: 40px 0
     &__title
       font-size: 32px
       line-height: 36px
+      padding-top: 40px
     &__map
       min-height: 350px
