@@ -107,7 +107,8 @@
     width: 50%
     flex-wrap: wrap
     align-items: flex-start
-    margin: 0 -15px
+    justify-content: space-between
+    padding-left: 75px
   &__btn,
   &__mobile-btn
     font-size: 17px
@@ -125,8 +126,7 @@
   &__mobile-btn
     display: none
   &__item
-    width: 50%
-    margin-bottom: 55px
+    margin-bottom: 45px
     padding: 0 15px
     &:nth-child(3),
     &:nth-child(4)
@@ -147,7 +147,7 @@
         font-size: 70px
     &-descr
       font-size: 16px
-      line-height: 36px
+      line-height: 26px
       margin: 0
       max-width: 235px
       
@@ -278,6 +278,11 @@
   .event-item
     min-height: 1px
     padding: 40px
+  .advantages
+    &__more
+      padding-left: 35px
+    &__item
+      width: 50%
     
 +r($wide)
   .product-section
@@ -334,6 +339,7 @@
       padding-right: 0
     &__more
       width: 100%
+      padding-left: 0
     &__btn
       display: none
     &__mobile-btn
