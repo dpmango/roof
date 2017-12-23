@@ -6,13 +6,15 @@ extends shared/_layout
 block content
   main.page-main#fullpage
     section.manufac-section.section(data-section-name="01")
+      video.manufac-section__video(src="img/video-bg.mp4" mute loop autoplay)
       .container
         .manufac-section__wrap.flex-wrap
           h2.common-title Производство комплектующих для строительства
           p.common-descr Комплексные поставки на Российский рынок профессиональных материалов для монтажа кровли и окон
           .manufac-section__companies.flex-wrap
             a.manufac-section__company(href="#")
-              i.icon.icon-dax
+              //i.icon.icon-dax
+              +icon('ico-daxmer2')
             a.manufac-section__company(href="#")
               +icon('ico-folder')
             a.manufac-section__company(href="#")

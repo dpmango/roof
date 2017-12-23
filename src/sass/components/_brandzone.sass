@@ -1,8 +1,8 @@
-.brandzone-body
+//.brandzone-body
   .header__contacts
     opacity: 0
     visibility: hidden
-.brand-logo
+//.brand-logo
   position: absolute
   z-index: 100
   width: 100%
@@ -43,6 +43,14 @@
     margin: 0
     position: relative
     z-index: 2
+    background-repeat: no-repeat
+    background-size: 100% 100%
+    background-position: 50% 50%
+    margin-left: auto
+    margin-right: auto
+    background-image: url(../../icons/dax-blue@2x.png)
+    width: 410px
+    height: 120px
   &__descr
     font-size: 29px
     line-height: 37px
@@ -103,11 +111,14 @@
       height: 4px
       width: 50px
       background-color: $mainColor
+      z-index: 2
   &__text
     font-size: 15px
     line-height: 23px
     color: #92aacc
     margin: 0
+    position: relative
+    z-index: 2
   &__wrap
     align-items: flex-start
   &__slide
@@ -123,6 +134,7 @@
       font-size: 150px
       font-family: $fontBold
       color: lighten(#133054, 1%)
+      z-index: 1
     &--first:before
       content: '1'
     &--second:before
@@ -577,6 +589,8 @@
     overflow-x: hidden
     &__title
       font-size: 75px
+      width: 330px
+      height: 90px
     &__descr
       font-size: 22px
       line-height: 28px
