@@ -361,11 +361,11 @@ $('[js-open-mobile]').on('click', function(e){
   if ($(this).hasClass('is-active')) {
     $('body').removeClass('no-scroll');
     $(this).removeClass('is-active');
-    $('.mobile-menu').slideUp(300);
+    $('.mobile-menu').fadeOut(300);
   } else {
     $('body').addClass('no-scroll');
     $(this).addClass('is-active');
-    $('.mobile-menu').slideDown(300);
+    $('.mobile-menu').fadeIn(300);
   }
 });
   
